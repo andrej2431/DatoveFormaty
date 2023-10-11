@@ -1,0 +1,44 @@
+# Evidence továren na sladkosti
+
+## Abstrakt
+Tento dokument je specifikací konceptuálního modelu pro evidenci továren na sladkosti.
+
+## Specifikace
+V této sekci jsou definovány jednotlivé třídy. Pro každou vlastnost je uveden její identifikátor, který je pro její reprezentaci použit v datech, její název, datový typ, popis a příklad.
+
+### Továrna
+Tato třída reprezentuje továrnu.
+
+#### Název továrny
+Vlastnost
+	název
+Typ
+	Řetězec
+Jméno
+	Název továrny
+Popis
+	Název továrny
+Příklad
+	Karlíkova továrna na čokoládu, a.s.
+
+#### Rychlost výroby
+Vlastnost
+	rychlost výroby
+Typ
+	Číslo
+Jméno
+	Rychlost výroby
+Popis
+	Počet vyprodukovaných sladkostí za minutu
+Příklad
+	10000
+
+#### Vazba: Zaměstnává
+Vazba
+	zaměstnává
+Typ
+	Zaměstnanec
+Jméno
+	Zaměstnává
+Popis
+	Zaměstnanec, který je zaměstnaný danou továrnou
