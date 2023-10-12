@@ -42,3 +42,332 @@ Jméno
 	Zaměstnává
 Popis
 	Zaměstnanec, který je zaměstnaný danou továrnou
+
+#### Vazba: Vyrábí
+Vazba
+	vyrábí
+Typ
+	Sladkost
+Jméno
+	Vyrábí
+Popis
+	Sladkost, která je vyráběna danou továrnou.
+
+#### Vazba: Nachází se v
+Vazba
+	nachází se v
+Typ
+	Automat
+Jméno
+	Nachází se v
+Popis
+	Automat, který se nachází v prostorách dané tovýrny.
+
+### Zaměstnanec
+Tato třída reprezentuje zaměstnance.
+
+#### Jméno
+Vlastnost
+	jméno
+Typ
+	Pole řetězců
+Jméno
+	Jméno
+Popis
+	Křestní jméno
+Příklad
+	Jan Pavel Eduard
+
+#### Příjmení
+Vlastnost
+	příjmení
+Typ
+	Řetězec
+Jméno
+	Příjmení
+Popis
+	Příjmení
+Příklad
+	Novák
+
+#### Tituly
+Vlastnost
+	tituly
+Typ
+	Pole řetězců
+Jméno
+	Tituly
+Popis
+	Všechny dosažené tituly
+Příklad
+	Mgr. MUDr.
+
+#### Vazba: Zaměstnává
+Vazba
+	zaměstnává
+Typ
+	Továrna
+Jméno
+	Zaměstnává
+Popis
+	Továrna, která zaměstnává daného zaměstnance
+
+### Sladkost
+Tato třída reprezentuje sladkost.
+
+#### Název
+Vlastnost
+	název
+Typ
+	Řetězec
+Jméno
+	Název
+Popis
+	Prodejní název sladkosti
+Příklad
+	Tatranka
+
+#### Hmotnost
+Vlastnost
+	hmotnost
+Typ
+	Číslo
+Jméno
+	Hmotnost
+Popis
+	Hmotnost samotné sladkosti bez obalu, uvedeno v gramech
+Příklad
+	120
+
+#### Šířka
+Vlastnost
+	šířka
+Typ
+	Číslo
+Jméno
+	Šířka
+Popis
+	Šířka samotné sladkosti bez obalu, uvedeno v milimetrech
+Příklad
+	32
+
+#### Délka
+Vlastnost
+	délka
+Typ
+	Číslo
+Jméno
+	Délka
+Popis
+	Délka samotné sladkosti bez obalu, uvedeno v milimetrech
+Příklad
+	73
+
+#### Výška
+Vlastnost
+	výška
+Typ
+	Číslo
+Jméno
+	Výška
+Popis
+	Výška samotné sladkosti bez obalu, uvedeno v milimetrech
+Příklad
+	16
+
+#### Vazba: Vyrábí
+Vazba
+	vyrábí
+Typ
+	Továrna
+Jméno
+	Vyrábí
+Popis
+	Továrna, která vyrábí danou sladkost
+
+#### Vazba: Nabízí
+Vazba
+	nabízí
+Typ
+	Automat
+Jméno
+	Nabízí
+Popis
+	Automat, který nabízí danou sladkost
+
+#### Vazba: Obsahuje
+Vazba
+	obsahuje
+Typ
+	Surovina
+Jméno
+	Obsahuje
+Popis
+	Surovina, kterou daná sladkost obsahuje
+
+### Automat
+Tato třída reprezentuje automat spravovaný řetězcem továren, prodává sladkosti vyráběné oním řetězcem továren
+
+#### Název
+Vlastnost
+	název
+Typ
+	Řetězec
+Jméno
+	Název
+Popis
+	Název automatu
+Příklad
+	Ňamky u Karlova mostu
+
+#### Kapacita
+Vlastnost
+	kapacita
+Typ
+	Číslo
+Jméno
+	Kapacita
+Popis
+	Počet sladkostí, které automat dokáže v jednu chvíli skladovat a prodávat
+Příklad
+	750
+
+#### Šířka
+Vlastnost
+	šířka
+Typ
+	Číslo
+Jméno
+	Šířka
+Popis
+	Šířka celého automatu, uvedeno v milimetrech
+Příklad
+	1321
+
+#### Délka
+Vlastnost
+	délka
+Typ
+	Číslo
+Jméno
+	Délka
+Popis
+	Délka celého automatu, uvedeno v milimetrech
+Příklad
+	1010
+
+#### Výška
+Vlastnost
+	výška
+Typ
+	Číslo
+Jméno
+	Výška
+Popis
+	Výška celého automatu, uvedeno v milimetrech
+Příklad
+	2023
+
+#### Vazba: Nachází se v
+Vazba
+	nachází se v
+Typ
+	Továrna
+Jméno
+	Nachází se v
+Popis
+	Továrna, v jejíž prostorách se automat nachází
+
+#### Vazba: Nabízí
+Vazba
+	nabízí
+Typ
+	Sladkost
+Jméno
+	Nabízí
+Popis
+	Sladkost, kterou automat nabízí a prodává
+
+### Surovina
+Tato třída reprezentuje surovinu potřebnou pro výrobu nějakých sladkostí
+
+#### Název
+Vlastnost
+	název
+Typ
+	Řetězec
+Jméno
+	Název
+Popis
+	Název suroviny
+Příklad
+	Lískové ořechy loupané
+
+#### Cena za kg
+Vlastnost
+	cena za kg
+Typ
+	Číslo
+Jméno
+	Cena za kg
+Popis
+	Cena dané suroviny za jeden kilogram, uvedeno v korunách
+Příklad
+	327
+
+#### Vazba: Obsahuje
+Vazba
+	obsahuje
+Typ
+	Sladkost
+Jméno
+	Obsahuje
+Popis
+	Sladkost, která obsahuje danou surovinu
+
+#### Vazba: Obsahuje
+Vazba
+	obsahuje
+Typ
+	Alergen
+Jméno
+	Obsahuje
+Popis
+	Alergen, který je obsažen v dané surovině
+
+### Alergen
+Tato třída reprezentuje alergen
+
+#### Název
+Vlastnost
+	název
+Typ
+	Řetězec
+Jméno
+	Název
+Popis
+	Název alergenu
+Příklad
+	Skořápkové plody
+
+#### Číslo
+Vlastnost
+	číslo
+Typ
+	Číslo
+Jméno
+	Číslo
+Popis
+	Českou republikou uznávané číslo daného alergenu
+Příklad
+	8
+
+#### Vazba: Obsahuje
+Vazba
+	obsahuje
+Typ
+	Surovina
+Jméno
+	Obsahuje
+Popis
+	Surovina, která obsahuje daný alergen
