@@ -61,7 +61,7 @@ Typ
 Jméno
 	Nachází se v
 Popis
-	Automat, který se nachází v prostorách dané tovýrny.
+	Automat, který se nachází v prostorách dané továrny.
 
 ### Zaměstnanec
 Tato třída reprezentuje zaměstnance.
@@ -358,7 +358,7 @@ Typ
 Jméno
 	Číslo
 Popis
-	Českou republikou uznávané číslo daného alergenu
+	Číslo alergenu dle Nařízení (EU) č. 1169/2011
 Příklad
 	8
 
