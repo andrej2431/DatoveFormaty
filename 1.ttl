@@ -1,45 +1,59 @@
-#Instances
+#Prefixy
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-
 @prefix dcterms: <http://purl.org/dc/terms/> .
-
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-
-
 @prefix ex: <https://example.org/vocabulary/> .
 @prefix ex2: <https://example.org/resource/pages/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # Deklarace
-ex:Zaměstnanec a rdfs:Class .
 ex:Továrna a rdfs:Class .
+ex:Zaměstnanec a rdfs:Class .
 ex:Sladkost a rdfs:Class .
 ex:Automat a rdfs:Class .
 ex:Surovina a rdfs:Class .
 ex:Alergen a rdfs:Class .
 
-dcterms:název a rdf:Property .
-dcterms:rychlostVýroby a rdf:Property .
+# Tovarna
+ex:názevTovárny a rdf:Property .
+ex:rychlostVýroby a rdf:Property .
 
-dcterms:jméno a rdf:Property .
-dcterms:příjmení a rdf:Property .
-dcterms:tituly a rdf:Property .
+# Zamestnanec
+ex:jméno a rdf:Property .
+ex:příjmení a rdf:Property .
+ex:tituly a rdf:Property .
 
-dcterms:hmostnost a rdf:Property .
-dcterms:šířka a rdf:Property .
-dcterms:výška a rdf:Property .
-dcterms:délka a rdf:Property .
+# Sladkost
+ex:názevSladkosti a rdf:Property .
+ex:hmostnost a rdf:Property .
+ex:šířkaSladkosti a rdf:Property .
+ex:výškaSladkosti a rdf:Property .
+ex:délkaSladkosti a rdf:Property .
 
-dcterms:kapacita a rdf:Property .
+# Automat
+ex:názevAutomatu a rdf:Property .
+ex:šířkaAutomatu a rdf:Property .
+ex:výškaAutomatu a rdf:Property .
+ex:délkaAutomatu a rdf:Property .
+ex:kapacita a rdf:Property .
 
-dcterms:cenaZaKg a rdf:Property .
-dcterms:číslo a rdf:Property .
+# Surovina
+ex:názevSuroviny a rdf:Property .
+ex:cenaZaKg a rdf:Property .
 
-dcterms:zaměstnává a rdf:Property .
-dcterms:vyrábí a rdf:Property .
-dcterms:nacházíSeV a rdf:Property .
-dcterms:nabízí a rdf:Property .
-dcterms:obsahujeSurovinu a rdf:Property .
-dcterms:obsahujeAlergen a rdf:Property .
+#Alergen
+ex:názevAlergenu a rdf:Property .
+ex:číslo a rdf:Property .
+
+
+## vztahy
+ex:zaměstnává a rdf:Property .
+ex:vyrábí a rdf:Property .
+ex:nacházíSeV a rdf:Property .
+ex:nabízí a rdf:Property .
+ex:obsahujeSurovinu a rdf:Property .
+ex:obsahujeAlergen a rdf:Property .
 
 ######### Definice class
 
@@ -49,23 +63,23 @@ ex:Zaměstnanec a rdfs:Class;
     rdfs:comment ""@cs .
 
 ex:Továrna a rdfs:Class;
-    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:label "Továrna"@cs ;
     rdfs:comment ""@cs.
 
 ex:Sladkost a rdfs:Class;
-    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:label "Sladkost"@cs ;
     rdfs:comment ""@cs.
 
 ex:Automat a rdfs:Class;
-    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:label "Automat"@cs ;
     rdfs:comment ""@cs.
 
 ex:Surovina a rdfs:Class;
-    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:label "Surovina"@cs ;
     rdfs:comment ""@cs.
 
 ex:Alergen a rdfs:Class;
-    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:label "Alergen"@cs ;
     rdfs:comment ""@cs.
 
 
@@ -108,68 +122,123 @@ ex:obsahujeAlergen a rdfs:Property;
 
 # Definice properties
 
-ex:název a rdfs:Property;
-    rdfs:label "Název"@cs ;
+### Tovarna
+ex:názevTovárny a rdfs:Property;
+    rdfs:label "Název Továrny"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:xsd.
+    rdfs:domain ex:Tovarna;
+    rdfs:range xsd:string.
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+ex:rychlostVýroby a rdfs:Property;
+    rdfs:label "Rychlost Výroby"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:domain ex:Továrna;
+    rdfs:range xsd:int.
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+### Zamestanec
+ex:jméno a rdfs:Property;
+    rdfs:label "Jméno"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:domain ex:Zaměstnanec;
+    rdfs:range xsd:string.
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+ex:příjmení a rdfs:Property;
+    rdfs:label "Příjmení"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:domain ex:Zaměstnanec;
+    rdfs:range xsd:string.
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+ex:tituly a rdfs:Property;
+    rdfs:label "Tituly"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:domain ex:Zaměstnanec;
+    rdfs:range xsd:string. # TODO
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+### Sladkost
+ex:názevSladkosti a rdfs:Property;
+    rdfs:label "Název Sladkosti"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:domain ex:Sladkost;
+    rdfs:range xsd:string.
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+ex:hmostnost a rdfs:Property;
+    rdfs:label "Hmostnost"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:domain ex:Sladkost;
+    rdfs:range xsd:int.
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+ex:šířkaSladkosti a rdfs:Property;
+    rdfs:label "Šírka Sladkosti"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:domain ex:Sladkost;
+    rdfs:range xsd:int.
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+ex:výškaSladkosti a rdfs:Property;
+    rdfs:label "Výška Sladkosti"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:domain ex:Sladkost;
+    rdfs:range xsd:int.
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+ex:délkaSladkosti a rdfs:Property;
+    rdfs:label "Délka Sladkosti"@cs ;
     rdfs:comment ""@cs;
-    rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:domain ex:Sladkost;
+    rdfs:range xsd:int.
 
-ex:obsahujeAlergen a rdfs:Property;
-    rdfs:label "Obsahuje alergen"@cs ;
+### Automat
+ex:názevAutomatu a rdfs:Property;
+    rdfs:label "Název Automatu"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Automat;
+    rdfs:range xsd:string.
+
+ex:šířkaAutomatu a rdfs:Property;
+    rdfs:label "Šírka Automatu"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Automat;
+    rdfs:range xsd:int.
+
+ex:výškaAutomatu a rdfs:Property;
+    rdfs:label "Výška Automatu"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Automat;
+    rdfs:range xsd:int.
+
+ex:délkaAutomatu a rdfs:Property;
+    rdfs:label "Délka Automatu"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Automat;
+    rdfs:range xsd:int.
+
+ex:kapacita a rdfs:Property;
+    rdfs:label "Kapacita"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Automat;
+    rdfs:range xsd:int.
+
+### Surovina
+ex:názevSuroviny a rdfs:Property;
+    rdfs:label "Název Suroviny"@cs ;
     rdfs:comment ""@cs;
     rdfs:domain ex:Surovina;
-    rdfs:range ex:Alergen.
+    rdfs:range xsd:string.
+
+
+ex:cenaZaKg a rdfs:Property;
+    rdfs:label "Cena za kg"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range xsd:double.
+
+### Alergen
+ex:názevAlergenu a rdfs:Property;
+    rdfs:label "Název alergenu"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Alergen;
+    rdfs:range xsd:string.
+
+ex:číslo a rdfs:Property;
+    rdfs:label "Číslo"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Alergen;
+    rdfs:range xsd:int.
