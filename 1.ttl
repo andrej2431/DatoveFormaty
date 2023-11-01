@@ -1,0 +1,175 @@
+#Instances
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+@prefix ex: <https://example.org/vocabulary/> .
+@prefix ex2: <https://example.org/resource/pages/> .
+
+# Deklarace
+ex:Zaměstnanec a rdfs:Class .
+ex:Továrna a rdfs:Class .
+ex:Sladkost a rdfs:Class .
+ex:Automat a rdfs:Class .
+ex:Surovina a rdfs:Class .
+ex:Alergen a rdfs:Class .
+
+dcterms:název a rdf:Property .
+dcterms:rychlostVýroby a rdf:Property .
+
+dcterms:jméno a rdf:Property .
+dcterms:příjmení a rdf:Property .
+dcterms:tituly a rdf:Property .
+
+dcterms:hmostnost a rdf:Property .
+dcterms:šířka a rdf:Property .
+dcterms:výška a rdf:Property .
+dcterms:délka a rdf:Property .
+
+dcterms:kapacita a rdf:Property .
+
+dcterms:cenaZaKg a rdf:Property .
+dcterms:číslo a rdf:Property .
+
+dcterms:zaměstnává a rdf:Property .
+dcterms:vyrábí a rdf:Property .
+dcterms:nacházíSeV a rdf:Property .
+dcterms:nabízí a rdf:Property .
+dcterms:obsahujeSurovinu a rdf:Property .
+dcterms:obsahujeAlergen a rdf:Property .
+
+######### Definice class
+
+
+ex:Zaměstnanec a rdfs:Class;
+    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:comment ""@cs .
+
+ex:Továrna a rdfs:Class;
+    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:comment ""@cs.
+
+ex:Sladkost a rdfs:Class;
+    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:comment ""@cs.
+
+ex:Automat a rdfs:Class;
+    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:comment ""@cs.
+
+ex:Surovina a rdfs:Class;
+    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:comment ""@cs.
+
+ex:Alergen a rdfs:Class;
+    rdfs:label "Zaměstnanec"@cs ;
+    rdfs:comment ""@cs.
+
+
+### Definice vztahov
+ex:zaměstnává a rdfs:Property;
+    rdfs:label "Zaměstnává"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Továrna;
+    rdfs:range ex:Zaměstnanec.
+
+ex:vyrábí a rdfs:Property;
+    rdfs:label "Vyrábí"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Továrna;
+    rdfs:range ex:Sladkost.
+
+ex:nacházíSeV a rdfs:Property;
+    rdfs:label "Se nachází v"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Automat;
+    rdfs:range ex:Továrna.
+
+ex:nabízí a rdfs:Property;
+    rdfs:label "Nabízí"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Automat;
+    rdfs:range ex:Sladkost.
+
+ex:obsahujeSurovinu a rdfs:Property;
+    rdfs:label "Obsahuje surovinu"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Sladkost;
+    rdfs:range ex:Surovina.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+# Definice properties
+
+ex:název a rdfs:Property;
+    rdfs:label "Název"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:xsd.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
+
+ex:obsahujeAlergen a rdfs:Property;
+    rdfs:label "Obsahuje alergen"@cs ;
+    rdfs:comment ""@cs;
+    rdfs:domain ex:Surovina;
+    rdfs:range ex:Alergen.
