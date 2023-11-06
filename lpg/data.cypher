@@ -104,8 +104,3 @@ Create
 (Automat2)-[:NacházíSaV]->(Továrna2),
 (Automat3)-[:NacházíSaV]->(Továrna3),
 (Automat4)-[:NacházíSaV]->(Továrna3)
-
-MATCH (Apollo:Zaměstnanec {jméno: 'Apollo', přijmení:'Liečivý'} ),
-      (Zeus:Zaměstnanec {jméno: 'Zeus', přijmení:'Hromný'}),
-      p = shortestPath((Apollo)-[:Zaměstnává]-(Zeus))
-RETURN p
