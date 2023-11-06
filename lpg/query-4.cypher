@@ -1,2 +1,0 @@
-// Dotaz najde 'najkratší cestu' mezi Hádesem a Zeusem, použije se built-in algoritmus shortestPath()
-MATCH p=shortestPath((Zeus:Zaměstnanec {jméno:"Zeus"})-[*]-(Hades:Zaměstnanec {jméno:"Hádes"})) RETURN p

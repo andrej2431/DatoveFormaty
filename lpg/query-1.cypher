@@ -1,2 +1,0 @@
-// Vrať název a hmotnost sladkosti o hmotnosti mezi 10 a 100 gramy a seřadí podle hmotnosti od největší
-MATCH (m:Sladkost) WHERE m.hmotnost <=100 AND m.hmotnost > 10 RETURN m.název, m.hmotnost ORDER BY m.hmotnost Desc
