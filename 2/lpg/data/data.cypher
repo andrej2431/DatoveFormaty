@@ -9,20 +9,20 @@ CREATE (Artemis:Zaměstnanec {jméno:'Artemis', přijmení:'Lesná', tituly: 'Lu
 CREATE (Apollo:Zaměstnanec {jméno:'Apollo', přijmení:'Liečivý', tituly: 'Lig.'})
 
 // Továrny
-CREATE (Továrna1:Továrna {název:'Továrna 1', rychlostVyroby:32})
-CREATE (Továrna2:Továrna {název:'Továrna 2', rychlostVyroby:64})
-CREATE (Továrna3:Továrna {název:'Továrna 3', rychlostVyroby:128})
+CREATE (TovárnaKarlíkova:Továrna {název:'Karlíkova továrna na čokoládu', rychlostVyroby:32})
+CREATE (TovárnaHaribo:Továrna {název:'Haribo Industries', rychlostVyroby:64})
+CREATE (TovárnaCukPrum:Továrna {název:'Cukrárenská průmyslovka', rychlostVyroby:128})
 
 // Sladkost
-CREATE (Sladkost1:Sladkost {název:'Sladkost 1', hmotnost:125, šířka:50, délka:60, výška: 120})
-CREATE (Sladkost2:Sladkost {název:'Sladkost 2', hmotnost:75, šířka:60, délka:60, výška: 70})
-CREATE (Sladkost3:Sladkost {název:'Sladkost 3', hmotnost:50, šířka:50, délka:30, výška: 80})
+CREATE (Tatranka:Sladkost {název:'Tatranka kyselé', hmotnost:125, šířka:50, délka:60, výška: 120})
+CREATE (Nektar:Sladkost {název:'Nektar', hmotnost:75, šířka:60, délka:60, výška:70})
+CREATE (ČokoDortík:Sladkost {název:'Čokoládový dortík', hmotnost:50, šířka:50, délka:30, výška: 80})
 
 //Automat
-CREATE (Automat1:Automat {název:'Automat 1', kapacita:120, šířka:50, délka:70, výška: 200})
-CREATE (Automat2:Automat {název:'Automat 2', kapacita:120, šířka:50, délka:70, výška: 200})
-CREATE (Automat3:Automat {název:'Automat 3', kapacita:110, šířka:50, délka:70, výška: 180})
-CREATE (Automat4:Automat {název:'Automat 4', kapacita:110, šířka:50, délka:70, výška: 180})
+CREATE (AutomatUVrátnice:Automat {název:'U Vrátnice', kapacita:120, šířka:50, délka:70, výška: 200})
+CREATE (AutomatRychláMňamka:Automat {název:'Rychlá Mňamka', kapacita:120, šířka:50, délka:70, výška: 200})
+CREATE (AutomatPohoštěníVMezipatře:Automat {název:'Pohoštění V Mezipatře', kapacita:110, šířka:50, délka:70, výška: 180})
+CREATE (AutomatOblačnéObčerstvení:Automat {název:'Oblačné Občerstvení', kapacita:110, šířka:50, délka:70, výška: 180})
 
 // Suroviny
 CREATE (Múka:Surovina {název:'múka', cenaZaKilo:24})
@@ -42,15 +42,15 @@ CREATE (MlékoAlergén:Alergén {název:'mléko', číslo:7})
 
 // Zaměstnává
 CREATE
-(Továrna1)-[:Zaměstnává]->(Zeus),
-(Továrna1)-[:Zaměstnává]->(Athena),
+(TovárnaKarlíkova)-[:Zaměstnává {pozice:'Šéf'}]->(Zeus),
+(TovárnaKarlíkova)-[:Zaměstnává {pozice:'U pásu'}]->(Athena),
 
-(Továrna2)-[:Zaměstnává]->(Hades),
-(Továrna2)-[:Zaměstnává]->(Afrodita),
-(Továrna2)-[:Zaměstnává]->(Hermes),
+(TovárnaHaribo)-[:Zaměstnává {pozice:'Vrátný'}]->(Hades),
+(TovárnaHaribo)-[:Zaměstnává {pozice:'Modelka do reklam'}]->(Afrodita),
+(TovárnaHaribo)-[:Zaměstnává {pozice:'U pásu'}]->(Hermes),
 
-(Továrna3)-[:Zaměstnává]->(Apollo),
-(Továrna3)-[:Zaměstnává]->(Artemis)
+(TovárnaCukPrum)-[:Zaměstnává {pozice:'Technik'}]->(Apollo),
+(TovárnaCukPrum)-[:Zaměstnává {pozice:'U pásu'}]->(Artemis)
 
 // Obsahuje Alergén
 CREATE
@@ -63,43 +63,42 @@ CREATE
 
 // Obsahuje Surovinu
 Create
-(Sladkost1)-[:Obsahuje]->(Čokoláda),
-(Sladkost1)-[:Obsahuje]->(Mléko),
-(Sladkost1)-[:Obsahuje]->(Múka),
-(Sladkost2)-[:Obsahuje]->(Múka),
-(Sladkost2)-[:Obsahuje]->(Mléko),
-(Sladkost2)-[:Obsahuje]->(Vejce),
-(Sladkost2)-[:Obsahuje]->(Cukor),
-(Sladkost2)-[:Obsahuje]->(Maslo),
-(Sladkost3)-[:Obsahuje]->(Čokoláda),
-(Sladkost3)-[:Obsahuje]->(Múka),
-(Sladkost3)-[:Obsahuje]->(Maslo)
+(Tatranka)-[:Obsahuje]->(Čokoláda),
+(Tatranka)-[:Obsahuje]->(Mléko),
+(Tatranka)-[:Obsahuje]->(Múka),
+(Nektar)-[:Obsahuje]->(Múka),
+(Nektar)-[:Obsahuje]->(Mléko),
+(Nektar)-[:Obsahuje]->(Vejce),
+(Nektar)-[:Obsahuje]->(Cukor),
+(Nektar)-[:Obsahuje]->(Maslo),
+(ČokoDortík)-[:Obsahuje]->(Čokoláda),
+(ČokoDortík)-[:Obsahuje]->(Múka),
+(ČokoDortík)-[:Obsahuje]->(Maslo)
 
 // Vyrábí
 Create
-(Továrna1)-[:Vyrábí]->(Sladkost1),
-(Továrna2)-[:Vyrábí]->(Sladkost1),
-(Továrna2)-[:Vyrábí]->(Sladkost2),
-(Továrna3)-[:Vyrábí]->(Sladkost2),
-(Továrna3)-[:Vyrábí]->(Sladkost3)
+(TovárnaKarlíkova)-[:Vyrábí]->(Tatranka),
+(TovárnaHaribo)-[:Vyrábí]->(Tatranka),
+(TovárnaHaribo)-[:Vyrábí]->(Nektar),
+(TovárnaCukPrum)-[:Vyrábí]->(Nektar),
+(TovárnaCukPrum)-[:Vyrábí]->(ČokoDortík)
 
 //Nabízí
 Create
-(Automat1)-[:Nabízí]->(Sladkost1),
-(Automat1)-[:Nabízí]->(Sladkost2),
-(Automat1)-[:Nabízí]->(Sladkost3),
-(Automat2)-[:Nabízí]->(Sladkost1),
-(Automat2)-[:Nabízí]->(Sladkost2),
-(Automat2)-[:Nabízí]->(Sladkost3),
-
-(Automat3)-[:Nabízí]->(Sladkost2),
-(Automat3)-[:Nabízí]->(Sladkost3),
-(Automat4)-[:Nabízí]->(Sladkost2),
-(Automat4)-[:Nabízí]->(Sladkost3)
+(AutomatUVrátnice)-[:Nabízí]->(Tatranka),
+(AutomatUVrátnice)-[:Nabízí]->(Nektar),
+(AutomatUVrátnice)-[:Nabízí]->(ČokoDortík),
+(AutomatRychláMňamka)-[:Nabízí]->(Tatranka),
+(AutomatRychláMňamka)-[:Nabízí]->(Nektar),
+(AutomatRychláMňamka)-[:Nabízí]->(ČokoDortík),
+(AutomatPohoštěníVMezipatře)-[:Nabízí]->(Nektar),
+(AutomatPohoštěníVMezipatře)-[:Nabízí]->(ČokoDortík),
+(AutomatOblačnéObčerstvení)-[:Nabízí]->(Nektar),
+(AutomatOblačnéObčerstvení)-[:Nabízí]->(ČokoDortík)
 
 //Nachází sa v
 Create
-(Automat1)-[:NacházíSaV]->(Továrna1),
-(Automat2)-[:NacházíSaV]->(Továrna2),
-(Automat3)-[:NacházíSaV]->(Továrna3),
-(Automat4)-[:NacházíSaV]->(Továrna3)
+(AutomatUVrátnice)-[:NacházíSaV]->(TovárnaKarlíkova),
+(AutomatRychláMňamka)-[:NacházíSaV]->(TovárnaHaribo),
+(AutomatPohoštěníVMezipatře)-[:NacházíSaV]->(TovárnaCukPrum),
+(AutomatOblačnéObčerstvení)-[:NacházíSaV]->(TovárnaCukPrum)
