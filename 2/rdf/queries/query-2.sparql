@@ -1,5 +1,7 @@
 # Pre každého zamestnanca vypíše automaty ke kterým má prístup a počet sladkostí, ktoré ten automat nabízí
 
+PREFIX ex: <https://example.org/vocabulary/>
+
 SELECT ?jmeno ?automatNazev (COUNT(?sladkost) AS ?sladkostCount)
 WHERE {
   ?zamestnanec a ex:Zaměstnanec.

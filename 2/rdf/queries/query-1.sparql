@@ -1,4 +1,7 @@
 # Vypíše názvy všetkých automatov, v ktorých priemerná hmotnost sladkostí ktoré nabízí je >= 75g
+
+PREFIX ex: <https://example.org/vocabulary/>
+
 SELECT ?nazev
 WHERE {
   ?automat a ex:Automat.

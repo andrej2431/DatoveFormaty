@@ -1,5 +1,7 @@
-
 # Vypíše názvy všetkých sladkostí ktoré neobsahujú VejceAlergen zoradených podľa hmotnosti
+
+PREFIX ex: <https://example.org/vocabulary/>
+
 SELECT ?nazev
 WHERE {
   ?sladkost a ex:Sladkost.

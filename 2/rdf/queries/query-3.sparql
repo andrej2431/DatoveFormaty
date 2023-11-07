@@ -1,5 +1,8 @@
 # Vnútorný SELECT vyberie dvojice zamestnancov a objem najväčšej sladkosti, ktorú si obidvaja môžu zobrať z automatu
 # Vonkajší SELECT potom len vyberie názov tej najväčšej sladkosti
+
+PREFIX ex: <https://example.org/vocabulary/>
+
 SELECT DISTINCT ?jmeno1 ?jmeno2 ?nazevSladkosti{
   {
     SELECT DISTINCT ?zamestnanec1 ?zamestnanec2 (MAX(?objemSladkosti) AS ?maxObjemSladkosti)
