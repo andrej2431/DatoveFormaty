@@ -7,7 +7,8 @@
 @prefix gr: <http://purl.org/goodrelations/v1#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# Deklarace
+######### Deklarace
+
 # ex:Továrna a rdfs:Class .
 # ex:Zaměstnanec a rdfs:Class .
 # ex:Sladkost a rdfs:Class .
@@ -46,7 +47,6 @@
 # ex:názevAlergenu a rdf:Property .
 # ex:číslo a rdf:Property .
 
-
 ## vztahy
 # ex:zaměstnává a rdf:Property .
 # ex:vyrábí a rdf:Property .
@@ -56,7 +56,6 @@
 # ex:obsahujeAlergen a rdf:Property .
 
 ######### Definice class
-
 
 ex:Zaměstnanec a rdfs:Class;
     rdfs:label "Zaměstnanec"@cs ;
@@ -82,8 +81,8 @@ ex:Alergen a rdfs:Class;
     rdfs:label "Alergen"@cs ;
     rdfs:comment "Tato třída reprezentuje alergen."@cs.
 
+######### Definice vztahov
 
-### Definice vztahov
 ex:zaměstnává a rdfs:Property;
     rdfs:label "Zaměstnává"@cs ;
     rdfs:comment "Zaměstnanec, který je zaměstnaný danou továrnou"@cs;
@@ -120,9 +119,10 @@ ex:obsahujeAlergen a rdfs:Property;
     rdfs:domain ex:Surovina;
     rdfs:range ex:Alergen.
 
-# Definice properties
+######### Definice properties
 
 ### Tovarna
+
 ex:názevTovárny a rdfs:Property;
     rdfs:label "Název továrny"@cs ;
     rdfs:comment "Název továrny"@cs;
@@ -135,8 +135,8 @@ ex:rychlostVýroby a rdfs:Property;
     rdfs:domain ex:Továrna;
     rdfs:range xsd:decimal.
 
-
 ### Zamestanec
+
 ex:jméno a rdfs:Property;
     rdfs:label "Jméno"@cs ;
     rdfs:comment "Křestní jméno"@cs;
@@ -153,10 +153,10 @@ ex:tituly a rdfs:Property;
     rdfs:label "Tituly"@cs ;
     rdfs:comment "Dosažené tituly"@cs;
     rdfs:domain ex:Zaměstnanec;
-    rdfs:range xsd:string. # TODO
-
+    rdfs:range xsd:string.
 
 ### Sladkost
+
 ex:názevSladkosti a rdfs:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Prodejní název sladkosti"@cs;
@@ -187,8 +187,8 @@ ex:výškaSladkosti a rdfs:Property;
     rdfs:domain ex:Sladkost;
     rdfs:range xsd:int.
 
-
 ### Automat
+
 ex:názevAutomatu a rdfs:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název automatu"@cs;
@@ -219,8 +219,8 @@ ex:výškaAutomatu a rdfs:Property;
     rdfs:domain ex:Automat;
     rdfs:range xsd:int.
 
-
 ### Surovina
+
 ex:názevSuroviny a rdfs:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název suroviny"@cs;
@@ -233,8 +233,8 @@ ex:cenaZaKg a rdfs:Property;
     rdfs:domain ex:Surovina;
     rdfs:range xsd:decimal.
 
-
 ### Alergen
+
 ex:názevAlergenu a rdfs:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název alergenu"@cs;
