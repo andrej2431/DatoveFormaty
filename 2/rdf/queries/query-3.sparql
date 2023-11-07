@@ -1,0 +1,45 @@
+# Vnútorný SELECT vyberie dvojice zamestnancov a objem najväčšej sladkosti, ktorú si obidvaja môžu zobrať z automatu
+# Vonkajší SELECT potom len vyberie názov tej najväčšej sladkosti
+SELECT DISTINCT ?jmeno1 ?jmeno2 ?nazevSladkosti{
+  {
+    SELECT DISTINCT ?zamestnanec1 ?zamestnanec2 (MAX(?objemSladkosti) AS ?maxObjemSladkosti)
+    WHERE {
+      ?zamestnanec1 a ex:Zaměstnanec.
+      ?zamestnanec2 a ex:Zaměstnanec.
+      
+      ?zamestnanec1 ex:jméno ?jmeno1.
+  	  ?zamestnanec2 ex:jméno ?jmeno2.
+      
+      ?sladkost a ex:Sladkost.
+      ?sladkost ex:šířkaSladkosti ?sirka.
+      ?sladkost ex:délkaSladkosti ?delka.
+      ?sladkost ex:výškaSladkosti ?vyska.
+
+      BIND(?sirka*?delka*?vyska AS ?objemSladkosti)
+
+      FILTER(?zamestnanec1 != ?zamestnanec2 && ?jmeno1 < ?jmeno2)
+      FILTER EXISTS {
+        ?automat1 ex:nacházíSeV/ex:zaměstnává ?zamestnanec1.
+        ?automat2 ex:nacházíSeV/ex:zaměstnává ?zamestnanec2.
+        ?automat1 ex:nabízí ?sladkost.
+        ?automat2 ex:nabízí ?sladkost.
+      }
+    }
+    GROUP BY ?zamestnanec1 ?zamestnanec2
+  }
+  
+  ?zamestnanec1 ex:jméno ?jmeno1.
+  ?zamestnanec2 ex:jméno ?jmeno2.
+    
+  ?automat1 ex:nacházíSeV/ex:zaměstnává ?zamestnanec1.
+  ?automat2 ex:nacházíSeV/ex:zaměstnává ?zamestnanec2.
+  ?automat1 ex:nabízí ?sladkost.
+  ?automat2 ex:nabízí ?sladkost.
+  ?sladkost ex:názevSladkosti ?nazevSladkosti.
+  ?sladkost ex:šířkaSladkosti ?sirka.
+  ?sladkost ex:délkaSladkosti ?delka.
+  ?sladkost ex:výškaSladkosti ?vyska.
+  
+  BIND(?sirka*?delka*?vyska AS ?objemSladkosti)
+  FILTER(?objemSladkosti = ?maxObjemSladkosti)
+}

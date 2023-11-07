@@ -74,7 +74,7 @@ ex:obsahujeAlergen a rdfs:Property;
 ### Tovarna
 
 ex:názevTovárny a rdfs:Property;
-    rdfs:label "Název továrny"@cs ;
+    rdfs:label "Název"@cs ;
     rdfs:comment "Název továrny"@cs;
     rdfs:domain ex:Továrna;
     rdfs:range rdf:langString.
@@ -202,93 +202,86 @@ ex:číslo a rdfs:Property;
 
 ## Instance
 ### Zaměstnanci
-ex:Zeus a ex:Zaměstanec;
+ex:Zeus a ex:Zaměstnanec;
     ex:jméno "Zeus"@cs;
     ex:příjmení "Hromný"@cs;
-    ex:tituly "Nej."@cs;
     .
 
-ex:Athena a ex:Zaměstanec;
-    ex:jméno "Zeus"@cs;
-    ex:příjmení "Hromný"@cs;
-    ex:tituly "Pí."@cs;
+ex:Athena a ex:Zaměstnanec;
+    ex:jméno "Athéna"@cs;
+    ex:příjmení "Múdra"@cs;
     .
 
-ex:Hades a ex:Zaměstanec;
-    ex:jméno "Zeus"@cs;
-    ex:příjmení "Hromný"@cs;
-    ex:tituly "PPodsv."@cs;
+ex:Hades a ex:Zaměstnanec;
+    ex:jméno "Hádes"@cs;
+    ex:příjmení "Černý"@cs;
     .
 
-ex:Afrodita a ex:Zaměstanec;
-    ex:jméno "Zeus"@cs;
-    ex:příjmení "Hromný"@cs;
-    ex:tituly "Nejkr."@cs;
+ex:Afrodita a ex:Zaměstnanec;
+    ex:jméno "Afrodita"@cs;
+    ex:příjmení "Krásna"@cs;
     .
 
-ex:Hermes a ex:Zaměstanec;
-    ex:jméno "Zeus"@cs;
-    ex:příjmení "Hromný"@cs;
-    ex:tituly "Buch."@cs;
+ex:Hermes a ex:Zaměstnanec;
+    ex:jméno "Hermes"@cs;
+    ex:příjmení "Kováč"@cs;
     .
 
-ex:Artemis a ex:Zaměstanec;
-    ex:jméno "Zeus"@cs;
-    ex:příjmení "Hromný"@cs;
-    ex:tituly "LukStř."@cs;
+ex:Artemis a ex:Zaměstnanec;
+    ex:jméno "Artemis"@cs;
+    ex:příjmení "Lesná"@cs;
     .
 
-ex:Apollo a ex:Zaměstanec;
-    ex:jméno "Zeus"@cs;
-    ex:příjmení "Hromný"@cs;
-    ex:tituly "Lig."@cs;
+ex:Apollo a ex:Zaměstnanec;
+    ex:jméno "Apollo"@cs;
+    ex:příjmení "Liečivý"@cs;
     .
 
 ### Továrne
 ex:Továrna1 a ex:Továrna;
-    ex:název "Továrna 1"@cs;
+    ex:názevTovárny "Továrna 1"@cs;
     ex:rychlostVýroby "32" @cs;
     .
 
 
 ex:Továrna2 a ex:Továrna;
-    ex:název "Továrna 2"@cs;
+    ex:názevTovárny "Továrna 2"@cs;
     ex:rychlostVýroby "64" @cs;
     .
 
 
 ex:Továrna3 a ex:Továrna;
-    ex:název "Továrna 3"@cs;
+    ex:názevTovárny "Továrna 3"@cs;
     ex:rychlostVýroby "128" @cs;
     .
 ### Sladkosti
 ex:Sladkost1 a ex:Sladkost;
-    ex:název "Sladkost 1"@cs;
-    ex:hmostnost "125"^^xsd:integer;
+    ex:názevSladkosti "Sladkost 1"@cs;
+    ex:hmotnost "125"^^xsd:integer;
     ex:šířkaSladkosti "50"^^xsd:integer;
     ex:délkaSladkosti "60"^^xsd:integer;
     ex:výškaSladkosti "120"^^xsd:integer;
     .
 
 ex:Sladkost2 a ex:Sladkost;
-    ex:název "Sladkost 2"@cs;
-    ex:hmostnost "75"^^xsd:integer;
-    ex:šířkaSladkosti "50"^^xsd:integer;
+    ex:názevSladkosti "Sladkost 2"@cs;
+    ex:hmotnost "75"^^xsd:integer;
+    ex:šířkaSladkosti "60"^^xsd:integer;
     ex:délkaSladkosti "60"^^xsd:integer;
-    ex:výškaSladkosti "120"^^xsd:integer;
+    ex:výškaSladkosti "70"^^xsd:integer;
     .
 
 ex:Sladkost3 a ex:Sladkost;
-    ex:název "Sladkost 3"@cs;
-    ex:hmostnost "50"^^xsd:integer;
+    ex:názevSladkosti "Sladkost 3"@cs;
+    ex:hmotnost "50"^^xsd:integer;
     ex:šířkaSladkosti "50"^^xsd:integer;
-    ex:délkaSladkosti "60"^^xsd:integer;
-    ex:výškaSladkosti "120"^^xsd:integer;
+    ex:délkaSladkosti "30"^^xsd:integer;
+    ex:výškaSladkosti "80"^^xsd:integer;
     .
 
 ### Automaty
 ex:Automat1 a ex:Automat;
-    ex:název "Automat 1"@cs;
+    ex:názevAutomatu "Automat 1"@cs;
     ex:kapacita "120"^^xsd:integer;
     ex:šířkaAutomatu "50"^^xsd:integer;
     ex:délkaAutomatu "70"^^xsd:integer;
@@ -296,7 +289,7 @@ ex:Automat1 a ex:Automat;
     .
 
 ex:Automat2 a ex:Automat;
-    ex:název "Automat 2"@cs;
+    ex:názevAutomatu "Automat 2"@cs;
     ex:kapacita "120"^^xsd:integer;
     ex:šířkaAutomatu "50"^^xsd:integer;
     ex:délkaAutomatu "70"^^xsd:integer;
@@ -304,7 +297,7 @@ ex:Automat2 a ex:Automat;
     .
 
 ex:Automat3 a ex:Automat;
-    ex:název "Automat 3"@cs;
+    ex:názevAutomatu "Automat 3"@cs;
     ex:kapacita "110"^^xsd:integer;
     ex:šířkaAutomatu "50"^^xsd:integer;
     ex:délkaAutomatu "40"^^xsd:integer;
@@ -312,7 +305,7 @@ ex:Automat3 a ex:Automat;
     .
 
 ex:Automat4 a ex:Automat;
-    ex:název "Automat 4"@cs;
+    ex:názevAutomatu "Automat 4"@cs;
     ex:kapacita "110"^^xsd:integer;
     ex:šířkaAutomatu "50"^^xsd:integer;
     ex:délkaAutomatu "70"^^xsd:integer;
@@ -322,59 +315,59 @@ ex:Automat4 a ex:Automat;
 ### Suroviny
 
 ex:Múka a ex:Surovina;
-    ex:název "múka"@cs;
+    ex:názevSuroviny "múka"@cs;
     ex:cenaZaKg "24"^^xsd:integer;
     .
 
 ex:Maslo a ex:Surovina;
-    ex:název "maslo"@cs;
+    ex:názevSuroviny "maslo"@cs;
     ex:cenaZaKg "56"^^xsd:integer;
     .
 
 ex:Cukor a ex:Surovina;
-    ex:název "cukor"@cs;
+    ex:názevSuroviny "cukor"@cs;
     ex:cenaZaKg "20"^^xsd:integer;
     .
 
 ex:Vejce a ex:Surovina;
-    ex:název "vejce"@cs;
+    ex:názevSuroviny "vejce"@cs;
     ex:cenaZaKg "100"^^xsd:integer;
     .
 
 ex:Čokoláda a ex:Surovina;
-    ex:název "čokoláda"@cs;
+    ex:názevSuroviny "čokoláda"@cs;
     ex:cenaZaKg "100"^^xsd:integer;
     .
 
 ex:Mléko a ex:Surovina;
-    ex:název "mléko"@cs;
+    ex:názevSuroviny "mléko"@cs;
     ex:cenaZaKg "23"^^xsd:integer;
     .
 
 ### Alergény
 
 ex:Lepek a ex:Alergen;
-    ex:název "lepek"@cs;
+    ex:názevAlergenu "lepek"@cs;
     ex:číslo "1"^^xsd:integer;
     .
 
 ex:VejceAlergen a ex:Alergen;
-    ex:název "vejce"@cs;
+    ex:názevAlergenu "vejce"@cs;
     ex:číslo "3"^^xsd:integer;
     .
 
 ex:Arašidy a ex:Alergen;
-    ex:název "arašídy"@cs;
+    ex:názevAlergenu "arašídy"@cs;
     ex:číslo "4"^^xsd:integer;
     .
 
 ex:Sója a ex:Alergen;
-    ex:název "sója"@cs;
+    ex:názevAlergenu "sója"@cs;
     ex:číslo "6"^^xsd:integer;
     .
 
 ex:MlékoAlergen a ex:Alergen;
-    ex:název "mléko"@cs;
+    ex:názevAlergenu "mléko"@cs;
     ex:číslo "7"^^xsd:integer;
     .
 
@@ -388,8 +381,8 @@ ex:Továrna2 ex:zaměstnává ex:Hades.
 ex:Továrna2 ex:zaměstnává ex:Afrodita.
 ex:Továrna2 ex:zaměstnává ex:Hermes.
 
-ex:Továrna1 ex:zaměstnává ex:Apollo.
-ex:Továrna1 ex:zaměstnává ex:Artemis.
+ex:Továrna3 ex:zaměstnává ex:Apollo.
+ex:Továrna3 ex:zaměstnává ex:Artemis.
 
 ### Obsahuje alergen
 ex:Múka ex:obsahujeAlergen ex:Lepek.
@@ -423,12 +416,14 @@ ex:Továrna3 ex:vyrábí ex:Sladkost1.
 ex:Automat1 ex:nabízí ex:Sladkost1.
 ex:Automat1 ex:nabízí ex:Sladkost2.
 ex:Automat1 ex:nabízí ex:Sladkost3.
+
 ex:Automat2 ex:nabízí ex:Sladkost1.
 ex:Automat2 ex:nabízí ex:Sladkost2.
 ex:Automat2 ex:nabízí ex:Sladkost3.
 
 ex:Automat3 ex:nabízí ex:Sladkost2.
 ex:Automat3 ex:nabízí ex:Sladkost3.
+
 ex:Automat4 ex:nabízí ex:Sladkost2.
 ex:Automat4 ex:nabízí ex:Sladkost3.
 

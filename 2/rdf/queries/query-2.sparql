@@ -1,0 +1,11 @@
+# Pre každého zamestnanca vypíše automaty ke kterým má prístup a počet sladkostí, ktoré ten automat nabízí
+
+SELECT ?jmeno ?automatNazev (COUNT(?sladkost) AS ?sladkostCount)
+WHERE {
+  ?zamestnanec a ex:Zaměstnanec.
+  ?zamestnanec ex:jméno ?jmeno.
+  ?automat ex:nacházíSeV/ex:zaměstnává ?zamestnanec.
+  ?automat ex:názevAutomatu ?automatNazev.
+  ?automat ex:nabízí ?sladkost.
+}
+GROUP BY ?jmeno ?automatNazev

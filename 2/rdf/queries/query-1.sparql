@@ -1,0 +1,10 @@
+# Vypíše názvy všetkých automatov, v ktorých priemerná hmotnost sladkostí ktoré nabízí je >= 75g
+SELECT ?nazev
+WHERE {
+  ?automat a ex:Automat.
+  ?automat ex:názevAutomatu ?nazev.
+  ?automat ex:nabízí/ex:hmotnost ?hmotnost.
+  
+} 
+GROUP BY ?nazev
+HAVING (AVG(?hmotnost) >= 75)
