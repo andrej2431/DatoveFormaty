@@ -54,12 +54,12 @@ CREATE
 
 // Obsahuje Alergén
 CREATE
-(Múka)-[:Obsahuje]->(Lepek),
-(Mléko)-[:Obsahuje]->(MlékoAlergén),
-(Maslo)-[:Obsahuje]->(MlékoAlergén),
-(Vejce)-[:Obsahuje]->(VejceAlergén),
-(Čokoláda)-[:Obsahuje]->(Arašídy),
-(Čokoláda)-[:Obsahuje]->(MlékoAlergén)
+(Múka)-[:Obsahuje {závažnostObjemu:92}]->(Lepek),
+(Mléko)-[:Obsahuje {závažnostObjemu:100}]->(MlékoAlergén),
+(Maslo)-[:Obsahuje {závažnostObjemu:63}]->(MlékoAlergén),
+(Vejce)-[:Obsahuje {závažnostObjemu:100}]->(VejceAlergén),
+(Čokoláda)-[:Obsahuje {závažnostObjemu:42}]->(Arašídy),
+(Čokoláda)-[:Obsahuje {závažnostObjemu:38}]->(MlékoAlergén)
 
 // Obsahuje Surovinu
 Create
@@ -85,16 +85,16 @@ Create
 
 //Nabízí
 Create
-(AutomatUVrátnice)-[:Nabízí]->(Tatranka),
-(AutomatUVrátnice)-[:Nabízí]->(Nektar),
-(AutomatUVrátnice)-[:Nabízí]->(ČokoDortík),
-(AutomatRychláMňamka)-[:Nabízí]->(Tatranka),
-(AutomatRychláMňamka)-[:Nabízí]->(Nektar),
-(AutomatRychláMňamka)-[:Nabízí]->(ČokoDortík),
-(AutomatPohoštěníVMezipatře)-[:Nabízí]->(Nektar),
-(AutomatPohoštěníVMezipatře)-[:Nabízí]->(ČokoDortík),
-(AutomatOblačnéObčerstvení)-[:Nabízí]->(Nektar),
-(AutomatOblačnéObčerstvení)-[:Nabízí]->(ČokoDortík)
+(AutomatUVrátnice)-[:Nabízí {cena:17}]->(Tatranka),
+(AutomatUVrátnice)-[:Nabízí {cena:1024}]->(Nektar),
+(AutomatUVrátnice)-[:Nabízí {cena:56}]->(ČokoDortík),
+(AutomatRychláMňamka)-[:Nabízí {cena:15}]->(Tatranka),
+(AutomatRychláMňamka)-[:Nabízí {cena:999}]->(Nektar),
+(AutomatRychláMňamka)-[:Nabízí {cena:48}]->(ČokoDortík),
+(AutomatPohoštěníVMezipatře)-[:Nabízí {cena:1060}]->(Nektar),
+(AutomatPohoštěníVMezipatře)-[:Nabízí {cena:63}]->(ČokoDortík),
+(AutomatOblačnéObčerstvení)-[:Nabízí {cena:1}]->(Nektar),
+(AutomatOblačnéObčerstvení)-[:Nabízí {cena:1}]->(ČokoDortík)
 
 //Nachází sa v
 Create
