@@ -1,0 +1,11 @@
+
+# Vypíše názvy všetkých sladkostí ktoré neobsahujú VejceAlergen zoradených podľa hmotnosti
+SELECT ?nazev
+WHERE {
+  ?sladkost a ex:Sladkost.
+  ?sladkost ex:hmostnost ?hmotnost.
+  ?sladkost ex:název ?nazev.
+  FILTER NOT EXISTS {
+   ?sladkost ex:obsahujeSurovinu/ex:obsahujeAlergen ex:VejceAlergen. 
+  }
+} ORDER BY ASC(?hmotnost)

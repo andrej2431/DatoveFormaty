@@ -1,61 +1,11 @@
 #Prefixy
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ex: <https://example.org/vocabulary/> .
-@prefix ex2: <https://example.org/resource/pages/> .
-@prefix gr: <http://purl.org/goodrelations/v1#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-######### Deklarace
 
-# ex:Továrna a rdfs:Class .
-# ex:Zaměstnanec a rdfs:Class .
-# ex:Sladkost a rdfs:Class .
-# ex:Automat a rdfs:Class .
-# ex:Surovina a rdfs:Class .
-# ex:Alergen a rdfs:Class .
-
-# Tovarna
-# ex:názevTovárny a rdf:Property .
-# ex:rychlostVýroby a rdf:Property .
-
-# Zamestnanec
-# ex:jméno a rdf:Property .
-# ex:příjmení a rdf:Property .
-# ex:tituly a rdf:Property .
-
-# Sladkost
-# ex:názevSladkosti a rdf:Property .
-# ex:hmostnost a rdf:Property .
-# ex:šířkaSladkosti a rdf:Property .
-# ex:výškaSladkosti a rdf:Property .
-# ex:délkaSladkosti a rdf:Property .
-
-# Automat
-# ex:názevAutomatu a rdf:Property .
-# ex:šířkaAutomatu a rdf:Property .
-# ex:výškaAutomatu a rdf:Property .
-# ex:délkaAutomatu a rdf:Property .
-# ex:kapacita a rdf:Property .
-
-# Surovina
-# ex:názevSuroviny a rdf:Property .
-# ex:cenaZaKg a rdf:Property .
-
-#Alergen
-# ex:názevAlergenu a rdf:Property .
-# ex:číslo a rdf:Property .
-
-## vztahy
-# ex:zaměstnává a rdf:Property .
-# ex:vyrábí a rdf:Property .
-# ex:nacházíSeV a rdf:Property .
-# ex:nabízí a rdf:Property .
-# ex:obsahujeSurovinu a rdf:Property .
-# ex:obsahujeAlergen a rdf:Property .
-
-######### Definice class
+# Definice classes
 
 ex:Zaměstnanec a rdfs:Class;
     rdfs:label "Zaměstnanec"@cs ;
@@ -81,7 +31,7 @@ ex:Alergen a rdfs:Class;
     rdfs:label "Alergen"@cs ;
     rdfs:comment "Tato třída reprezentuje alergen."@cs.
 
-######### Definice vztahov
+## Definice vztahov
 
 ex:zaměstnává a rdfs:Property;
     rdfs:label "Zaměstnává"@cs ;
@@ -119,7 +69,7 @@ ex:obsahujeAlergen a rdfs:Property;
     rdfs:domain ex:Surovina;
     rdfs:range ex:Alergen.
 
-######### Definice properties
+## Definice properties
 
 ### Tovarna
 
@@ -307,118 +257,118 @@ ex:Továrna3 a ex:Továrna;
 ### Sladkosti
 ex:Sladkost1 a ex:Sladkost;
     ex:název "Sladkost 1"@cs;
-    ex:hmostnost 125;
-    ex:šířkaSladkosti 50;
-    ex:délkaSladkosti 60;
-    ex:výškaSladkosti 120;
+    ex:hmostnost "125"^^xsd:integer;
+    ex:šířkaSladkosti "50"^^xsd:integer;
+    ex:délkaSladkosti "60"^^xsd:integer;
+    ex:výškaSladkosti "120"^^xsd:integer;
     .
 
 ex:Sladkost2 a ex:Sladkost;
     ex:název "Sladkost 2"@cs;
-    ex:hmostnost 75;
-    ex:šířkaSladkosti 50;
-    ex:délkaSladkosti 60;
-    ex:výškaSladkosti 120;
+    ex:hmostnost "75"^^xsd:integer;
+    ex:šířkaSladkosti "50"^^xsd:integer;
+    ex:délkaSladkosti "60"^^xsd:integer;
+    ex:výškaSladkosti "120"^^xsd:integer;
     .
 
 ex:Sladkost3 a ex:Sladkost;
     ex:název "Sladkost 3"@cs;
-    ex:hmostnost 50;
-    ex:šířkaSladkosti 50;
-    ex:délkaSladkosti 60;
-    ex:výškaSladkosti 120;
+    ex:hmostnost "50"^^xsd:integer;
+    ex:šířkaSladkosti "50"^^xsd:integer;
+    ex:délkaSladkosti "60"^^xsd:integer;
+    ex:výškaSladkosti "120"^^xsd:integer;
     .
 
 ### Automaty
 ex:Automat1 a ex:Automat;
     ex:název "Automat 1"@cs;
-    ex:kapacita 120;
-    ex:šířkaAutomatu 50;
-    ex:délkaAutomatu 70;
-    ex:výškaAutomatu 200;
+    ex:kapacita "120"^^xsd:integer;
+    ex:šířkaAutomatu "50"^^xsd:integer;
+    ex:délkaAutomatu "70"^^xsd:integer;
+    ex:výškaAutomatu "200"^^xsd:integer;
     .
 
 ex:Automat2 a ex:Automat;
     ex:název "Automat 2"@cs;
-    ex:kapacita 120;
-    ex:šířkaAutomatu 50;
-    ex:délkaAutomatu 70;
-    ex:výškaAutomatu 200;
+    ex:kapacita "120"^^xsd:integer;
+    ex:šířkaAutomatu "50"^^xsd:integer;
+    ex:délkaAutomatu "70"^^xsd:integer;
+    ex:výškaAutomatu "200"^^xsd:integer;
     .
 
 ex:Automat3 a ex:Automat;
     ex:název "Automat 3"@cs;
-    ex:kapacita 110;
-    ex:šířkaAutomatu 50;
-    ex:délkaAutomatu 70;
-    ex:výškaAutomatu 180;
+    ex:kapacita "110"^^xsd:integer;
+    ex:šířkaAutomatu "50"^^xsd:integer;
+    ex:délkaAutomatu "40"^^xsd:integer;
+    ex:výškaAutomatu "180"^^xsd:integer;
     .
 
 ex:Automat4 a ex:Automat;
     ex:název "Automat 4"@cs;
-    ex:kapacita 110;
-    ex:šířkaAutomatu 50;
-    ex:délkaAutomatu 70;
-    ex:výškaAutomatu 180;
+    ex:kapacita "110"^^xsd:integer;
+    ex:šířkaAutomatu "50"^^xsd:integer;
+    ex:délkaAutomatu "70"^^xsd:integer;
+    ex:výškaAutomatu "180"^^xsd:integer;
     .
 
 ### Suroviny
 
 ex:Múka a ex:Surovina;
     ex:název "múka"@cs;
-    ex:cenaZaKg 24;
+    ex:cenaZaKg "24"^^xsd:integer;
     .
 
 ex:Maslo a ex:Surovina;
     ex:název "maslo"@cs;
-    ex:cenaZaKg 56;
+    ex:cenaZaKg "56"^^xsd:integer;
     .
 
 ex:Cukor a ex:Surovina;
     ex:název "cukor"@cs;
-    ex:cenaZaKg 20;
+    ex:cenaZaKg "20"^^xsd:integer;
     .
 
 ex:Vejce a ex:Surovina;
     ex:název "vejce"@cs;
-    ex:cenaZaKg 100;
+    ex:cenaZaKg "100"^^xsd:integer;
     .
 
 ex:Čokoláda a ex:Surovina;
     ex:název "čokoláda"@cs;
-    ex:cenaZaKg 100;
+    ex:cenaZaKg "100"^^xsd:integer;
     .
 
 ex:Mléko a ex:Surovina;
     ex:název "mléko"@cs;
-    ex:cenaZaKg 23;
+    ex:cenaZaKg "23"^^xsd:integer;
     .
 
 ### Alergény
 
 ex:Lepek a ex:Alergen;
     ex:název "lepek"@cs;
-    ex:číslo 1;
+    ex:číslo "1"^^xsd:integer;
     .
 
 ex:VejceAlergen a ex:Alergen;
     ex:název "vejce"@cs;
-    ex:číslo 1;
+    ex:číslo "3"^^xsd:integer;
     .
 
 ex:Arašidy a ex:Alergen;
     ex:název "arašídy"@cs;
-    ex:číslo 1;
+    ex:číslo "4"^^xsd:integer;
     .
 
 ex:Sója a ex:Alergen;
     ex:název "sója"@cs;
-    ex:číslo 1;
+    ex:číslo "6"^^xsd:integer;
     .
 
 ex:MlékoAlergen a ex:Alergen;
     ex:název "mléko"@cs;
-    ex:číslo 1;
+    ex:číslo "7"^^xsd:integer;
     .
 
 ## Vztahy
