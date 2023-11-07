@@ -1,13 +1,12 @@
 
 // Zaměstnanci
-CREATE (Zeus:Zaměstnanec {jméno:'Zeus', přijmení:'Hromný'})
-CREATE (Athena:Zaměstnanec {jméno:'Athéna', přijmení:'Múdra'})
-CREATE (Hades:Zaměstnanec {jméno:'Hádes', přijmení:'Černý'})
-CREATE (Afrodita:Zaměstnanec {jméno:'Afrodita', přijmení:'Krásna'})
-CREATE (Hermes:Zaměstnanec {jméno:'Hermes', přijmení:'Kováč'})
-
-CREATE (Artemis:Zaměstnanec {jméno:'Artemis', přijmení:'Lesná'})
-CREATE (Apollo:Zaměstnanec {jméno:'Apollo', přijmení:'Liečivý'})
+CREATE (Zeus:Zaměstnanec {jméno:'Zeus', přijmení:'Hromný', tituly:'Nej.'})
+CREATE (Athena:Zaměstnanec {jméno:'Athéna', přijmení:'Múdra', tituly: 'Pí.'})
+CREATE (Hades:Zaměstnanec {jméno:'Hádes', přijmení:'Černý', tituly: 'PPodsv.'})
+CREATE (Afrodita:Zaměstnanec {jméno:'Afrodita', přijmení:'Krásna', tituly: 'Nejkr.'})
+CREATE (Hermes:Zaměstnanec {jméno:'Hermes', přijmení:'Kováč', tituly: 'Buch.'})
+CREATE (Artemis:Zaměstnanec {jméno:'Artemis', přijmení:'Lesná', tituly: 'LukStř.'})
+CREATE (Apollo:Zaměstnanec {jméno:'Apollo', přijmení:'Liečivý', tituly: 'Lig.'})
 
 // Továrny
 CREATE (Továrna1:Továrna {název:'Továrna 1', rychlostVyroby:32})
