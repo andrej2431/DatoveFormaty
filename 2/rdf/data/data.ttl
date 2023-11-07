@@ -246,3 +246,237 @@ ex:číslo a rdfs:Property;
     rdfs:comment "Číslo alergenu dle Nařízení (EU) č. 1169/2011"@cs;
     rdfs:domain ex:Alergen;
     rdfs:range xsd:int.
+
+
+# Data
+
+## Instance
+### Zaměstnanci
+ex:Zeus a ex:Zaměstanec;
+    ex:jméno "Zeus"@cs;
+    ex:příjmení "Hromný"@cs;
+    .
+
+ex:Athena a ex:Zaměstanec;
+    ex:jméno "Zeus"@cs;
+    ex:příjmení "Hromný"@cs;
+    .
+
+ex:Hades a ex:Zaměstanec;
+    ex:jméno "Zeus"@cs;
+    ex:příjmení "Hromný"@cs;
+    .
+
+ex:Afrodita a ex:Zaměstanec;
+    ex:jméno "Zeus"@cs;
+    ex:příjmení "Hromný"@cs;
+    .
+
+ex:Hermes a ex:Zaměstanec;
+    ex:jméno "Zeus"@cs;
+    ex:příjmení "Hromný"@cs;
+    .
+
+ex:Artemis a ex:Zaměstanec;
+    ex:jméno "Zeus"@cs;
+    ex:příjmení "Hromný"@cs;
+    .
+
+ex:Apollo a ex:Zaměstanec;
+    ex:jméno "Zeus"@cs;
+    ex:příjmení "Hromný"@cs;
+    .
+
+### Továrne
+ex:Továrna1 a ex:Továrna;
+    ex:název "Továrna 1"@cs;
+    ex:rychlostVýroby "32" @cs;
+    .
+
+
+ex:Továrna2 a ex:Továrna;
+    ex:název "Továrna 2"@cs;
+    ex:rychlostVýroby "64" @cs;
+    .
+
+
+ex:Továrna3 a ex:Továrna;
+    ex:název "Továrna 3"@cs;
+    ex:rychlostVýroby "128" @cs;
+    .
+### Sladkosti
+ex:Sladkost1 a ex:Sladkost;
+    ex:název "Sladkost 1"@cs;
+    ex:hmostnost 125;
+    ex:šířkaSladkosti 50;
+    ex:délkaSladkosti 60;
+    ex:výškaSladkosti 120;
+    .
+
+ex:Sladkost2 a ex:Sladkost;
+    ex:název "Sladkost 2"@cs;
+    ex:hmostnost 75;
+    ex:šířkaSladkosti 50;
+    ex:délkaSladkosti 60;
+    ex:výškaSladkosti 120;
+    .
+
+ex:Sladkost3 a ex:Sladkost;
+    ex:název "Sladkost 3"@cs;
+    ex:hmostnost 50;
+    ex:šířkaSladkosti 50;
+    ex:délkaSladkosti 60;
+    ex:výškaSladkosti 120;
+    .
+
+### Automaty
+ex:Automat1 a ex:Automat;
+    ex:název "Automat 1"@cs;
+    ex:kapacita 120;
+    ex:šířkaAutomatu 50;
+    ex:délkaAutomatu 70;
+    ex:výškaAutomatu 200;
+    .
+
+ex:Automat2 a ex:Automat;
+    ex:název "Automat 2"@cs;
+    ex:kapacita 120;
+    ex:šířkaAutomatu 50;
+    ex:délkaAutomatu 70;
+    ex:výškaAutomatu 200;
+    .
+
+ex:Automat3 a ex:Automat;
+    ex:název "Automat 3"@cs;
+    ex:kapacita 110;
+    ex:šířkaAutomatu 50;
+    ex:délkaAutomatu 70;
+    ex:výškaAutomatu 180;
+    .
+
+ex:Automat4 a ex:Automat;
+    ex:název "Automat 4"@cs;
+    ex:kapacita 110;
+    ex:šířkaAutomatu 50;
+    ex:délkaAutomatu 70;
+    ex:výškaAutomatu 180;
+    .
+
+### Suroviny
+
+ex:Múka a ex:Surovina;
+    ex:název "múka"@cs;
+    ex:cenaZaKg 24;
+    .
+
+ex:Maslo a ex:Surovina;
+    ex:název "maslo"@cs;
+    ex:cenaZaKg 56;
+    .
+
+ex:Cukor a ex:Surovina;
+    ex:název "cukor"@cs;
+    ex:cenaZaKg 20;
+    .
+
+ex:Vejce a ex:Surovina;
+    ex:název "vejce"@cs;
+    ex:cenaZaKg 100;
+    .
+
+ex:Čokoláda a ex:Surovina;
+    ex:název "čokoláda"@cs;
+    ex:cenaZaKg 100;
+    .
+
+ex:Mléko a ex:Surovina;
+    ex:název "mléko"@cs;
+    ex:cenaZaKg 23;
+    .
+
+### Alergény
+
+ex:Lepek a ex:Alergen;
+    ex:název "lepek"@cs;
+    ex:číslo 1;
+    .
+
+ex:VejceAlergen a ex:Alergen;
+    ex:název "vejce"@cs;
+    ex:číslo 1;
+    .
+
+ex:Arašidy a ex:Alergen;
+    ex:název "arašídy"@cs;
+    ex:číslo 1;
+    .
+
+ex:Sója a ex:Alergen;
+    ex:název "sója"@cs;
+    ex:číslo 1;
+    .
+
+ex:MlékoAlergen a ex:Alergen;
+    ex:název "mléko"@cs;
+    ex:číslo 1;
+    .
+
+## Vztahy
+
+### Zamestnava
+ex:Továrna1 ex:zaměstnává ex:Zeus.
+ex:Továrna1 ex:zaměstnává ex:Athena.
+
+ex:Továrna2 ex:zaměstnává ex:Hades.
+ex:Továrna2 ex:zaměstnává ex:Afrodita.
+ex:Továrna2 ex:zaměstnává ex:Hermes.
+
+ex:Továrna1 ex:zaměstnává ex:Apollo.
+ex:Továrna1 ex:zaměstnává ex:Artemis.
+
+### Obsahuje alergen
+ex:Múka ex:obsahujeAlergen ex:Lepek.
+ex:Mléko ex:obsahujeAlergen ex:MlékoAlergen.
+ex:Maslo ex:obsahujeAlergen ex:MlékoAlergen.
+ex:Vejce ex:obsahujeAlergen ex:VejceAlergen.
+ex:Čokoláda ex:obsahujeAlergen ex:Arašidy.
+ex:Čokoláda ex:obsahujeAlergen ex:MlékoAlergen.
+
+### Obsahuje surovinu
+ex:Sladkost1 ex:obsahujeSurovinu ex:Čokoláda.
+ex:Sladkost1 ex:obsahujeSurovinu ex:Mléko.
+ex:Sladkost1 ex:obsahujeSurovinu ex:Múka.
+ex:Sladkost2 ex:obsahujeSurovinu ex:Múka.
+ex:Sladkost2 ex:obsahujeSurovinu ex:Mléko.
+ex:Sladkost2 ex:obsahujeSurovinu ex:Vejce.
+ex:Sladkost2 ex:obsahujeSurovinu ex:Cukor.
+ex:Sladkost2 ex:obsahujeSurovinu ex:Maslo.
+ex:Sladkost3 ex:obsahujeSurovinu ex:Čokoláda.
+ex:Sladkost3 ex:obsahujeSurovinu ex:Múka.
+ex:Sladkost3 ex:obsahujeSurovinu ex:Maslo.
+
+### Vyrábí
+ex:Továrna1 ex:vyrábí ex:Sladkost1.
+ex:Továrna2 ex:vyrábí ex:Sladkost1.
+ex:Továrna2 ex:vyrábí ex:Sladkost2.
+ex:Továrna3 ex:vyrábí ex:Sladkost2.
+ex:Továrna3 ex:vyrábí ex:Sladkost1.
+
+### Nabízí
+ex:Automat1 ex:nabízí ex:Sladkost1.
+ex:Automat1 ex:nabízí ex:Sladkost2.
+ex:Automat1 ex:nabízí ex:Sladkost3.
+ex:Automat2 ex:nabízí ex:Sladkost1.
+ex:Automat2 ex:nabízí ex:Sladkost2.
+ex:Automat2 ex:nabízí ex:Sladkost3.
+
+ex:Automat3 ex:nabízí ex:Sladkost2.
+ex:Automat3 ex:nabízí ex:Sladkost3.
+ex:Automat4 ex:nabízí ex:Sladkost2.
+ex:Automat4 ex:nabízí ex:Sladkost3.
+
+### Nachází se v
+ex:Automat1 ex:nacházíSeV ex:Továrna1.
+ex:Automat2 ex:nacházíSeV ex:Továrna2.
+ex:Automat3 ex:nacházíSeV ex:Továrna3.
+ex:Automat4 ex:nacházíSeV ex:Továrna3.
