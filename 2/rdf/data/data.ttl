@@ -205,36 +205,43 @@ ex:číslo a rdfs:Property;
 ex:Zeus a ex:Zaměstanec;
     ex:jméno "Zeus"@cs;
     ex:příjmení "Hromný"@cs;
+    ex:tituly "Nej."@cs;
     .
 
 ex:Athena a ex:Zaměstanec;
     ex:jméno "Zeus"@cs;
     ex:příjmení "Hromný"@cs;
+    ex:tituly "Pí."@cs;
     .
 
 ex:Hades a ex:Zaměstanec;
     ex:jméno "Zeus"@cs;
     ex:příjmení "Hromný"@cs;
+    ex:tituly "PPodsv."@cs;
     .
 
 ex:Afrodita a ex:Zaměstanec;
     ex:jméno "Zeus"@cs;
     ex:příjmení "Hromný"@cs;
+    ex:tituly "Nejkr."@cs;
     .
 
 ex:Hermes a ex:Zaměstanec;
     ex:jméno "Zeus"@cs;
     ex:příjmení "Hromný"@cs;
+    ex:tituly "Buch."@cs;
     .
 
 ex:Artemis a ex:Zaměstanec;
     ex:jméno "Zeus"@cs;
     ex:příjmení "Hromný"@cs;
+    ex:tituly "LukStř."@cs;
     .
 
 ex:Apollo a ex:Zaměstanec;
     ex:jméno "Zeus"@cs;
     ex:příjmení "Hromný"@cs;
+    ex:tituly "Lig."@cs;
     .
 
 ### Továrne
