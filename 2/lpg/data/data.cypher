@@ -14,7 +14,7 @@ CREATE (TovárnaHaribo:Továrna {název:'Haribo Industries', rychlostVyroby:64})
 CREATE (TovárnaCukPrum:Továrna {název:'Cukrárenská průmyslovka', rychlostVyroby:128})
 
 // Sladkost
-CREATE (Tatranka:Sladkost {název:'Tatranka kyselé', hmotnost:125, šířka:50, délka:60, výška: 120})
+CREATE (Tatranka:Sladkost {název:'Tatranka', hmotnost:125, šířka:50, délka:60, výška: 120})
 CREATE (Nektar:Sladkost {název:'Nektar', hmotnost:75, šířka:60, délka:60, výška:70})
 CREATE (ČokoDortík:Sladkost {název:'Čokoládový dortík', hmotnost:50, šířka:50, délka:30, výška: 80})
 

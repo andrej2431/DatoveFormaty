@@ -205,74 +205,82 @@ ex:číslo a rdfs:Property;
 ex:Zeus a ex:Zaměstnanec;
     ex:jméno "Zeus"@cs;
     ex:příjmení "Hromný"@cs;
+    ex:tituly "Nej."@cs;
     .
 
 ex:Athena a ex:Zaměstnanec;
     ex:jméno "Athéna"@cs;
     ex:příjmení "Múdra"@cs;
+    ex:tituly "Pí."@cs;
     .
 
 ex:Hades a ex:Zaměstnanec;
     ex:jméno "Hádes"@cs;
     ex:příjmení "Černý"@cs;
+    ex:tituly "PPodsv."@cs;
     .
 
 ex:Afrodita a ex:Zaměstnanec;
     ex:jméno "Afrodita"@cs;
     ex:příjmení "Krásna"@cs;
+    ex:tituly "Nejkr."@cs;
     .
 
 ex:Hermes a ex:Zaměstnanec;
     ex:jméno "Hermes"@cs;
     ex:příjmení "Kováč"@cs;
+    ex:tituly "Buch."@cs;
     .
 
 ex:Artemis a ex:Zaměstnanec;
     ex:jméno "Artemis"@cs;
     ex:příjmení "Lesná"@cs;
+    ex:tituly "Lesná."@cs;
     .
 
 ex:Apollo a ex:Zaměstnanec;
     ex:jméno "Apollo"@cs;
     ex:příjmení "Liečivý"@cs;
+    ex:tituly "Lig."@cs;
     .
 
 ### Továrne
-ex:Továrna1 a ex:Továrna;
-    ex:názevTovárny "Továrna 1"@cs;
+ex:TovárnaKarlíkova a ex:Továrna;
+    ex:názevTovárny "Karlíkova továrna na čokoládu"@cs;
     ex:rychlostVýroby "32" @cs;
     .
 
 
-ex:Továrna2 a ex:Továrna;
-    ex:názevTovárny "Továrna 2"@cs;
+ex:TovárnaHaribo a ex:Továrna;
+    ex:názevTovárny "Haribo Industries"@cs;
     ex:rychlostVýroby "64" @cs;
     .
 
 
-ex:Továrna3 a ex:Továrna;
-    ex:názevTovárny "Továrna 3"@cs;
+ex:TovárnaCukPrum a ex:Továrna;
+    ex:názevTovárny "Cukrárenská průmyslovka"@cs;
     ex:rychlostVýroby "128" @cs;
     .
+
 ### Sladkosti
-ex:Sladkost1 a ex:Sladkost;
-    ex:názevSladkosti "Sladkost 1"@cs;
+ex:Tatranka a ex:Sladkost;
+    ex:názevSladkosti "Tatranka"@cs;
     ex:hmotnost "125"^^xsd:integer;
     ex:šířkaSladkosti "50"^^xsd:integer;
     ex:délkaSladkosti "60"^^xsd:integer;
     ex:výškaSladkosti "120"^^xsd:integer;
     .
 
-ex:Sladkost2 a ex:Sladkost;
-    ex:názevSladkosti "Sladkost 2"@cs;
+ex:Nektar a ex:Sladkost;
+    ex:názevSladkosti "Nektar"@cs;
     ex:hmotnost "75"^^xsd:integer;
     ex:šířkaSladkosti "60"^^xsd:integer;
     ex:délkaSladkosti "60"^^xsd:integer;
     ex:výškaSladkosti "70"^^xsd:integer;
     .
 
-ex:Sladkost3 a ex:Sladkost;
-    ex:názevSladkosti "Sladkost 3"@cs;
+ex:ČokoDortík a ex:Sladkost;
+    ex:názevSladkosti "Čokoládový dortík"@cs;
     ex:hmotnost "50"^^xsd:integer;
     ex:šířkaSladkosti "50"^^xsd:integer;
     ex:délkaSladkosti "30"^^xsd:integer;
@@ -280,32 +288,32 @@ ex:Sladkost3 a ex:Sladkost;
     .
 
 ### Automaty
-ex:Automat1 a ex:Automat;
-    ex:názevAutomatu "Automat 1"@cs;
+ex:AutomatUVrátnice a ex:Automat;
+    ex:názevAutomatu "U Vrátnice"@cs;
     ex:kapacita "120"^^xsd:integer;
     ex:šířkaAutomatu "50"^^xsd:integer;
     ex:délkaAutomatu "70"^^xsd:integer;
     ex:výškaAutomatu "200"^^xsd:integer;
     .
 
-ex:Automat2 a ex:Automat;
-    ex:názevAutomatu "Automat 2"@cs;
+ex:AutomatRychláMňamka a ex:Automat;
+    ex:názevAutomatu "Rychlá Mňamka"@cs;
     ex:kapacita "120"^^xsd:integer;
     ex:šířkaAutomatu "50"^^xsd:integer;
     ex:délkaAutomatu "70"^^xsd:integer;
     ex:výškaAutomatu "200"^^xsd:integer;
     .
 
-ex:Automat3 a ex:Automat;
-    ex:názevAutomatu "Automat 3"@cs;
+ex:AutomatPohoštěníVMezipatře a ex:Automat;
+    ex:názevAutomatu "Pohoštění V Mezipatře"@cs;
     ex:kapacita "110"^^xsd:integer;
     ex:šířkaAutomatu "50"^^xsd:integer;
     ex:délkaAutomatu "40"^^xsd:integer;
     ex:výškaAutomatu "180"^^xsd:integer;
     .
 
-ex:Automat4 a ex:Automat;
-    ex:názevAutomatu "Automat 4"@cs;
+ex:AutomatOblačnéObčerstvení a ex:Automat;
+    ex:názevAutomatu "Oblačné Občerstvení"@cs;
     ex:kapacita "110"^^xsd:integer;
     ex:šířkaAutomatu "50"^^xsd:integer;
     ex:délkaAutomatu "70"^^xsd:integer;
@@ -374,15 +382,15 @@ ex:MlékoAlergen a ex:Alergen;
 ## Vztahy
 
 ### Zamestnava
-ex:Továrna1 ex:zaměstnává ex:Zeus.
-ex:Továrna1 ex:zaměstnává ex:Athena.
+ex:TovárnaKarlíkova ex:zaměstnává ex:Zeus.
+ex:TovárnaKarlíkova ex:zaměstnává ex:Athena.
 
-ex:Továrna2 ex:zaměstnává ex:Hades.
-ex:Továrna2 ex:zaměstnává ex:Afrodita.
-ex:Továrna2 ex:zaměstnává ex:Hermes.
+ex:TovárnaHaribo ex:zaměstnává ex:Hades.
+ex:TovárnaHaribo ex:zaměstnává ex:Afrodita.
+ex:TovárnaHaribo ex:zaměstnává ex:Hermes.
 
-ex:Továrna3 ex:zaměstnává ex:Apollo.
-ex:Továrna3 ex:zaměstnává ex:Artemis.
+ex:TovárnaCukPrum ex:zaměstnává ex:Apollo.
+ex:TovárnaCukPrum ex:zaměstnává ex:Artemis.
 
 ### Obsahuje alergen
 ex:Múka ex:obsahujeAlergen ex:Lepek.
@@ -393,42 +401,42 @@ ex:Čokoláda ex:obsahujeAlergen ex:Arašidy.
 ex:Čokoláda ex:obsahujeAlergen ex:MlékoAlergen.
 
 ### Obsahuje surovinu
-ex:Sladkost1 ex:obsahujeSurovinu ex:Čokoláda.
-ex:Sladkost1 ex:obsahujeSurovinu ex:Mléko.
-ex:Sladkost1 ex:obsahujeSurovinu ex:Múka.
-ex:Sladkost2 ex:obsahujeSurovinu ex:Múka.
-ex:Sladkost2 ex:obsahujeSurovinu ex:Mléko.
-ex:Sladkost2 ex:obsahujeSurovinu ex:Vejce.
-ex:Sladkost2 ex:obsahujeSurovinu ex:Cukor.
-ex:Sladkost2 ex:obsahujeSurovinu ex:Maslo.
-ex:Sladkost3 ex:obsahujeSurovinu ex:Čokoláda.
-ex:Sladkost3 ex:obsahujeSurovinu ex:Múka.
-ex:Sladkost3 ex:obsahujeSurovinu ex:Maslo.
+ex:Tatranka ex:obsahujeSurovinu ex:Čokoláda.
+ex:Tatranka ex:obsahujeSurovinu ex:Mléko.
+ex:Tatranka ex:obsahujeSurovinu ex:Múka.
+ex:Nektar ex:obsahujeSurovinu ex:Múka.
+ex:Nektar ex:obsahujeSurovinu ex:Mléko.
+ex:Nektar ex:obsahujeSurovinu ex:Vejce.
+ex:Nektar ex:obsahujeSurovinu ex:Cukor.
+ex:Nektar ex:obsahujeSurovinu ex:Maslo.
+ex:ČokoDortík ex:obsahujeSurovinu ex:Čokoláda.
+ex:ČokoDortík ex:obsahujeSurovinu ex:Múka.
+ex:ČokoDortík ex:obsahujeSurovinu ex:Maslo.
 
 ### Vyrábí
-ex:Továrna1 ex:vyrábí ex:Sladkost1.
-ex:Továrna2 ex:vyrábí ex:Sladkost1.
-ex:Továrna2 ex:vyrábí ex:Sladkost2.
-ex:Továrna3 ex:vyrábí ex:Sladkost2.
-ex:Továrna3 ex:vyrábí ex:Sladkost1.
+ex:TovárnaKarlíkova ex:vyrábí ex:Tatranka.
+ex:TovárnaHaribo ex:vyrábí ex:Tatranka.
+ex:TovárnaHaribo ex:vyrábí ex:Nektar.
+ex:TovárnaCukPrum ex:vyrábí ex:Nektar.
+ex:TovárnaCukPrum ex:vyrábí ex:Tatranka.
 
 ### Nabízí
-ex:Automat1 ex:nabízí ex:Sladkost1.
-ex:Automat1 ex:nabízí ex:Sladkost2.
-ex:Automat1 ex:nabízí ex:Sladkost3.
+ex:AutomatUVrátnice ex:nabízí ex:Tatranka.
+ex:AutomatUVrátnice ex:nabízí ex:Nektar.
+ex:AutomatUVrátnice ex:nabízí ex:ČokoDortík.
 
-ex:Automat2 ex:nabízí ex:Sladkost1.
-ex:Automat2 ex:nabízí ex:Sladkost2.
-ex:Automat2 ex:nabízí ex:Sladkost3.
+ex:AutomatRychláMňamka ex:nabízí ex:Tatranka.
+ex:AutomatRychláMňamka ex:nabízí ex:Nektar.
+ex:AutomatRychláMňamka ex:nabízí ex:ČokoDortík.
 
-ex:Automat3 ex:nabízí ex:Sladkost2.
-ex:Automat3 ex:nabízí ex:Sladkost3.
+ex:AutomatPohoštěníVMezipatře ex:nabízí ex:Nektar.
+ex:AutomatPohoštěníVMezipatře ex:nabízí ex:ČokoDortík.
 
-ex:Automat4 ex:nabízí ex:Sladkost2.
-ex:Automat4 ex:nabízí ex:Sladkost3.
+ex:AutomatOblačnéObčerstvení ex:nabízí ex:Nektar.
+ex:AutomatOblačnéObčerstvení ex:nabízí ex:ČokoDortík.
 
 ### Nachází se v
-ex:Automat1 ex:nacházíSeV ex:Továrna1.
-ex:Automat2 ex:nacházíSeV ex:Továrna2.
-ex:Automat3 ex:nacházíSeV ex:Továrna3.
-ex:Automat4 ex:nacházíSeV ex:Továrna3.
+ex:AutomatUVrátnice ex:nacházíSeV ex:TovárnaKarlíkova.
+ex:AutomatRychláMňamka ex:nacházíSeV ex:TovárnaHaribo.
+ex:AutomatPohoštěníVMezipatře ex:nacházíSeV ex:TovárnaCukPrum.
+ex:AutomatOblačnéObčerstvení ex:nacházíSeV ex:TovárnaCukPrum.

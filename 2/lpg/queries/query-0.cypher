@@ -1,3 +1,3 @@
-// Ukáže všechna data
-Match (n)-[r]->(m)
-Return n,r,m
+// Ukáže všechna data (Neo4j přidá vztahy automaticky)
+Match (n)
+Return n
