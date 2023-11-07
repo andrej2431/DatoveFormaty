@@ -77,13 +77,13 @@ ex:názevTovárny a rdfs:Property;
     rdfs:label "Název továrny"@cs ;
     rdfs:comment "Název továrny"@cs;
     rdfs:domain ex:Továrna;
-    rdfs:range xsd:string.
+    rdfs:range rdf:langString.
 
 ex:rychlostVýroby a rdfs:Property;
     rdfs:label "Rychlost výroby"@cs ;
     rdfs:comment "Počet vyprodukovaných sladkostí za minutu"@cs;
     rdfs:domain ex:Továrna;
-    rdfs:range xsd:decimal.
+    rdfs:range xsd:int.
 
 ### Zamestanec
 
@@ -91,19 +91,19 @@ ex:jméno a rdfs:Property;
     rdfs:label "Jméno"@cs ;
     rdfs:comment "Křestní jméno"@cs;
     rdfs:domain ex:Zaměstnanec;
-    rdfs:range xsd:string.
+    rdfs:range rdf:langString.
 
 ex:příjmení a rdfs:Property;
     rdfs:label "Příjmení"@cs ;
     rdfs:comment "Příjmení"@cs;
     rdfs:domain ex:Zaměstnanec;
-    rdfs:range xsd:string.
+    rdfs:range rdf:langString.
 
 ex:tituly a rdfs:Property;
     rdfs:label "Tituly"@cs ;
     rdfs:comment "Dosažené tituly"@cs;
     rdfs:domain ex:Zaměstnanec;
-    rdfs:range xsd:string.
+    rdfs:range rdf:langString.
 
 ### Sladkost
 
@@ -111,7 +111,7 @@ ex:názevSladkosti a rdfs:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Prodejní název sladkosti"@cs;
     rdfs:domain ex:Sladkost;
-    rdfs:range xsd:string.
+    rdfs:range rdf:langString.
 
 ex:hmostnost a rdfs:Property;
     rdfs:label "Hmotnost"@cs ;
@@ -143,7 +143,7 @@ ex:názevAutomatu a rdfs:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název automatu"@cs;
     rdfs:domain ex:Automat;
-    rdfs:range xsd:string.
+    rdfs:range rdf:langString.
 
 ex:kapacita a rdfs:Property;
     rdfs:label "Kapacita"@cs ;
@@ -175,7 +175,7 @@ ex:názevSuroviny a rdfs:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název suroviny"@cs;
     rdfs:domain ex:Surovina;
-    rdfs:range xsd:string.
+    rdfs:range rdf:langString.
 
 ex:cenaZaKg a rdfs:Property;
     rdfs:label "Cena za kg"@cs ;
@@ -189,7 +189,7 @@ ex:názevAlergenu a rdfs:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název alergenu"@cs;
     rdfs:domain ex:Alergen;
-    rdfs:range xsd:string.
+    rdfs:range rdf:langString.
 
 ex:číslo a rdfs:Property;
     rdfs:label "Číslo"@cs ;
