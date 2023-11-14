@@ -33,37 +33,37 @@ ex:Alergen a rdfs:Class;
 
 ## Definice vztahov
 
-ex:zaměstnává a rdfs:Property;
+ex:zaměstnává a rdf:Property;
     rdfs:label "Zaměstnává"@cs ;
     rdfs:comment "Zaměstnanec, který je zaměstnaný danou továrnou"@cs;
     rdfs:domain ex:Továrna;
     rdfs:range ex:Zaměstnanec.
 
-ex:vyrábí a rdfs:Property;
+ex:vyrábí a rdf:Property;
     rdfs:label "Vyrábí"@cs ;
     rdfs:comment "Sladkost, která je vyráběna danou továrnou"@cs;
     rdfs:domain ex:Továrna;
     rdfs:range ex:Sladkost.
 
-ex:nacházíSeV a rdfs:Property;
+ex:nacházíSeV a rdf:Property;
     rdfs:label "Se nachází v"@cs ;
     rdfs:comment "Továrna, v jejíž prostorách se automat nachází"@cs;
     rdfs:domain ex:Automat;
     rdfs:range ex:Továrna.
 
-ex:nabízí a rdfs:Property;
+ex:nabízí a rdf:Property;
     rdfs:label "Nabízí"@cs ;
     rdfs:comment "Sladkost, kterou automat nabízí a prodává"@cs;
     rdfs:domain ex:Automat;
     rdfs:range ex:Sladkost.
 
-ex:obsahujeSurovinu a rdfs:Property;
+ex:obsahujeSurovinu a rdf:Property;
     rdfs:label "Obsahuje surovinu"@cs ;
     rdfs:comment "Surovina, kterou daná sladkost obsahuje"@cs;
     rdfs:domain ex:Sladkost;
     rdfs:range ex:Surovina.
 
-ex:obsahujeAlergen a rdfs:Property;
+ex:obsahujeAlergen a rdf:Property;
     rdfs:label "Obsahuje alergen"@cs ;
     rdfs:comment "Alergen, který je obsažen v dané surovině"@cs;
     rdfs:domain ex:Surovina;
@@ -73,33 +73,33 @@ ex:obsahujeAlergen a rdfs:Property;
 
 ### Tovarna
 
-ex:názevTovárny a rdfs:Property;
+ex:názevTovárny a rdf:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název továrny"@cs;
     rdfs:domain ex:Továrna;
     rdfs:range rdf:langString.
 
-ex:rychlostVýroby a rdfs:Property;
+ex:rychlostVýroby a rdf:Property;
     rdfs:label "Rychlost výroby"@cs ;
     rdfs:comment "Počet vyprodukovaných sladkostí za minutu"@cs;
     rdfs:domain ex:Továrna;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
 ### Zamestanec
 
-ex:jméno a rdfs:Property;
+ex:jméno a rdf:Property;
     rdfs:label "Jméno"@cs ;
     rdfs:comment "Křestní jméno"@cs;
     rdfs:domain ex:Zaměstnanec;
     rdfs:range rdf:langString.
 
-ex:příjmení a rdfs:Property;
+ex:příjmení a rdf:Property;
     rdfs:label "Příjmení"@cs ;
     rdfs:comment "Příjmení"@cs;
     rdfs:domain ex:Zaměstnanec;
     rdfs:range rdf:langString.
 
-ex:tituly a rdfs:Property;
+ex:tituly a rdf:Property;
     rdfs:label "Tituly"@cs ;
     rdfs:comment "Dosažené tituly"@cs;
     rdfs:domain ex:Zaměstnanec;
@@ -107,77 +107,77 @@ ex:tituly a rdfs:Property;
 
 ### Sladkost
 
-ex:názevSladkosti a rdfs:Property;
+ex:názevSladkosti a rdf:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Prodejní název sladkosti"@cs;
     rdfs:domain ex:Sladkost;
     rdfs:range rdf:langString.
 
-ex:hmostnost a rdfs:Property;
+ex:hmostnost a rdf:Property;
     rdfs:label "Hmotnost"@cs ;
     rdfs:comment "Hmotnost samotné sladkosti bez obalu, uvedeno v gramech"@cs;
     rdfs:domain ex:Sladkost;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
-ex:šířkaSladkosti a rdfs:Property;
+ex:šířkaSladkosti a rdf:Property;
     rdfs:label "Šírka"@cs ;
     rdfs:comment "Šířka samotné sladkosti bez obalu, uvedeno v milimetrech"@cs;
     rdfs:domain ex:Sladkost;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
-ex:délkaSladkosti a rdfs:Property;
+ex:délkaSladkosti a rdf:Property;
     rdfs:label "Délka"@cs ;
     rdfs:comment "Délka samotné sladkosti bez obalu, uvedeno v milimetrech"@cs;
     rdfs:domain ex:Sladkost;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
-ex:výškaSladkosti a rdfs:Property;
+ex:výškaSladkosti a rdf:Property;
     rdfs:label "Výška"@cs ;
     rdfs:comment "Výška samotné sladkosti bez obalu, uvedeno v milimetrech"@cs;
     rdfs:domain ex:Sladkost;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
 ### Automat
 
-ex:názevAutomatu a rdfs:Property;
+ex:názevAutomatu a rdf:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název automatu"@cs;
     rdfs:domain ex:Automat;
     rdfs:range rdf:langString.
 
-ex:kapacita a rdfs:Property;
+ex:kapacita a rdf:Property;
     rdfs:label "Kapacita"@cs ;
     rdfs:comment "Počet sladkostí, které automat dokáže v jednu chvíli skladovat a prodávat"@cs;
     rdfs:domain ex:Automat;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
-ex:šířkaAutomatu a rdfs:Property;
+ex:šířkaAutomatu a rdf:Property;
     rdfs:label "Šírka"@cs ;
     rdfs:comment "Šířka celého automatu, uvedeno v milimetrech"@cs;
     rdfs:domain ex:Automat;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
-ex:délkaAutomatu a rdfs:Property;
+ex:délkaAutomatu a rdf:Property;
     rdfs:label "Délka"@cs ;
     rdfs:comment "Délka celého automatu, uvedeno v milimetrech"@cs;
     rdfs:domain ex:Automat;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
-ex:výškaAutomatu a rdfs:Property;
+ex:výškaAutomatu a rdf:Property;
     rdfs:label "Výška"@cs ;
     rdfs:comment "Výška celého automatu, uvedeno v milimetrech"@cs;
     rdfs:domain ex:Automat;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
 ### Surovina
 
-ex:názevSuroviny a rdfs:Property;
+ex:názevSuroviny a rdf:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název suroviny"@cs;
     rdfs:domain ex:Surovina;
     rdfs:range rdf:langString.
 
-ex:cenaZaKg a rdfs:Property;
+ex:cenaZaKg a rdf:Property;
     rdfs:label "Cena za kg"@cs ;
     rdfs:comment "Cena dané suroviny za jeden kilogram, uvedeno v korunách"@cs;
     rdfs:domain ex:Surovina;
@@ -185,17 +185,17 @@ ex:cenaZaKg a rdfs:Property;
 
 ### Alergen
 
-ex:názevAlergenu a rdfs:Property;
+ex:názevAlergenu a rdf:Property;
     rdfs:label "Název"@cs ;
     rdfs:comment "Název alergenu"@cs;
     rdfs:domain ex:Alergen;
     rdfs:range rdf:langString.
 
-ex:číslo a rdfs:Property;
+ex:číslo a rdf:Property;
     rdfs:label "Číslo"@cs ;
     rdfs:comment "Číslo alergenu dle Nařízení (EU) č. 1169/2011"@cs;
     rdfs:domain ex:Alergen;
-    rdfs:range xsd:int.
+    rdfs:range xsd:integer.
 
 
 # Data
@@ -247,19 +247,19 @@ ex:Apollo a ex:Zaměstnanec;
 ### Továrne
 ex:TovárnaKarlíkova a ex:Továrna;
     ex:názevTovárny "Karlíkova továrna na čokoládu"@cs;
-    ex:rychlostVýroby "32" @cs;
+    ex:rychlostVýroby "32";
     .
 
 
 ex:TovárnaHaribo a ex:Továrna;
     ex:názevTovárny "Haribo Industries"@cs;
-    ex:rychlostVýroby "64" @cs;
+    ex:rychlostVýroby "64";
     .
 
 
 ex:TovárnaCukPrum a ex:Továrna;
     ex:názevTovárny "Cukrárenská průmyslovka"@cs;
-    ex:rychlostVýroby "128" @cs;
+    ex:rychlostVýroby "128";
     .
 
 ### Sladkosti
@@ -324,32 +324,32 @@ ex:AutomatOblačnéObčerstvení a ex:Automat;
 
 ex:Múka a ex:Surovina;
     ex:názevSuroviny "múka"@cs;
-    ex:cenaZaKg "24"^^xsd:integer;
+    ex:cenaZaKg "24.90"^^xsd:decimal;
     .
 
 ex:Maslo a ex:Surovina;
     ex:názevSuroviny "maslo"@cs;
-    ex:cenaZaKg "56"^^xsd:integer;
+    ex:cenaZaKg "56.49"^^xsd:decimal;
     .
 
 ex:Cukor a ex:Surovina;
     ex:názevSuroviny "cukor"@cs;
-    ex:cenaZaKg "20"^^xsd:integer;
+    ex:cenaZaKg "20.12"^^xsd:decimal;
     .
 
 ex:Vejce a ex:Surovina;
     ex:názevSuroviny "vejce"@cs;
-    ex:cenaZaKg "100"^^xsd:integer;
+    ex:cenaZaKg "100.00"^^xsd:decimal;
     .
 
 ex:Čokoláda a ex:Surovina;
     ex:názevSuroviny "čokoláda"@cs;
-    ex:cenaZaKg "100"^^xsd:integer;
+    ex:cenaZaKg "100.00"^^xsd:decimal;
     .
 
 ex:Mléko a ex:Surovina;
     ex:názevSuroviny "mléko"@cs;
-    ex:cenaZaKg "23"^^xsd:integer;
+    ex:cenaZaKg "23.42"^^xsd:decimal;
     .
 
 ### Alergény
