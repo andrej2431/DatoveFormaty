@@ -1,0 +1,31 @@
+{
+    "@context": {
+        "ex": "http://example.org/vocabulary/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "type": "@type",
+        "alergen": "ex:Alergen",
+        "surovina": "ex:Surovina",
+        "id": "@id",
+        "číslo": {
+            "@id": "ex:číslo",
+            "@type": "xsd:integer"
+        },
+        "alergeny": "@graph"
+    },
+
+    "alergeny": [
+        {
+            "type": "alergen",
+            "id": "ex:Arašídy",
+            "číslo": 4
+        },
+        {
+            "type": "alergen",
+            "id": "ex:Múka",
+            "číslo": 7
+        }
+    ]
+}
+
+// https://json-ld.org/playground/
