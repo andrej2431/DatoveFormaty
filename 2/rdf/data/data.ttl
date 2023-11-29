@@ -247,19 +247,19 @@ ex:Apollo a ex:Zaměstnanec;
 ### Továrne
 ex:TovárnaKarlíkova a ex:Továrna;
     ex:názevTovárny "Karlíkova továrna na čokoládu"@cs;
-    ex:rychlostVýroby "32";
+    ex:rychlostVýroby "32"^^xsd:integer;
     .
 
 
 ex:TovárnaHaribo a ex:Továrna;
     ex:názevTovárny "Haribo Industries"@cs;
-    ex:rychlostVýroby "64";
+    ex:rychlostVýroby "64"^^xsd:integer;
     .
 
 
 ex:TovárnaCukPrum a ex:Továrna;
     ex:názevTovárny "Cukrárenská průmyslovka"@cs;
-    ex:rychlostVýroby "128";
+    ex:rychlostVýroby "128"^^xsd:integer;
     .
 
 ### Sladkosti
