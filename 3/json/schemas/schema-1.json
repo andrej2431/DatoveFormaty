@@ -4,6 +4,56 @@
     "type": "object",
     "title": "Evidence továren na sladkosti",
     "properties": {
+        "sladkosti": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "sladkost",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "název": {
+                        "type": "object",
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "cs"
+                        ]
+                    },
+                    "hmotnost": {
+                        "type": "number"
+                    },
+                    "šířka": {
+                        "type": "number"
+                    },
+                    "délka": {
+                        "type": "number"
+                    },
+                    "výška": {
+                        "type": "number"
+                    },
+                    "obsahuje": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "title": "id suroviny"
+                        }
+                    }
+                },
+                "required": [
+                    "id",
+                    "název",
+                    "hmotnost",
+                    "šířka",
+                    "délka",
+                    "výška"
+                ]
+            }            
+        },
         "suroviny": {
             "type": "array",
             "items": {
@@ -75,6 +125,7 @@
         }
     },
     "required": [
+        "sladkosti",
         "alergeny",
         "suroviny"
     ]

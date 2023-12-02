@@ -4,6 +4,38 @@
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "typ": "@type",
         "id": "@id",
+        "sladkosti": {
+            "@id": "ex:Sladkosti",
+            "@container": "@set",
+            "@context": {
+                "sladkost": "ex:Sladkost",
+                "název": {
+                    "@id": "ex:názevSladkosti",
+                    "@container": "@language"
+                },
+                "hmotnost": {
+                    "@id": "ex:hmotnost",
+                    "@type": "xsd:integer"
+                },
+                "šířka": {
+                    "@id": "ex:šířkaSladkosti",
+                    "@type": "xsd:integer"
+                },
+                "délka": {
+                    "@id": "ex:délkaSladkosti",
+                    "@type": "xsd:integer"
+                },
+                "výška": {
+                    "@id": "ex:výškaSladkosti",
+                    "@type": "xsd:integer"
+                },
+                "obsahuje": {
+                    "@id": "ex:obsahujeSurovinu",
+                    "@type": "@id"
+                }
+
+            }
+        },
         "suroviny": {
             "@id": "ex:Suroviny",
             "@container": "@set",
@@ -40,6 +72,58 @@
         }
     },
     "id": "evidence",
+    "sladkosti": [
+        {
+            "id": "ex:Tatranka",
+            "typ": "sladkost",
+            "název": {
+                "cs": "Tatranka"
+            },
+            "hmotnost": 125,
+            "šířka": 50,
+            "délka": 60,
+            "výška": 120,
+            "obsahuje": [
+                "ex:Čokoláda",
+                "ex:Mléko",
+                "ex:Múka"
+            ]
+        },
+        {
+            "id": "ex:Nektar",
+            "typ": "sladkost",
+            "název": {
+                "cs": "Nektar"
+            },
+            "hmotnost": 75,
+            "šířka": 60,
+            "délka": 60,
+            "výška": 70,
+            "obsahuje": [
+                "ex:Múka",
+                "ex:Mléko",
+                "ex:Vejce",
+                "ex:Cukor",
+                "ex:Maslo"
+            ]
+        },
+        {
+            "id": "ex:ČokoDortík",
+            "typ": "sladkost",
+            "název": {
+                "cs": "Čokoládový dortík"
+            },
+            "hmotnost": 50,
+            "šířka": 50,
+            "délka": 30,
+            "výška": 80,
+            "obsahuje": [
+                "ex:Čokoláda",
+                "ex:Múka",
+                "ex:Maslo"
+            ]
+        }
+    ],
     "suroviny": [
         {
             "id": "ex:Múka",
