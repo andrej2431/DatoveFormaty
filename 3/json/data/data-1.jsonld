@@ -1,31 +1,101 @@
 {
     "@context": {
-        "ex": "http://example.org/vocabulary/",
-        "dcterms": "http://purl.org/dc/terms/",
+        "ex": "https://example.org/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "type": "@type",
-        "alergen": "ex:Alergen",
-        "surovina": "ex:Surovina",
+        "typ": "@type",
         "id": "@id",
-        "číslo": {
-            "@id": "ex:číslo",
-            "@type": "xsd:integer"
+        "suroviny": {
+            "@id": "ex:Suroviny",
+            "@container": "@set",
+            "@context": {
+                "surovina": "ex:Surovina",
+                "název": {
+                    "@id": "ex:názevSuroviny",
+                    "@container": "@language"
+                },
+                "obsahuje": {
+                    "@id": "ex:obsahujeAlergen",
+                    "@type": "@id"
+                }
+            }
         },
-        "alergeny": "@graph"
+        "alergeny": {
+            "@id": "ex:Alergeny",
+            "@container": "@set",
+            "@context": {
+                "alergen": "ex:Alergen",
+                "název": {
+                    "@id": "ex:názevAlergenu",
+                    "@container": "@language"
+                },
+                "číslo": {
+                    "@id": "ex:číslo",
+                    "@type": "xsd:integer"
+                }
+            }
+        }
     },
-
+    "id": "evidence",
+    "suroviny": [
+        {
+            "id": "ex:Surovina1",
+            "typ": "surovina",
+            "název": {
+                "cs": "Surovina 1"
+            },
+            "obsahuje": [
+                "ex:Alergen1",
+                "ex:Alergen2"
+            ]
+        },
+        {
+            "id": "ex:Surovina2",
+            "typ": "surovina",
+            "název": {
+                "cs": "Surovina 2"
+            }
+        }
+    ],
     "alergeny": [
         {
-            "type": "alergen",
-            "id": "ex:Arašídy",
+            "id": "ex:Lepek",
+            "typ": "alergen",
+            "název": {
+                "cs": "lepek"
+            },
+            "číslo": 1
+        },
+        {
+            "id": "ex:VejceAlergen",
+            "typ": "alergen",
+            "název": {
+                "cs": "vejce"
+            },
+            "číslo": 3
+        },
+        {
+            "id": "ex:Arašidy",
+            "typ": "alergen",
+            "název": {
+                "cs": "arašídy"
+            },
             "číslo": 4
         },
         {
-            "type": "alergen",
-            "id": "ex:Múka",
+            "id": "ex:Sója",
+            "typ": "alergen",
+            "název": {
+                "cs": "sója"
+            },
+            "číslo": 6
+        },
+        {
+            "id": "ex:MlékoAlergen",
+            "typ": "alergen",
+            "název": {
+                "cs": "mléko"
+            },
             "číslo": 7
         }
     ]
 }
-
-// https://json-ld.org/playground/

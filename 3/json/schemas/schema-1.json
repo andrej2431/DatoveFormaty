@@ -19,10 +19,10 @@
                             "cs": {
                                 "type": "string"
                             }
-                        }
-                    },
-                    "cena za kg": {
-                        "type": "number"
+                        },
+                        "required": [
+                            "cs"
+                        ]
                     },
                     "obsahuje": {
                         "type": "array",
@@ -31,7 +31,11 @@
                             "title": "id alergenu"
                         }
                     }
-                }
+                },
+                "required": [
+                    "id",
+                    "název"
+                ]
             }
         },
         "alergeny": {
@@ -49,13 +53,25 @@
                             "cs": {
                                 "type": "string"
                             }
-                        }
+                        },
+                        "required": [
+                            "cs"
+                        ]
                     },
                     "číslo": {
                         "type": "number"
                     }
-                }
+                },
+                "required": [
+                    "id",
+                    "název",
+                    "číslo"
+                ]
             }
         }
-    }
+    },
+    "required": [
+        "alergeny",
+        "suroviny"
+    ]
 }
