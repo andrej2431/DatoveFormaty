@@ -24,6 +24,9 @@
                             "cs"
                         ]
                     },
+                    "cena za kg": {
+                        "type": "number"
+                    },
                     "obsahuje": {
                         "type": "array",
                         "items": {
@@ -34,7 +37,8 @@
                 },
                 "required": [
                     "id",
-                    "název"
+                    "název",
+                    "cena za kg"
                 ]
             }
         },

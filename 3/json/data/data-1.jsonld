@@ -13,6 +13,10 @@
                     "@id": "ex:názevSuroviny",
                     "@container": "@language"
                 },
+                "cena za kg": {
+                    "@id": "ex:cenaZaKg",
+                    "@type": "xsd:decimal"
+                },
                 "obsahuje": {
                     "@id": "ex:obsahujeAlergen",
                     "@type": "@id"
@@ -38,22 +42,68 @@
     "id": "evidence",
     "suroviny": [
         {
-            "id": "ex:Surovina1",
+            "id": "ex:Múka",
             "typ": "surovina",
             "název": {
-                "cs": "Surovina 1"
+                "cs": "múka"
             },
+            "cena za kg": 24.90,
             "obsahuje": [
-                "ex:Alergen1",
-                "ex:Alergen2"
+                "ex:Lepek"
             ]
         },
         {
-            "id": "ex:Surovina2",
+            "id": "ex:Maslo",
             "typ": "surovina",
             "název": {
-                "cs": "Surovina 2"
-            }
+                "cs": "maslo"
+            },
+            "cena za kg": 56.49,
+            "obsahuje": [
+                "ex:MlékoAlergen"
+            ]
+        },
+        {
+            "id": "ex:Cukor",
+            "typ": "surovina",
+            "název": {
+                "cs": "cukor"
+            },
+            "cena za kg": 20.12
+        },
+        {
+            "id": "ex:Vejce",
+            "typ": "surovina",
+            "název": {
+                "cs": "vejce"
+            },
+            "cena za kg": 100.00,
+            "obsahuje": [
+                "ex:VejceAlergen"
+            ]
+        },
+        {
+            "id": "ex:Čokoláda",
+            "typ": "surovina",
+            "název": {
+                "cs": "čokoláda"
+            },
+            "cena za kg": 100.00,
+            "obsahuje": [
+                "ex:Arašidy",
+                "ex:MlékoAlergen"
+            ]
+        },
+        {
+            "id": "ex:Mléko",
+            "typ": "surovina",
+            "název": {
+                "cs": "mléko"
+            },
+            "cena za kg": 23.42,
+            "obsahuje": [
+                "ex:MlékoAlergen"
+            ]
         }
     ],
     "alergeny": [
