@@ -113,7 +113,7 @@ ex:názevSladkosti a rdf:Property;
     rdfs:domain ex:Sladkost;
     rdfs:range rdf:langString.
 
-ex:hmostnost a rdf:Property;
+ex:hmotnost a rdf:Property;
     rdfs:label "Hmotnost"@cs ;
     rdfs:comment "Hmotnost samotné sladkosti bez obalu, uvedeno v gramech"@cs;
     rdfs:domain ex:Sladkost;
