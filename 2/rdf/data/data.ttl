@@ -418,7 +418,7 @@ ex:TovárnaKarlíkova ex:vyrábí ex:Tatranka.
 ex:TovárnaHaribo ex:vyrábí ex:Tatranka.
 ex:TovárnaHaribo ex:vyrábí ex:Nektar.
 ex:TovárnaCukPrum ex:vyrábí ex:Nektar.
-ex:TovárnaCukPrum ex:vyrábí ex:Tatranka.
+ex:TovárnaCukPrum ex:vyrábí ex:ČokoDortík.
 
 ### Nabízí
 ex:AutomatUVrátnice ex:nabízí ex:Tatranka.
