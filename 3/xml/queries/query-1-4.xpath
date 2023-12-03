@@ -1,0 +1,4 @@
+
+(: Získejte názvy sladkostí (sladkost), které obsahují alespoň tři různé alergeny: :)
+
+//sladkost[count(distinct-values(obsahujeSurovinu/surovina-id/ancestor::alergen-id)) >= 3]/název/text()

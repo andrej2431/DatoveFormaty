@@ -1,0 +1,4 @@
+
+(: Vyhledejte názvy alergenů (alergen), které nejsou přítomny v žádné sladkosti (sladkost): :)
+
+//alergen[not(id = //sladkost/obsahujeSurovinu/surovina-id/ancestor::alergen-id/text())]/název/text()
