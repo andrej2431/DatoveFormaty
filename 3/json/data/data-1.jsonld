@@ -42,6 +42,41 @@
                 }
             }
         },
+        "automaty": {
+            "@id": "ex:Automaty",
+            "@container": "@set",
+            "@context": {
+                "automat": "ex:Automat",
+                "název": {
+                    "@id": "ex:názevAutomatu",
+                    "@container": "@language"
+                },
+                "kapacita": {
+                    "@id": "ex:kapacita",
+                    "@type": "xsd:integer"
+                },
+                "šířka": {
+                    "@id": "ex:šířkaAutomatu",
+                    "@type": "xsd:integer"
+                },
+                "délka": {
+                    "@id": "ex:délkaAutomatu",
+                    "@type": "xsd:integer"
+                },
+                "výška": {
+                    "@id": "ex:výškaAutomatu",
+                    "@type": "xsd:integer"
+                },
+                "nabízí": {
+                    "@id": "ex:nabízí",
+                    "@type": "@id"
+                },
+                "nachází se v": {
+                    "@id": "ex:nacházíSeV",
+                    "@type": "@id"
+                }
+            }
+        },
         "sladkosti": {
             "@id": "ex:Sladkosti",
             "@container": "@set",
@@ -71,7 +106,6 @@
                     "@id": "ex:obsahujeSurovinu",
                     "@type": "@id"
                 }
-
             }
         },
         "suroviny": {
@@ -243,6 +277,74 @@
                 "ex:Nektar",
                 "ex:ČokoDortík"
             ]
+        }
+    ],
+    "automaty": [
+        {
+            "id": "ex:AutomatUVrátnice",
+            "typ": "automat",
+            "název": {
+                "cs": "U Vrátnice"
+            },
+            "kapacita": 120,
+            "šířka": 50,
+            "délka": 70,
+            "výška": 200,
+            "nabízí": [
+                "ex:Tatranka",
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ],
+            "nachází se v": "ex:TovárnaKarlíkova"
+        },
+        {
+            "id": "ex:AutomatRychláMňamka",
+            "typ": "automat",
+            "název": {
+                "cs": "Rychlá Mňamka"
+            },
+            "kapacita": 120,
+            "šířka": 50,
+            "délka": 70,
+            "výška": 200,
+            "nabízí": [
+                "ex:Tatranka",
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ],
+            "nachází se v": "ex:TovárnaHaribo"
+        },
+        {
+            "id": "ex:AutomatPohoštěníVMezipatře",
+            "typ": "automat",
+            "název": {
+                "cs": "Pohoštění V Mezipatře"
+            },
+            "kapacita": 110,
+            "šířka": 50,
+            "délka": 40,
+            "výška": 180,
+            "nabízí": [
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ],
+            "nachází se v": "ex:TovárnaCukPrum"
+        },
+        {
+            "id": "ex:AutomatOblačnéObčerstvení",
+            "typ": "automat",
+            "název": {
+                "cs": "Oblačné Občerstvení"
+            },
+            "kapacita": 110,
+            "šířka": 50,
+            "délka": 70,
+            "výška": 180,
+            "nabízí": [
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ],
+            "nachází se v": "ex:TovárnaCukPrum"
         }
     ],
     "sladkosti": [
