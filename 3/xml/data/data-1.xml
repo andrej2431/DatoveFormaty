@@ -104,7 +104,7 @@ xmlns="http://example.org/xsd" >
             <rýchlost-výroby>128</rýchlost-výroby>
             <vyrábí>
                 <sladkost-id>Nektar</sladkost-id>
-                <sladkost-id>Tatranka</sladkost-id>
+                <sladkost-id>ČokoDortík</sladkost-id>
             </vyrábí>
             <zaměstnává>
                 <zaměstnanec-id>Apollo</zaměstnanec-id>

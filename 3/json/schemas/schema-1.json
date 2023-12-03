@@ -4,6 +4,146 @@
     "type": "object",
     "title": "Evidence továren na sladkosti",
     "properties": {
+        "továrny": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "továrna",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "název": {
+                        "type": "object",
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "cs"
+                        ]
+                    },
+                    "rychlost výroby": {
+                        "type": "number"
+                    },
+                    "zaměstnává": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "zaměstnanec",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "jméno": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cs": {
+                                            "type": "array"
+                                        }
+                                    },
+                                    "required": [
+                                        "cs"
+                                    ]
+                                },
+                                "příjmení": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cs": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "tituly": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cs": {
+                                            "type": "array"
+                                        }
+                                    },
+                                    "required": [
+                                        "cs"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "jméno",
+                                "příjmení",
+                                "tituly"
+                            ]
+                        }
+                    },
+                    "vyrábí": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "title": "id sladkosti"
+                        }
+                    }
+                },
+                "required": [
+                    "id",
+                    "název",
+                    "rychlost výroby"
+                ]
+            }
+        },
+        "automaty": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "automat",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "název": {
+                        "type": "object",
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "cs"
+                        ]
+                    },
+                    "kapacita": {
+                        "type": "number"
+                    },
+                    "šířka": {
+                        "type": "number"
+                    },
+                    "délka": {
+                        "type": "number"
+                    },
+                    "výška": {
+                        "type": "number"
+                    },
+                    "nabízí": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "title": "id sladkosti"
+                        }
+                    },
+                    "nachází se v": {
+                        "type": "string",
+                        "title": "id továrny"
+                    }
+                },
+                "required": [
+                    "id",
+                    "název",
+                    "kapacita",
+                    "šířka",
+                    "délka",
+                    "výška"
+                ]
+            }            
+        },
         "sladkosti": {
             "type": "array",
             "items": {
@@ -125,6 +265,8 @@
         }
     },
     "required": [
+        "továrny",
+        "automaty",
         "sladkosti",
         "alergeny",
         "suroviny"

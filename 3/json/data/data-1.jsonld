@@ -4,6 +4,79 @@
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "typ": "@type",
         "id": "@id",
+        "továrny": {
+            "@id": "ex:Továrny",
+            "@container": "@set",
+            "@context": {
+                "továrna": "ex:Továrna",
+                "název": {
+                    "@id": "ex:názevTovárny",
+                    "@container": "@language"
+                },
+                "rychlost výroby": {
+                    "@id": "ex:rychlostVýroby",
+                    "@type": "xsd:integer"
+                },
+                "zaměstnává": {
+                    "@id": "ex:zaměstnává",
+                    "@container": "@set",
+                    "@context": {
+                        "zaměstnanec": "ex:Zaměstnanec",
+                        "jméno": {
+                            "@id": "ex:jméno",
+                            "@container": "@language"
+                        },
+                        "příjmení": {
+                            "@id": "ex:příjmení",
+                            "@container": "@language"
+                        },
+                        "tituly": {
+                            "@id": "ex:tituly",
+                            "@container": "@language"
+                        }
+                    }
+                },
+                "vyrábí": {
+                    "@id": "ex:vyrábí",
+                    "@type": "@id"
+                }
+            }
+        },
+        "automaty": {
+            "@id": "ex:Automaty",
+            "@container": "@set",
+            "@context": {
+                "automat": "ex:Automat",
+                "název": {
+                    "@id": "ex:názevAutomatu",
+                    "@container": "@language"
+                },
+                "kapacita": {
+                    "@id": "ex:kapacita",
+                    "@type": "xsd:integer"
+                },
+                "šířka": {
+                    "@id": "ex:šířkaAutomatu",
+                    "@type": "xsd:integer"
+                },
+                "délka": {
+                    "@id": "ex:délkaAutomatu",
+                    "@type": "xsd:integer"
+                },
+                "výška": {
+                    "@id": "ex:výškaAutomatu",
+                    "@type": "xsd:integer"
+                },
+                "nabízí": {
+                    "@id": "ex:nabízí",
+                    "@type": "@id"
+                },
+                "nachází se v": {
+                    "@id": "ex:nacházíSeV",
+                    "@type": "@id"
+                }
+            }
+        },
         "sladkosti": {
             "@id": "ex:Sladkosti",
             "@container": "@set",
@@ -33,7 +106,6 @@
                     "@id": "ex:obsahujeSurovinu",
                     "@type": "@id"
                 }
-
             }
         },
         "suroviny": {
@@ -71,7 +143,210 @@
             }
         }
     },
+
     "id": "evidence",
+    "továrny": [
+        {
+            "id": "ex:TovárnaKarlíkova",
+            "typ": "továrna",
+            "název": {
+                "cs": "Karlíkova továrna na čokoládu"
+            },
+            "rychlost výroby": 32,
+            "zaměstnává": [
+                {
+                    "id": "ex:Zeus",
+                    "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Zeus"]
+                    },
+                    "příjmení": {
+                        "cs": "Hromný"
+                    },
+                    "tituly": {
+                        "cs": ["Nej."]
+                    }
+                },
+                {
+                    "id": "ex:Athena",
+                    "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Athéna"]
+                    },
+                    "příjmení": {
+                        "cs": "Múdra"
+                    },
+                    "tituly": {
+                        "cs": ["Pí."]
+                    }
+                }
+            ],
+            "vyrábí": [
+                "ex:Tatranka"
+            ]
+        },
+        {
+            "id": "ex:TovárnaHaribo",
+            "typ": "továrna",
+            "název": {
+                "cs": "Haribo Industries"
+            },
+            "rychlost výroby": 64,
+            "zaměstnává": [
+                {
+                    "id": "ex:Hades",
+                    "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Hádes"]
+                    },
+                    "příjmení": {
+                        "cs": "Černý"
+                    },
+                    "tituly": {
+                        "cs": ["PPodsv."]
+                    }
+                },
+                {
+                    "id": "ex:Afrodita",
+                    "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Afrodita"]
+                    },
+                    "příjmení": {
+                        "cs": "Krásna"
+                    },
+                    "tituly": {
+                        "cs": ["Nejkr."]
+                    }
+                },
+                {
+                    "id": "ex:Hermes",
+                    "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Hermes"]
+                    },
+                    "příjmení": {
+                        "cs": "Kováč"
+                    },
+                    "tituly": {
+                        "cs": ["Buch."]
+                    }
+                }
+            ],
+            "vyrábí": [
+                "ex:Tatranka",
+                "ex:Nektar"
+            ]
+        },
+        {
+            "id": "ex:TovárnaCukPrum",
+            "typ": "továrna",
+            "název": {
+                "cs": "Cukrárenská průmyslovka"
+            },
+            "rychlost výroby": 128,
+            "zaměstnává": [
+                {
+                    "id": "ex:Apollo",
+                    "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Apollo"]
+                    },
+                    "příjmení": {
+                        "cs": "Liečivý"
+                    },
+                    "tituly": {
+                        "cs": ["Lig."]
+                    }
+                },
+                {
+                    "id": "ex:Artemis",
+                    "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Artemis"]
+                    },
+                    "příjmení": {
+                        "cs": "Lesná"
+                    },
+                    "tituly": {
+                        "cs": ["Lesná."]
+                    }
+                }
+            ],
+            "vyrábí": [
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ]
+        }
+    ],
+    "automaty": [
+        {
+            "id": "ex:AutomatUVrátnice",
+            "typ": "automat",
+            "název": {
+                "cs": "U Vrátnice"
+            },
+            "kapacita": 120,
+            "šířka": 50,
+            "délka": 70,
+            "výška": 200,
+            "nabízí": [
+                "ex:Tatranka",
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ],
+            "nachází se v": "ex:TovárnaKarlíkova"
+        },
+        {
+            "id": "ex:AutomatRychláMňamka",
+            "typ": "automat",
+            "název": {
+                "cs": "Rychlá Mňamka"
+            },
+            "kapacita": 120,
+            "šířka": 50,
+            "délka": 70,
+            "výška": 200,
+            "nabízí": [
+                "ex:Tatranka",
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ],
+            "nachází se v": "ex:TovárnaHaribo"
+        },
+        {
+            "id": "ex:AutomatPohoštěníVMezipatře",
+            "typ": "automat",
+            "název": {
+                "cs": "Pohoštění V Mezipatře"
+            },
+            "kapacita": 110,
+            "šířka": 50,
+            "délka": 40,
+            "výška": 180,
+            "nabízí": [
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ],
+            "nachází se v": "ex:TovárnaCukPrum"
+        },
+        {
+            "id": "ex:AutomatOblačnéObčerstvení",
+            "typ": "automat",
+            "název": {
+                "cs": "Oblačné Občerstvení"
+            },
+            "kapacita": 110,
+            "šířka": 50,
+            "délka": 70,
+            "výška": 180,
+            "nabízí": [
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ],
+            "nachází se v": "ex:TovárnaCukPrum"
+        }
+    ],
     "sladkosti": [
         {
             "id": "ex:Tatranka",
