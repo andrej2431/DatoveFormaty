@@ -1,5 +1,5 @@
 
 (: Uveďte názvy továren (továrna), které vyrábějí sladkosti (sladkost) obsahující přísadu s cenou za kilogram vyšší než 50 
-a mají prodejní automaty (automaty) s kapacitou větší než 150: :)
+a mají prodejní automaty (automaty) s kapacitou větší než 150 :)
 
 //továrna[vyrábí/sladkost-id/ancestor::sladkost/obsahujeSurovinu/surovina-id/../cena-za-kg > 50 and ../following-sibling::automaty/automat/kapacita > 150]/název/text()
