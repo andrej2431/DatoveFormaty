@@ -4,6 +4,92 @@
     "type": "object",
     "title": "Evidence továren na sladkosti",
     "properties": {
+        "továrny": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "továrna",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "název": {
+                        "type": "object",
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "cs"
+                        ]
+                    },
+                    "rychlost výroby": {
+                        "type": "number"
+                    },
+                    "zaměstnává": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "title": "zaměstnanec",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "jméno": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cs": {
+                                            "type": "array"
+                                        }
+                                    },
+                                    "required": [
+                                        "cs"
+                                    ]
+                                },
+                                "příjmení": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cs": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                "tituly": {
+                                    "type": "object",
+                                    "properties": {
+                                        "cs": {
+                                            "type": "array"
+                                        }
+                                    },
+                                    "required": [
+                                        "cs"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "id",
+                                "jméno",
+                                "příjmení",
+                                "tituly"
+                            ]
+                        }
+                    },
+                    "vyrábí": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "title": "id sladkosti"
+                        }
+                    }
+                },
+                "required": [
+                    "id",
+                    "název",
+                    "rychlost výroby"
+                ]
+            }
+        },
         "sladkosti": {
             "type": "array",
             "items": {
@@ -125,6 +211,7 @@
         }
     },
     "required": [
+        "továrny",
         "sladkosti",
         "alergeny",
         "suroviny"
