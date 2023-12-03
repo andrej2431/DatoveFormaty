@@ -1,0 +1,2 @@
+- query-1-1.jq
+	- U každé továrny nalezne celkovou kapacitu automatů, které se v ní nacházejí.
