@@ -22,8 +22,16 @@
                     "@container": "@set",
                     "@context": {
                         "zaměstnanec": "ex:Zaměstnanec",
+                        "jméno": {
+                            "@id": "ex:jméno",
+                            "@container": "@language"
+                        },
                         "příjmení": {
                             "@id": "ex:příjmení",
+                            "@container": "@language"
+                        },
+                        "tituly": {
+                            "@id": "ex:tituly",
                             "@container": "@language"
                         }
                     }
@@ -115,15 +123,27 @@
                 {
                     "id": "ex:Zeus",
                     "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Zeus"]
+                    },
                     "příjmení": {
                         "cs": "Hromný"
+                    },
+                    "tituly": {
+                        "cs": ["Nej."]
                     }
                 },
                 {
                     "id": "ex:Athena",
                     "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Athéna"]
+                    },
                     "příjmení": {
                         "cs": "Múdra"
+                    },
+                    "tituly": {
+                        "cs": ["Pí."]
                     }
                 }
             ],
@@ -142,22 +162,40 @@
                 {
                     "id": "ex:Hades",
                     "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Hádes"]
+                    },
                     "příjmení": {
                         "cs": "Černý"
+                    },
+                    "tituly": {
+                        "cs": ["PPodsv."]
                     }
                 },
                 {
                     "id": "ex:Afrodita",
                     "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Afrodita"]
+                    },
                     "příjmení": {
                         "cs": "Krásna"
+                    },
+                    "tituly": {
+                        "cs": ["Nejkr."]
                     }
                 },
                 {
                     "id": "ex:Hermes",
                     "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Hermes"]
+                    },
                     "příjmení": {
                         "cs": "Kováč"
+                    },
+                    "tituly": {
+                        "cs": ["Buch."]
                     }
                 }
             ],
@@ -177,15 +215,27 @@
                 {
                     "id": "ex:Apollo",
                     "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Apollo"]
+                    },
                     "příjmení": {
                         "cs": "Liečivý"
+                    },
+                    "tituly": {
+                        "cs": ["Lig."]
                     }
                 },
                 {
                     "id": "ex:Artemis",
                     "typ": "zaměstnanec",
+                    "jméno": {
+                        "cs": ["Artemis"]
+                    },
                     "příjmení": {
                         "cs": "Lesná"
+                    },
+                    "tituly": {
+                        "cs": "Lesná."
                     }
                 }
             ],
