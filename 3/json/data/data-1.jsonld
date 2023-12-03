@@ -4,6 +4,36 @@
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "typ": "@type",
         "id": "@id",
+        "továrny": {
+            "@id": "ex:Továrny",
+            "@container": "@set",
+            "@context": {
+                "továrna": "ex:Továrna",
+                "název": {
+                    "@id": "ex:názevTovárny",
+                    "@container": "@language"
+                },
+                "rychlost výroby": {
+                    "@id": "ex:rychlostVýroby",
+                    "@type": "xsd:integer"
+                },
+                "zaměstnává": {
+                    "@id": "ex:zaměstnává",
+                    "@container": "@set",
+                    "@context": {
+                        "zaměstnanec": "ex:Zaměstnanec",
+                        "příjmení": {
+                            "@id": "ex:příjmení",
+                            "@container": "@language"
+                        }
+                    }
+                },
+                "vyrábí": {
+                    "@id": "ex:vyrábí",
+                    "@type": "@id"
+                }
+            }
+        },
         "sladkosti": {
             "@id": "ex:Sladkosti",
             "@container": "@set",
@@ -71,7 +101,100 @@
             }
         }
     },
+
     "id": "evidence",
+    "továrny": [
+        {
+            "id": "ex:TovárnaKarlíkova",
+            "typ": "továrna",
+            "název": {
+                "cs": "Karlíkova továrna na čokoládu"
+            },
+            "rychlost výroby": 32,
+            "zaměstnává": [
+                {
+                    "id": "ex:Zeus",
+                    "typ": "zaměstnanec",
+                    "příjmení": {
+                        "cs": "Hromný"
+                    }
+                },
+                {
+                    "id": "ex:Athena",
+                    "typ": "zaměstnanec",
+                    "příjmení": {
+                        "cs": "Múdra"
+                    }
+                }
+            ],
+            "vyrábí": [
+                "ex:Tatranka"
+            ]
+        },
+        {
+            "id": "ex:TovárnaHaribo",
+            "typ": "továrna",
+            "název": {
+                "cs": "Haribo Industries"
+            },
+            "rychlost výroby": 64,
+            "zaměstnává": [
+                {
+                    "id": "ex:Hades",
+                    "typ": "zaměstnanec",
+                    "příjmení": {
+                        "cs": "Černý"
+                    }
+                },
+                {
+                    "id": "ex:Afrodita",
+                    "typ": "zaměstnanec",
+                    "příjmení": {
+                        "cs": "Krásna"
+                    }
+                },
+                {
+                    "id": "ex:Hermes",
+                    "typ": "zaměstnanec",
+                    "příjmení": {
+                        "cs": "Kováč"
+                    }
+                }
+            ],
+            "vyrábí": [
+                "ex:Tatranka",
+                "ex:Nektar"
+            ]
+        },
+        {
+            "id": "ex:TovárnaCukPrum",
+            "typ": "továrna",
+            "název": {
+                "cs": "Cukrárenská průmyslovka"
+            },
+            "rychlost výroby": 128,
+            "zaměstnává": [
+                {
+                    "id": "ex:Apollo",
+                    "typ": "zaměstnanec",
+                    "příjmení": {
+                        "cs": "Liečivý"
+                    }
+                },
+                {
+                    "id": "ex:Artemis",
+                    "typ": "zaměstnanec",
+                    "příjmení": {
+                        "cs": "Lesná"
+                    }
+                }
+            ],
+            "vyrábí": [
+                "ex:Nektar",
+                "ex:ČokoDortík"
+            ]
+        }
+    ],
     "sladkosti": [
         {
             "id": "ex:Tatranka",
