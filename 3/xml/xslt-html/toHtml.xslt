@@ -157,7 +157,6 @@
                 <th>Název</th>
                 <th>Výrábě se</th>
                 <th>Suroviny</th>
-                <th>Alergeny</th>
                 <th>Hmotnost</th>
                 <th>Šířka</th>
                 <th>Délka</th>
@@ -182,11 +181,6 @@
                     <xsl:if test="position() != last()">, </xsl:if>
                 </xsl:for-each>
             </td>
-            <td>
-                <xsl:apply-templates select="ex:obsahujeSurovinu/ex:surovina-id">
-                    <xsl:sort select="."/>
-                </xsl:apply-templates>
-            </td>
             <td><xsl:value-of select="ex:hmotnost"/></td>
             <td><xsl:value-of select="ex:šířka"/></td>
             <td><xsl:value-of select="ex:délka"/></td>
@@ -197,10 +191,5 @@
         </tr>
     </xsl:template>
 
-    <xsl:template match="ex:surovina-id">
-        <xsl:value-of select="."/>
-        <xsl:variable name="alergen" select="/ex:database/ex:alergeny/ex:alergen[ex:id = current()]/ex:název"/>
-        <br>
-    </xsl:template>
 </xsl:stylesheet>
 
