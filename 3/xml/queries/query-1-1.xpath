@@ -1,4 +1,2 @@
 
 (: Najděte názvy továren (továrna), kde je celková kapacita všech jejich automatů větší než 200 :)
-
-//továrna[sum(../automaty/automat[nachází-se-v/tovarna-id = current()/id]/kapacita) > 200]/název/text()
