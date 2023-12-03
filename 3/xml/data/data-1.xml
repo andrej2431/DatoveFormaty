@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://example.org/xsd ../schemas/schema-1.xsd"
+xmlns="http://example.org/xsd" >
+
+    <zaměstnanci>
+        <zaměstnanec>
+            <id>Zeus</id>
+            <jméno>Zeus</jméno>
+            <příjmení>Hromný</příjmení>
+            <tituly>
+                <titul>Nej.</titul>
+            </tituly>
+        </zaměstnanec>
+
+        <zaměstnanec>
+            <id>Athena</id>
+            <jméno>Athéna</jméno>
+            <příjmení>Múdra</příjmení>
+            <tituly>
+                <titul>Pí</titul>
+            </tituly>
+        </zaměstnanec>
+
+        <zaměstnanec>
+            <id>Hades</id>
+            <jméno>Hádes</jméno>
+            <příjmení>Černý</příjmení>
+            <tituly>
+                <titul>PPodsv.</titul>
+            </tituly>
+        </zaměstnanec>
+
+        <zaměstnanec>
+            <id>Afrodita</id>
+            <jméno>Afrodita</jméno>
+            <příjmení>Krásna</příjmení>
+            <tituly>
+                <titul>Nejkr.</titul>
+            </tituly>
+        </zaměstnanec>
+
+        <zaměstnanec>
+            <id>Hermes</id>
+            <jméno>Hermes</jméno>
+            <příjmení>Kováč</příjmení>
+            <tituly>
+                <titul>Buch.</titul>
+            </tituly>
+        </zaměstnanec>
+
+        <zaměstnanec>
+            <id>Artemis</id>
+            <jméno>Artemis</jméno>
+            <příjmení>Lesná</příjmení>
+            <tituly>
+                <titul>Lesná.</titul>
+            </tituly>
+        </zaměstnanec>
+
+        <zaměstnanec>
+            <id>Apollo</id>
+            <jméno>Apollo</jméno>
+            <příjmení>Liečivý</příjmení>
+            <tituly>
+                <titul>Lig.</titul>
+            </tituly>
+        </zaměstnanec>
+    </zaměstnanci>
+
+    <továrny>
+        <továrna>
+            <id>TovárnaKarlíkova</id>
+            <název>Karlíkova továrna na čokoládu</název>
+            <rýchlost-výroby>32</rýchlost-výroby>
+            <vyrábí>
+                <sladkost-id>Tatranka</sladkost-id>
+            </vyrábí>
+            <zaměstnává>
+                <zaměstnanec-id>Zeus</zaměstnanec-id>
+                <zaměstnanec-id>Athena</zaměstnanec-id>
+            </zaměstnává>
+        </továrna>
+
+        <továrna>
+            <id>TovárnaHaribo</id>
+            <název>Haribo Industries</název>
+            <rýchlost-výroby>64</rýchlost-výroby>
+            <vyrábí>
+                <sladkost-id>Tatranka</sladkost-id>
+                <sladkost-id>Nektar</sladkost-id>
+            </vyrábí>
+            <zaměstnává>
+                <zaměstnanec-id>Hades</zaměstnanec-id>
+                <zaměstnanec-id>Afrodita</zaměstnanec-id>
+                <zaměstnanec-id>Hermes</zaměstnanec-id>
+            </zaměstnává>
+        </továrna>
+
+        <továrna>
+            <id>TovárnaCukPrum</id>
+            <název>Cukrárenská průmyslovka</název>
+            <rýchlost-výroby>128</rýchlost-výroby>
+            <vyrábí>
+                <sladkost-id>Nektar</sladkost-id>
+                <sladkost-id>Tatranka</sladkost-id>
+            </vyrábí>
+            <zaměstnává>
+                <zaměstnanec-id>Apollo</zaměstnanec-id>
+                <zaměstnanec-id>Artemis</zaměstnanec-id>
+            </zaměstnává>
+        </továrna>
+    </továrny>
+
+    <automaty>
+        <automat>
+            <id>AutomatUVrátnice</id>
+            <název>U Vrátnice</název>
+            <kapacita>120</kapacita>
+            <šířka>50</šířka>
+            <délka>70</délka>
+            <výška>200</výška>
+            <nabízí>
+                <sladkost-id>Tatranka</sladkost-id>
+                <sladkost-id>Nektar</sladkost-id>
+                <sladkost-id>ČokoDortík</sladkost-id>
+            </nabízí>
+            <nachází-se-v>
+                <tovarna-id>TovárnaKarlíkova</tovarna-id>
+            </nachází-se-v>
+        </automat>
+
+        <automat>
+            <id>AutomatRychláMňamka</id>
+            <název>Rychlá Mňamka</název>
+            <kapacita>120</kapacita>
+            <šířka>50</šířka>
+            <délka>70</délka>
+            <výška>70</výška>
+            <nabízí>
+                <sladkost-id>Tatranka</sladkost-id>
+                <sladkost-id>Nektar</sladkost-id>
+                <sladkost-id>čokoDortík</sladkost-id>
+            </nabízí>
+            <nachází-se-v>
+                <tovarna-id>TovárnaHaribo</tovarna-id>
+            </nachází-se-v>
+        </automat>
+
+        <automat>
+            <id>AutomatPohoštěníVMezipatře</id>
+            <název>Pohoštění V Mezipatře</název>
+            <kapacita>110</kapacita>
+            <šířka>50</šířka>
+            <délka>40</délka>
+            <výška>180</výška>
+            <nabízí>
+                <sladkost-id>Nektar</sladkost-id>
+                <sladkost-id>ČokoDortík</sladkost-id>
+            </nabízí>
+            <nachází-se-v>
+                <tovarna-id>TovárnaCukPrum</tovarna-id>
+            </nachází-se-v>
+        </automat>
+
+        <automat>
+            <id>AutomatOblačnéObčerstvení</id>
+            <název>Oblačné Občerstvení</název>
+            <kapacita>110</kapacita>
+            <šířka>50</šířka>
+            <délka>70</délka>
+            <výška>180</výška>
+            <nabízí>
+                <sladkost-id>Nektar</sladkost-id>
+                <sladkost-id>ČokoDortík</sladkost-id>
+            </nabízí>
+            <nachází-se-v>
+                <tovarna-id>TovárnaCukPrum</tovarna-id>    
+            </nachází-se-v>
+        </automat>
+    </automaty>
+
+    <sladkosti>
+        <sladkost>
+            <id>Tatranka</id>
+            <název>Tatranka</název>
+            <hmotnost>125</hmotnost>
+            <šířka>50</šířka>
+            <délka>60</délka>
+            <výška>120</výška>
+            <obsahujeSurovinu>
+                <surovina-id>Čokoláda</surovina-id>
+                <surovina-id>Mléko</surovina-id>
+                <surovina-id>Múka</surovina-id>
+            </obsahujeSurovinu>
+        </sladkost>
+
+        <sladkost>
+            <id>Nektar</id>
+            <název>Nektar</název>
+            <hmotnost>75</hmotnost>
+            <šířka>60</šířka>
+            <délka>60</délka>
+            <výška>70</výška>
+            <obsahujeSurovinu>
+                <surovina-id>Múka</surovina-id>
+                <surovina-id>Mléko</surovina-id>
+                <surovina-id>Vejce</surovina-id>
+                <surovina-id>Cukor</surovina-id>
+                <surovina-id>Maslo</surovina-id>
+            </obsahujeSurovinu>
+        </sladkost>
+
+        <sladkost>
+            <id>ČokoDortík</id>
+            <název>Čokoládový dortík</název>
+            <hmotnost>50</hmotnost>
+            <šířka>50</šířka>
+            <délka>30</délka>
+            <výška>80</výška>
+            <obsahujeSurovinu>
+                <surovina-id>Čokoláda</surovina-id>
+                <surovina-id>Múka</surovina-id>
+                <surovina-id>Maslo</surovina-id>
+            </obsahujeSurovinu>
+        </sladkost>
+    </sladkosti>
+
+    <suroviny>
+        <surovina>
+            <id>Múka</id>
+            <název>múka</název>
+            <cena-za-kg>24.90</cena-za-kg>
+            <obsahujeAlergen>
+                <alergen-id>Lepek</alergen-id>
+            </obsahujeAlergen>
+        </surovina>
+
+        <surovina>
+            <id>Maslo</id>
+            <název>maslo</název>
+            <cena-za-kg>56.49</cena-za-kg>
+            <obsahujeAlergen>
+                <alergen-id>MlékoAlergen</alergen-id>
+            </obsahujeAlergen>
+        </surovina>
+
+        <surovina>
+            <id>Cukor</id>
+            <název>cukor</název>
+            <cena-za-kg>20.12</cena-za-kg>
+            <obsahujeAlergen></obsahujeAlergen>
+        </surovina>
+
+        <surovina>
+            <id>Vejce</id>
+            <název>vejce</název>
+            <cena-za-kg>100.00</cena-za-kg>
+            <obsahujeAlergen>
+                 <alergen-id>VejceAlergen</alergen-id>
+            </obsahujeAlergen>
+        </surovina>
+
+        <surovina>
+            <id>Čokoláda</id>
+            <název>čokoláda</název>
+            <cena-za-kg>100.00</cena-za-kg>
+            <obsahujeAlergen>
+                <alergen-id>Arašidy</alergen-id>
+                <alergen-id>MlékoAlergen</alergen-id>
+            </obsahujeAlergen>
+        </surovina>
+
+        <surovina>
+            <id>Mléko</id>
+            <název>mléko</název>
+            <cena-za-kg>23.42</cena-za-kg>
+            <obsahujeAlergen>
+                <alergen-id>MlékoAlergen</alergen-id>
+            </obsahujeAlergen>
+        </surovina>
+    </suroviny>
+
+    <alergeny>
+        <alergen>
+            <id>Lepek</id>
+            <název>lepek</název>
+            <číslo>1</číslo>
+        </alergen>
+
+        <alergen>
+            <id>VejceAlergen</id>
+            <název>vejce</název>
+            <číslo>3</číslo>
+        </alergen>
+
+        <alergen>
+            <id>Arašidy</id>
+            <název>arašídy</název>
+            <číslo>4</číslo>
+        </alergen>
+
+        <alergen>
+            <id>Sója</id>
+            <název>sója</název>
+            <číslo>6</číslo>
+        </alergen>
+
+        <alergen>
+            <id>MlékoAlergen</id>
+            <název>mléko</název>
+            <číslo>7</číslo>
+        </alergen>
+    </alergeny>
+</database>

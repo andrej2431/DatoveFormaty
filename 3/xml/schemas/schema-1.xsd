@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://example.org/xsd" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" targetNamespace="http://example.org/xsd" elementFormDefault="qualified" vc:minVersion="1.1"> 
+    <xs:element name="database">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="zaměstnanci">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="tns:zaměstnanec" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+    
+                <xs:element name="továrny">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="tns:továrna" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+    
+                <xs:element name="automaty">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="tns:automat" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+    
+                <xs:element name="sladkosti">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="tns:sladkost" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+    
+                <xs:element name="suroviny">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="tns:surovina" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            
+                <xs:element name="alergeny">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="tns:alergen" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="czech-text">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="lang" type="xs:string" fixed="cz"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:element name="zaměstnanec">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="tns:czech-text"/>
+                <xs:element name="jméno" type="tns:czech-text"/>
+                <xs:element name="příjmení" type="tns:czech-text"/>
+                <xs:element name="tituly">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titul" type="tns:czech-text" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="továrna">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="tns:czech-text"/>
+                <xs:element name="název" type="tns:czech-text"/>
+                <xs:element name="rýchlost-výroby" type="xs:integer"/>
+
+                <xs:element name="vyrábí">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="sladkost-id" type="tns:czech-text" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="zaměstnává">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="zaměstnanec-id" type="tns:czech-text" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="automat">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="tns:czech-text"/>
+                <xs:element name="název" type="tns:czech-text"/>
+                <xs:element name="kapacita" type="xs:integer"/>
+                <xs:element name="šířka" type="xs:integer"/>
+                <xs:element name="délka" type="xs:integer"/>
+                <xs:element name="výška" type="xs:integer"/>
+    
+                <xs:element name="nabízí">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="sladkost-id" type="tns:czech-text" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="nachází-se-v">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tovarna-id" type="tns:czech-text" minOccurs="0"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sladkost">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="tns:czech-text"/>
+                <xs:element name="název" type="tns:czech-text"/>
+                <xs:element name="hmotnost" type="xs:integer"/>
+                <xs:element name="šířka" type="xs:integer"/>
+                <xs:element name="délka" type="xs:integer"/>
+                <xs:element name="výška" type="xs:integer" />
+                <xs:element name="obsahujeSurovinu">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="surovina-id" type="tns:czech-text" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="surovina">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="tns:czech-text"/>
+                <xs:element name="název" type="tns:czech-text"/>
+                <xs:element name="cena-za-kg" type="xs:decimal"/>
+                <xs:element name="obsahujeAlergen">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name ="alergen-id" type="tns:czech-text" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="alergen">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="tns:czech-text"/>
+                <xs:element name="název" type="tns:czech-text"/>
+                <xs:element name="číslo" type="xs:integer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>
