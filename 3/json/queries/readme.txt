@@ -1,2 +1,4 @@
 - query-1-1.jq
 	- U každé továrny nalezne celkovou kapacitu automatů, které se v ní nacházejí.
+- query-1-2.jq
+	- U každé továrny vypíše suroviny, které jsou ingredience do sladkostí, jež továrna vyrábí.
