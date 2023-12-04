@@ -4,271 +4,256 @@
     "type": "object",
     "title": "Evidence továren na sladkosti",
     "properties": {
-        "továrny": {
+        "evidence": {
             "type": "array",
             "items": {
-                "type": "object",
-                "title": "továrna",
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "název": {
+                "oneOf": [
+                    {
                         "type": "object",
+                        "title": "továrna",
                         "properties": {
-                            "cs": {
+                            "id": {
                                 "type": "string"
-                            }
-                        },
-                        "required": [
-                            "cs"
-                        ]
-                    },
-                    "rychlost výroby": {
-                        "type": "number"
-                    },
-                    "zaměstnává": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "title": "zaměstnanec",
-                            "properties": {
-                                "id": {
-                                    "type": "string"
-                                },
-                                "jméno": {
-                                    "type": "object",
-                                    "properties": {
-                                        "cs": {
-                                            "type": "array"
-                                        }
-                                    },
-                                    "required": [
-                                        "cs"
-                                    ]
-                                },
-                                "příjmení": {
-                                    "type": "object",
-                                    "properties": {
-                                        "cs": {
-                                            "type": "string"
-                                        }
+                            },
+                            "název": {
+                                "type": "object",
+                                "properties": {
+                                    "cs": {
+                                        "type": "string"
                                     }
                                 },
-                                "tituly": {
+                                "required": [
+                                    "cs"
+                                ]
+                            },
+                            "rychlost výroby": {
+                                "type": "number"
+                            },
+                            "zaměstnává": {
+                                "type": "array",
+                                "items": {
                                     "type": "object",
+                                    "title": "zaměstnanec",
                                     "properties": {
-                                        "cs": {
-                                            "type": "array"
+                                        "id": {
+                                            "type": "string"
+                                        },
+                                        "jméno": {
+                                            "type": "object",
+                                            "properties": {
+                                                "cs": {
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "cs"
+                                            ]
+                                        },
+                                        "příjmení": {
+                                            "type": "object",
+                                            "properties": {
+                                                "cs": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        },
+                                        "tituly": {
+                                            "type": "object",
+                                            "properties": {
+                                                "cs": {
+                                                    "type": "array"
+                                                }
+                                            },
+                                            "required": [
+                                                "cs"
+                                            ]
                                         }
                                     },
                                     "required": [
-                                        "cs"
+                                        "id",
+                                        "jméno",
+                                        "příjmení",
+                                        "tituly"
                                     ]
                                 }
                             },
-                            "required": [
-                                "id",
-                                "jméno",
-                                "příjmení",
-                                "tituly"
-                            ]
-                        }
-                    },
-                    "vyrábí": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "title": "id sladkosti"
-                        }
-                    }
-                },
-                "required": [
-                    "id",
-                    "název",
-                    "rychlost výroby"
-                ]
-            }
-        },
-        "automaty": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "title": "automat",
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "název": {
-                        "type": "object",
-                        "properties": {
-                            "cs": {
-                                "type": "string"
+                            "vyrábí": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "title": "id sladkosti"
+                                }
                             }
                         },
                         "required": [
-                            "cs"
+                            "id",
+                            "název",
+                            "rychlost výroby"
                         ]
                     },
-                    "kapacita": {
-                        "type": "number"
-                    },
-                    "šířka": {
-                        "type": "number"
-                    },
-                    "délka": {
-                        "type": "number"
-                    },
-                    "výška": {
-                        "type": "number"
-                    },
-                    "nabízí": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "title": "id sladkosti"
-                        }
-                    },
-                    "nachází se v": {
-                        "type": "string",
-                        "title": "id továrny"
-                    }
-                },
-                "required": [
-                    "id",
-                    "název",
-                    "kapacita",
-                    "šířka",
-                    "délka",
-                    "výška"
-                ]
-            }            
-        },
-        "sladkosti": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "title": "sladkost",
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "název": {
+                    {
                         "type": "object",
+                        "title": "automat",
                         "properties": {
-                            "cs": {
+                            "id": {
                                 "type": "string"
+                            },
+                            "název": {
+                                "type": "object",
+                                "properties": {
+                                    "cs": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "cs"
+                                ]
+                            },
+                            "kapacita": {
+                                "type": "number"
+                            },
+                            "šířka": {
+                                "type": "number"
+                            },
+                            "délka": {
+                                "type": "number"
+                            },
+                            "výška": {
+                                "type": "number"
+                            },
+                            "nabízí": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "title": "id sladkosti"
+                                }
+                            },
+                            "nachází se v": {
+                                "type": "string",
+                                "title": "id továrny"
                             }
                         },
                         "required": [
-                            "cs"
+                            "id",
+                            "název",
+                            "kapacita",
+                            "šířka",
+                            "délka",
+                            "výška"
                         ]
                     },
-                    "hmotnost": {
-                        "type": "number"
-                    },
-                    "šířka": {
-                        "type": "number"
-                    },
-                    "délka": {
-                        "type": "number"
-                    },
-                    "výška": {
-                        "type": "number"
-                    },
-                    "obsahuje": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "title": "id suroviny"
-                        }
-                    }
-                },
-                "required": [
-                    "id",
-                    "název",
-                    "hmotnost",
-                    "šířka",
-                    "délka",
-                    "výška"
-                ]
-            }            
-        },
-        "suroviny": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "title": "surovina",
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "název": {
+                    {
                         "type": "object",
+                        "title": "sladkost",
                         "properties": {
-                            "cs": {
+                            "id": {
                                 "type": "string"
+                            },
+                            "název": {
+                                "type": "object",
+                                "properties": {
+                                    "cs": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "cs"
+                                ]
+                            },
+                            "hmotnost": {
+                                "type": "number"
+                            },
+                            "šířka": {
+                                "type": "number"
+                            },
+                            "délka": {
+                                "type": "number"
+                            },
+                            "výška": {
+                                "type": "number"
+                            },
+                            "obsahuje": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "title": "id suroviny"
+                                }
                             }
                         },
                         "required": [
-                            "cs"
+                            "id",
+                            "název",
+                            "hmotnost",
+                            "šířka",
+                            "délka",
+                            "výška"
                         ]
                     },
-                    "cena za kg": {
-                        "type": "number"
-                    },
-                    "obsahuje": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "title": "id alergenu"
-                        }
-                    }
-                },
-                "required": [
-                    "id",
-                    "název",
-                    "cena za kg"
-                ]
-            }
-        },
-        "alergeny": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "title": "alergen",
-                "properties": {
-                    "id": {
-                        "type": "string"
-                    },
-                    "název": {
+                    {
                         "type": "object",
+                        "title": "surovina",
                         "properties": {
-                            "cs": {
+                            "id": {
                                 "type": "string"
+                            },
+                            "název": {
+                                "type": "object",
+                                "properties": {
+                                    "cs": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "cs"
+                                ]
+                            },
+                            "cena za kg": {
+                                "type": "number"
+                            },
+                            "obsahuje": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "title": "id alergenu"
+                                }
                             }
                         },
                         "required": [
-                            "cs"
+                            "id",
+                            "název",
+                            "cena za kg"
                         ]
                     },
-                    "číslo": {
-                        "type": "number"
+                    {
+                        "type": "object",
+                        "title": "alergen",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            },
+                            "název": {
+                                "type": "object",
+                                "properties": {
+                                    "cs": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "cs"
+                                ]
+                            },
+                            "číslo": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "název",
+                            "číslo"
+                        ]
                     }
-                },
-                "required": [
-                    "id",
-                    "název",
-                    "číslo"
                 ]
             }
         }
-    },
-    "required": [
-        "továrny",
-        "automaty",
-        "sladkosti",
-        "alergeny",
-        "suroviny"
-    ]
+    }
 }
