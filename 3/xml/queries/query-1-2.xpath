@@ -1,4 +1,6 @@
 
 (: názvy alergenů (alergen), které nejsou přítomny v žádné sladkosti (sladkost) :)
 
-//alergen[not(id = //suroviny/surovina/obsahujeAlergen/alergen-id/text())]/název/text()
+//alergen[not(id = 
+    (for $surovina in //surovina return $surovina[id=//sladkost/obsahujeSurovinu/surovina-id]/obsahujeAlergen/alergen-id/text())
+        )]/název/text()

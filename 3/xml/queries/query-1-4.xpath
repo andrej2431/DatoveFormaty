@@ -1,2 +1,6 @@
 
-(: Získejte názvy sladkostí (sladkost), které obsahují alespoň tři různé alergeny :)
+(: pro každou sladkost napište všechny alergeny, které obsahuje :)
+
+for $sladkost in //database/sladkosti/sladkost 
+    return $sladkost/název/text() | (for $surovina in //suroviny/surovina
+        return //alergeny/alergen[id=$surovina/obsahujeAlergen/alergen-id/text()]/název/text())

@@ -1,0 +1,6 @@
+
+(: všichni zaměstnanci, kteří dělají v továrně, kde se vyrábí sladkost s id=Nektar :)
+
+//database/zaměstnanci/zaměstnanec[
+    1=sum(for $továrna in //továrna return if (id = $továrna/zaměstnává/zaměstnanec-id and $továrna/vyrábí/sladkost-id='Nektar') then 1 else 0)
+]/příjmení/text()

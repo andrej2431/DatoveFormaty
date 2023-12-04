@@ -1,0 +1,6 @@
+
+(: Najděte názvy továren (továrna), kde je celková kapacita automatů větší než 200 :)
+
+//továrny/továrna
+    [sum(for $automat in //automat return 
+        if (id=$automat/nachází-se-v/tovarna-id) then $automat/kapacita else 0) > 200]/název/text()

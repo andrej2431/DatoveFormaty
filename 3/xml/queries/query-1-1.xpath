@@ -1,4 +1,5 @@
 
-(: všechny sladkosti (sladkost), které obsahují čokoládu a mouku :)
+(: všechny sladkosti (sladkost), které obsahují suroviny s názvy: čokoláda a múka :)
 
-//sladkost[obsahujeSurovinu/surovina-id = 'Čokoláda' and obsahujeSurovinu/surovina-id = 'Múka']/název/text()
+//sladkost[obsahujeSurovinu/surovina-id = (//surovina[název = 'čokoláda']/id) 
+    and obsahujeSurovinu/surovina-id = (//surovina[název = 'múka']/id)]/název/text()
