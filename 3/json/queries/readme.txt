@@ -2,3 +2,5 @@
 	- U každé továrny nalezne celkovou kapacitu automatů, které se v ní nacházejí.
 - query-1-2.jq
 	- U každé továrny vypíše suroviny, které jsou ingredience do sladkostí, jež továrna vyrábí.
+- query-1-3.jq
+	- Vypíše všechny sladkosti, které si může Artemis koupit v automatu v továrně, kde pracuje, a které neobsahují čokoládu
