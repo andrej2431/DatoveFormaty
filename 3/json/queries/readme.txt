@@ -4,3 +4,5 @@
 	- U každé továrny vypíše suroviny, které jsou ingredience do sladkostí, jež továrna vyrábí.
 - query-1-3.jq
 	- Vypíše všechny sladkosti, které si může Artemis koupit v automatu v továrně, kde pracuje, a které neobsahují čokoládu
+- query-1-4.jq
+	- Pro každou dvojici sladkostí vypíše jejich společné alergeny
