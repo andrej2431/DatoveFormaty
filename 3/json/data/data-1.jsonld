@@ -4,11 +4,10 @@
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "typ": "@type",
         "id": "@id",
-        "továrny": {
-            "@id": "ex:Továrny",
+        "továrna": {
+            "@id": "ex:Továrna",
             "@container": "@set",
             "@context": {
-                "továrna": "ex:Továrna",
                 "název": {
                     "@id": "ex:názevTovárny",
                     "@container": "@language"
@@ -42,11 +41,9 @@
                 }
             }
         },
-        "automaty": {
-            "@id": "ex:Automaty",
-            "@container": "@set",
+        "automat": {
+            "@id": "ex:Automat",
             "@context": {
-                "automat": "ex:Automat",
                 "název": {
                     "@id": "ex:názevAutomatu",
                     "@container": "@language"
@@ -77,11 +74,9 @@
                 }
             }
         },
-        "sladkosti": {
-            "@id": "ex:Sladkosti",
-            "@container": "@set",
+        "sladkost": {
+            "@id": "ex:Sladkost",
             "@context": {
-                "sladkost": "ex:Sladkost",
                 "název": {
                     "@id": "ex:názevSladkosti",
                     "@container": "@language"
@@ -108,11 +103,9 @@
                 }
             }
         },
-        "suroviny": {
-            "@id": "ex:Suroviny",
-            "@container": "@set",
+        "surovina": {
+            "@id": "ex:Surovina",
             "@context": {
-                "surovina": "ex:Surovina",
                 "název": {
                     "@id": "ex:názevSuroviny",
                     "@container": "@language"
@@ -127,11 +120,9 @@
                 }
             }
         },
-        "alergeny": {
-            "@id": "ex:Alergeny",
-            "@container": "@set",
+        "alergen": {
+            "@id": "ex:Alergen",
             "@context": {
-                "alergen": "ex:Alergen",
                 "název": {
                     "@id": "ex:názevAlergenu",
                     "@container": "@language"
@@ -141,11 +132,13 @@
                     "@type": "xsd:integer"
                 }
             }
-        }
+
+        },
+        "evidence": "@graph"
+
     },
 
-    "id": "evidence",
-    "továrny": [
+    "evidence": [
         {
             "id": "ex:TovárnaKarlíkova",
             "typ": "továrna",
@@ -277,9 +270,7 @@
                 "ex:Nektar",
                 "ex:ČokoDortík"
             ]
-        }
-    ],
-    "automaty": [
+        },
         {
             "id": "ex:AutomatUVrátnice",
             "typ": "automat",
@@ -345,9 +336,7 @@
                 "ex:ČokoDortík"
             ],
             "nachází se v": "ex:TovárnaCukPrum"
-        }
-    ],
-    "sladkosti": [
+        },
         {
             "id": "ex:Tatranka",
             "typ": "sladkost",
@@ -397,9 +386,7 @@
                 "ex:Múka",
                 "ex:Maslo"
             ]
-        }
-    ],
-    "suroviny": [
+        },
         {
             "id": "ex:Múka",
             "typ": "surovina",
@@ -463,9 +450,7 @@
             "obsahuje": [
                 "ex:MlékoAlergen"
             ]
-        }
-    ],
-    "alergeny": [
+        },
         {
             "id": "ex:Lepek",
             "typ": "alergen",
