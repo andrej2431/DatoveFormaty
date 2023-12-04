@@ -1,4 +1,4 @@
 
-(: Vyhledejte názvy alergenů (alergen), které nejsou přítomny v žádné sladkosti (sladkost) :)
+(: názvy alergenů (alergen), které nejsou přítomny v žádné sladkosti (sladkost) :)
 
 //alergen[not(id = //suroviny/surovina/obsahujeAlergen/alergen-id/text())]/název/text()

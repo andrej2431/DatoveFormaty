@@ -1,2 +1,4 @@
 
-(: Najděte názvy továren (továrna), kde je celková kapacita všech jejich automatů větší než 200 :)
+(: všechny sladkosti (sladkost), které obsahují čokoládu a mouku :)
+
+//sladkost[obsahujeSurovinu/surovina-id = 'Čokoláda' and obsahujeSurovinu/surovina-id = 'Múka']/název/text()

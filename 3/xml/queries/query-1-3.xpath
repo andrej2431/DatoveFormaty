@@ -1,3 +1,4 @@
 
-(: Uveďte názvy továren (továrna), které vyrábějí sladkosti (sladkost) obsahující přísadu s cenou za kilogram vyšší než 50 
-a mají prodejní automaty (automaty) s kapacitou větší než 150 :)
+(: názvy suroviny (surovina), které obsahují alespoň dva různé alergeny :)
+
+//surovina[count(obsahujeAlergen/alergen-id) > 1]/název/text()
