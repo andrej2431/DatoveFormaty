@@ -57,17 +57,29 @@
 				ex:názevTovárny "Karlíkova továrna na čokoládu"@cs;
 				ex:rychlostVýroby "32"^^xsd:integer;
 				.
-		
+				ex:TovárnaKarlíkova ex:zaměstnává ex:Zeus.
+				ex:TovárnaKarlíkova ex:zaměstnává ex:Athena.
+				ex:TovárnaKarlíkova ex:vyrábí ex:Tatranka.
+				
 			ex:TovárnaHaribo a ex:Továrna;
 				ex:názevTovárny "Haribo Industries"@cs;
 				ex:rychlostVýroby "64"^^xsd:integer;
 				.
-		
+				ex:TovárnaHaribo ex:zaměstnává ex:Hades.
+				ex:TovárnaHaribo ex:zaměstnává ex:Afrodita.
+				ex:TovárnaHaribo ex:zaměstnává ex:Hermes.
+				ex:TovárnaHaribo ex:vyrábí ex:Tatranka.
+				ex:TovárnaHaribo ex:vyrábí ex:Nektar.
+				
 			ex:TovárnaCukPrum a ex:Továrna;
 				ex:názevTovárny "Cukrárenská průmyslovka"@cs;
 				ex:rychlostVýroby "128"^^xsd:integer;
 				.
-		
+				ex:TovárnaCukPrum ex:zaměstnává ex:Apollo.
+				ex:TovárnaCukPrum ex:zaměstnává ex:Artemis.
+				ex:TovárnaCukPrum ex:vyrábí ex:Nektar.
+				ex:TovárnaCukPrum ex:vyrábí ex:ČokoDortík.
+				
 			### Automaty
 			
 			ex:AutomatUVrátnice a ex:Automat;
@@ -77,7 +89,11 @@
 				ex:délkaAutomatu "70"^^xsd:integer;
 				ex:výškaAutomatu "200"^^xsd:integer;
 				.
-		
+				ex:AutomatUVrátnice ex:nabízí ex:Tatranka.
+				ex:AutomatUVrátnice ex:nabízí ex:Nektar.
+				ex:AutomatUVrátnice ex:nabízí ex:ČokoDortík.
+				ex:AutomatUVrátnice ex:nacházíSeV ex:TovárnaKarlíkova.
+				
 			ex:AutomatRychláMňamka a ex:Automat;
 				ex:názevAutomatu "Rychlá Mňamka"@cs;
 				ex:kapacita "120"^^xsd:integer;
@@ -85,7 +101,11 @@
 				ex:délkaAutomatu "70"^^xsd:integer;
 				ex:výškaAutomatu "70"^^xsd:integer;
 				.
-		
+				ex:AutomatRychláMňamka ex:nabízí ex:Tatranka.
+				ex:AutomatRychláMňamka ex:nabízí ex:Nektar.
+				ex:AutomatRychláMňamka ex:nabízí ex:ČokoDortík.
+				ex:AutomatRychláMňamka ex:nacházíSeV ex:TovárnaHaribo.
+				
 			ex:AutomatPohoštěníVMezipatře a ex:Automat;
 				ex:názevAutomatu "Pohoštění V Mezipatře"@cs;
 				ex:kapacita "110"^^xsd:integer;
@@ -93,7 +113,10 @@
 				ex:délkaAutomatu "40"^^xsd:integer;
 				ex:výškaAutomatu "180"^^xsd:integer;
 				.
-		
+				ex:AutomatPohoštěníVMezipatře ex:nabízí ex:Nektar.
+				ex:AutomatPohoštěníVMezipatře ex:nabízí ex:ČokoDortík.
+				ex:AutomatPohoštěníVMezipatře ex:nacházíSeV ex:TovárnaCukPrum.
+				
 			ex:AutomatOblačnéObčerstvení a ex:Automat;
 				ex:názevAutomatu "Oblačné Občerstvení"@cs;
 				ex:kapacita "110"^^xsd:integer;
@@ -101,7 +124,10 @@
 				ex:délkaAutomatu "70"^^xsd:integer;
 				ex:výškaAutomatu "180"^^xsd:integer;
 				.
-		
+				ex:AutomatOblačnéObčerstvení ex:nabízí ex:Nektar.
+				ex:AutomatOblačnéObčerstvení ex:nabízí ex:ČokoDortík.
+				ex:AutomatOblačnéObčerstvení ex:nacházíSeV ex:TovárnaCukPrum.
+				
 			### Sladkosti
 			
 			ex:Tatranka a ex:Sladkost;
@@ -111,7 +137,10 @@
 				ex:délkaSladkosti "60"^^xsd:integer;
 				ex:výškaSladkosti "120"^^xsd:integer;
 				.
-		
+				ex:Tatranka ex:obsahujeSurovinu ex:Čokoláda.
+				ex:Tatranka ex:obsahujeSurovinu ex:Mléko.
+				ex:Tatranka ex:obsahujeSurovinu ex:Múka.
+				
 			ex:Nektar a ex:Sladkost;
 				ex:názevSladkosti "Nektar"@cs;
 				ex:hmotnost "75"^^xsd:integer;
@@ -119,7 +148,12 @@
 				ex:délkaSladkosti "60"^^xsd:integer;
 				ex:výškaSladkosti "70"^^xsd:integer;
 				.
-		
+				ex:Nektar ex:obsahujeSurovinu ex:Múka.
+				ex:Nektar ex:obsahujeSurovinu ex:Mléko.
+				ex:Nektar ex:obsahujeSurovinu ex:Vejce.
+				ex:Nektar ex:obsahujeSurovinu ex:Cukor.
+				ex:Nektar ex:obsahujeSurovinu ex:Maslo.
+				
 			ex:ČokoDortík a ex:Sladkost;
 				ex:názevSladkosti "Čokoládový dortík"@cs;
 				ex:hmotnost "50"^^xsd:integer;
@@ -127,39 +161,48 @@
 				ex:délkaSladkosti "30"^^xsd:integer;
 				ex:výškaSladkosti "80"^^xsd:integer;
 				.
-		
+				ex:ČokoDortík ex:obsahujeSurovinu ex:Čokoláda.
+				ex:ČokoDortík ex:obsahujeSurovinu ex:Múka.
+				ex:ČokoDortík ex:obsahujeSurovinu ex:Maslo.
+				
 			### Suroviny
 			
 			ex:Múka a ex:Surovina;
 				ex:názevSuroviny "múka"@cs;
 				ex:cenaZaKg "24.90"^^xsd:decimal;
 				.
-		
+				ex:Múka ex:obsahujeAlergen ex:Lepek.
+				
 			ex:Maslo a ex:Surovina;
 				ex:názevSuroviny "maslo"@cs;
 				ex:cenaZaKg "56.49"^^xsd:decimal;
 				.
-		
+				ex:Maslo ex:obsahujeAlergen ex:MlékoAlergen.
+				
 			ex:Cukor a ex:Surovina;
 				ex:názevSuroviny "cukor"@cs;
 				ex:cenaZaKg "20.12"^^xsd:decimal;
 				.
-		
+				
 			ex:Vejce a ex:Surovina;
 				ex:názevSuroviny "vejce"@cs;
 				ex:cenaZaKg "100.00"^^xsd:decimal;
 				.
-		
+				ex:Vejce ex:obsahujeAlergen ex:VejceAlergen.
+				
 			ex:Čokoláda a ex:Surovina;
 				ex:názevSuroviny "čokoláda"@cs;
 				ex:cenaZaKg "100.00"^^xsd:decimal;
 				.
-		
+				ex:Čokoláda ex:obsahujeAlergen ex:Arašidy.
+				ex:Čokoláda ex:obsahujeAlergen ex:MlékoAlergen.
+				
 			ex:Mléko a ex:Surovina;
 				ex:názevSuroviny "mléko"@cs;
 				ex:cenaZaKg "23.42"^^xsd:decimal;
 				.
-		
+				ex:Mléko ex:obsahujeAlergen ex:MlékoAlergen.
+				
 			### Alergeny
 			
 			ex:Lepek a ex:Alergen;
