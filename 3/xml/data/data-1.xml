@@ -141,7 +141,7 @@ xmlns="http://example.org/xsd" >
             <nabízí>
                 <sladkost-id>Tatranka</sladkost-id>
                 <sladkost-id>Nektar</sladkost-id>
-                <sladkost-id>čokoDortík</sladkost-id>
+                <sladkost-id>ČokoDortík</sladkost-id>
             </nabízí>
             <nachází-se-v>
                 <tovarna-id>TovárnaHaribo</tovarna-id>
