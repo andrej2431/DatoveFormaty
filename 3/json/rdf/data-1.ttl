@@ -1,0 +1,188 @@
+@prefix ex: <https://example.org/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Afrodita  a       ex:Zaměstnanec ;
+        ex:jméno     "Afrodita"@cs ;
+        ex:příjmení  "Krásna"@cs ;
+        ex:tituly    "Nejkr."@cs .
+
+ex:Apollo  a         ex:Zaměstnanec ;
+        ex:jméno     "Apollo"@cs ;
+        ex:příjmení  "Liečivý"@cs ;
+        ex:tituly    "Lig."@cs .
+
+ex:Arašidy  a             ex:Alergen ;
+        ex:názevAlergenu  "arašídy"@cs ;
+        ex:číslo          4 .
+
+ex:Artemis  a        ex:Zaměstnanec ;
+        ex:jméno     "Artemis"@cs ;
+        ex:příjmení  "Lesná"@cs ;
+        ex:tituly    "Lesná."@cs .
+
+ex:Athena  a         ex:Zaměstnanec ;
+        ex:jméno     "Athéna"@cs ;
+        ex:příjmení  "Múdra"@cs ;
+        ex:tituly    "Pí."@cs .
+
+ex:AutomatOblačnéObčerstvení
+        a                 ex:Automat ;
+        ex:délkaAutomatu  70 ;
+        ex:kapacita       110 ;
+        ex:nabízí         ex:Nektar ;
+        ex:nabízí         ex:ČokoDortík ;
+        ex:nacházíSeV     ex:TovárnaCukPrum ;
+        ex:názevAutomatu  "Oblačné Občerstvení"@cs ;
+        ex:výškaAutomatu  180 ;
+        ex:šířkaAutomatu  50 .
+
+ex:AutomatPohoštěníVMezipatře
+        a                 ex:Automat ;
+        ex:délkaAutomatu  40 ;
+        ex:kapacita       110 ;
+        ex:nabízí         ex:Nektar ;
+        ex:nabízí         ex:ČokoDortík ;
+        ex:nacházíSeV     ex:TovárnaCukPrum ;
+        ex:názevAutomatu  "Pohoštění V Mezipatře"@cs ;
+        ex:výškaAutomatu  180 ;
+        ex:šířkaAutomatu  50 .
+
+ex:AutomatRychláMňamka
+        a                 ex:Automat ;
+        ex:délkaAutomatu  70 ;
+        ex:kapacita       120 ;
+        ex:nabízí         ex:Tatranka ;
+        ex:nabízí         ex:Nektar ;
+        ex:nabízí         ex:ČokoDortík ;
+        ex:nacházíSeV     ex:TovárnaHaribo ;
+        ex:názevAutomatu  "Rychlá Mňamka"@cs ;
+        ex:výškaAutomatu  200 ;
+        ex:šířkaAutomatu  50 .
+
+ex:AutomatUVrátnice  a    ex:Automat ;
+        ex:délkaAutomatu  70 ;
+        ex:kapacita       120 ;
+        ex:nabízí         ex:Tatranka ;
+        ex:nabízí         ex:Nektar ;
+        ex:nabízí         ex:ČokoDortík ;
+        ex:nacházíSeV     ex:TovárnaKarlíkova ;
+        ex:názevAutomatu  "U Vrátnice"@cs ;
+        ex:výškaAutomatu  200 ;
+        ex:šířkaAutomatu  50 .
+
+ex:Cukor  a               ex:Surovina ;
+        ex:cenaZaKg       "2.012E1"^^xsd:decimal ;
+        ex:názevSuroviny  "cukor"@cs .
+
+ex:Hades  a          ex:Zaměstnanec ;
+        ex:jméno     "Hádes"@cs ;
+        ex:příjmení  "Černý"@cs ;
+        ex:tituly    "PPodsv."@cs .
+
+ex:Hermes  a         ex:Zaměstnanec ;
+        ex:jméno     "Hermes"@cs ;
+        ex:příjmení  "Kováč"@cs ;
+        ex:tituly    "Buch."@cs .
+
+ex:Lepek  a               ex:Alergen ;
+        ex:názevAlergenu  "lepek"@cs ;
+        ex:číslo          1 .
+
+ex:Maslo  a                 ex:Surovina ;
+        ex:cenaZaKg         "5.649E1"^^xsd:decimal ;
+        ex:názevSuroviny    "maslo"@cs ;
+        ex:obsahujeAlergen  ex:MlékoAlergen .
+
+ex:Mléko  a                 ex:Surovina ;
+        ex:cenaZaKg         "2.342E1"^^xsd:decimal ;
+        ex:názevSuroviny    "mléko"@cs ;
+        ex:obsahujeAlergen  ex:MlékoAlergen .
+
+ex:MlékoAlergen  a        ex:Alergen ;
+        ex:názevAlergenu  "mléko"@cs ;
+        ex:číslo          7 .
+
+ex:Múka  a                  ex:Surovina ;
+        ex:cenaZaKg         "2.49E1"^^xsd:decimal ;
+        ex:názevSuroviny    "múka"@cs ;
+        ex:obsahujeAlergen  ex:Lepek .
+
+ex:Nektar  a                 ex:Sladkost ;
+        ex:délkaSladkosti    60 ;
+        ex:hmotnost          75 ;
+        ex:názevSladkosti    "Nektar"@cs ;
+        ex:obsahujeSurovinu  ex:Múka ;
+        ex:obsahujeSurovinu  ex:Mléko ;
+        ex:obsahujeSurovinu  ex:Vejce ;
+        ex:obsahujeSurovinu  ex:Cukor ;
+        ex:obsahujeSurovinu  ex:Maslo ;
+        ex:výškaSladkosti    70 ;
+        ex:šířkaSladkosti    60 .
+
+ex:Sója  a                ex:Alergen ;
+        ex:názevAlergenu  "sója"@cs ;
+        ex:číslo          6 .
+
+ex:Tatranka  a               ex:Sladkost ;
+        ex:délkaSladkosti    60 ;
+        ex:hmotnost          125 ;
+        ex:názevSladkosti    "Tatranka"@cs ;
+        ex:obsahujeSurovinu  ex:Čokoláda ;
+        ex:obsahujeSurovinu  ex:Mléko ;
+        ex:obsahujeSurovinu  ex:Múka ;
+        ex:výškaSladkosti    120 ;
+        ex:šířkaSladkosti    50 .
+
+ex:TovárnaCukPrum  a       ex:Továrna ;
+        ex:názevTovárny    "Cukrárenská průmyslovka"@cs ;
+        ex:rychlostVýroby  128 ;
+        ex:vyrábí          ex:Nektar ;
+        ex:vyrábí          ex:ČokoDortík ;
+        ex:zaměstnává      ex:Apollo ;
+        ex:zaměstnává      ex:Artemis .
+
+ex:TovárnaHaribo  a        ex:Továrna ;
+        ex:názevTovárny    "Haribo Industries"@cs ;
+        ex:rychlostVýroby  64 ;
+        ex:vyrábí          ex:Tatranka ;
+        ex:vyrábí          ex:Nektar ;
+        ex:zaměstnává      ex:Hades ;
+        ex:zaměstnává      ex:Afrodita ;
+        ex:zaměstnává      ex:Hermes .
+
+ex:TovárnaKarlíkova  a     ex:Továrna ;
+        ex:názevTovárny    "Karlíkova továrna na čokoládu"@cs ;
+        ex:rychlostVýroby  32 ;
+        ex:vyrábí          ex:Tatranka ;
+        ex:zaměstnává      ex:Zeus ;
+        ex:zaměstnává      ex:Athena .
+
+ex:Vejce  a                 ex:Surovina ;
+        ex:cenaZaKg         "100"^^xsd:decimal ;
+        ex:názevSuroviny    "vejce"@cs ;
+        ex:obsahujeAlergen  ex:VejceAlergen .
+
+ex:VejceAlergen  a        ex:Alergen ;
+        ex:názevAlergenu  "vejce"@cs ;
+        ex:číslo          3 .
+
+ex:Zeus  a           ex:Zaměstnanec ;
+        ex:jméno     "Zeus"@cs ;
+        ex:příjmení  "Hromný"@cs ;
+        ex:tituly    "Nej."@cs .
+
+ex:ČokoDortík  a             ex:Sladkost ;
+        ex:délkaSladkosti    30 ;
+        ex:hmotnost          50 ;
+        ex:názevSladkosti    "Čokoládový dortík"@cs ;
+        ex:obsahujeSurovinu  ex:Čokoláda ;
+        ex:obsahujeSurovinu  ex:Múka ;
+        ex:obsahujeSurovinu  ex:Maslo ;
+        ex:výškaSladkosti    80 ;
+        ex:šířkaSladkosti    50 .
+
+ex:Čokoláda  a              ex:Surovina ;
+        ex:cenaZaKg         "100"^^xsd:decimal ;
+        ex:názevSuroviny    "čokoláda"@cs ;
+        ex:obsahujeAlergen  ex:Arašidy ;
+        ex:obsahujeAlergen  ex:MlékoAlergen .
