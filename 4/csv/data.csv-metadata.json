@@ -17,26 +17,31 @@
 			"url": "data-1.csv",
 			"tableSchema": {
 				"@type": "Schema",
+				"aboutUrl": "{+id}",
 				"columns": [
 					{
 						"@type": "Column",
 						"name": "id",
 						"titles": "id",
 						"datatype": "string",
-						"required": true
+						"required": true,
+						"propertyUrl": "rdf:type",
+						"valueUrl": "https://example.org/vocabulary/Alergen"
 					}, {
 						"@type": "Column",
 						"name": "nazev",
 						"titles": "název",
 						"datatype": "string",
 						"lang": "cs",
-						"required": true
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/názevAlergenu"
 					}, {
 						"@type": "Column",
 						"name": "cislo",
 						"titles": "číslo",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/číslo"
 					}
 				],
 				"primaryKey": "id"
@@ -48,26 +53,31 @@
 			"url": "data-2.csv",
 			"tableSchema": {
 				"@type": "Schema",
+				"aboutUrl": "{+id}",
 				"columns": [
 					{
 						"@type": "Column",
 						"name": "id",
 						"titles": "id",
 						"datatype": "string",
-						"required": true
+						"required": true,
+						"propertyUrl": "rdf:type",
+						"valueUrl": "https://example.org/vocabulary/Surovina"
 					}, {
 						"@type": "Column",
 						"name": "nazev",
 						"titles": "název",
 						"datatype": "string",
 						"lang": "cs",
-						"required": true
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/názevSuroviny"
 					}, {
 						"@type": "Column",
 						"name": "cena_za_kg",
 						"titles": "cena za kg",
-						"datatype": "number",
-						"required": true
+						"datatype": "decimal",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/cenaZaKg"
 					}
 				],
 				"primaryKey": "id"
@@ -79,44 +89,52 @@
 			"url": "data-3.csv",
 			"tableSchema": {
 				"@type": "Schema",
+				"aboutUrl": "{+id}",
 				"columns": [
 					{
 						"@type": "Column",
 						"name": "id",
 						"titles": "id",
 						"datatype": "string",
-						"required": true
+						"required": true,
+						"propertyUrl": "rdf:type",
+						"valueUrl": "https://example.org/vocabulary/Sladkost"
 					}, {
 						"@type": "Column",
 						"name": "nazev",
 						"titles": "název",
 						"datatype": "string",
 						"lang": "cs",
-						"required": true
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/názevSladkosti"
 					}, {
 						"@type": "Column",
 						"name": "hmotnost",
 						"titles": "hmotnost",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/hmotnost"
 					}, {
 						"@type": "Column",
 						"name": "sirka",
 						"titles": "šířka",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/šířkaSladkosti"
 					}, {
 						"@type": "Column",
 						"name": "delka",
 						"titles": "délka",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/délkaSladkosti"
 					}, {
 						"@type": "Column",
 						"name": "vyska",
 						"titles": "výška",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/výškaSladkosti"
 					}
 				],
 				"primaryKey": "id"
@@ -128,26 +146,31 @@
 			"url": "data-4.csv",
 			"tableSchema": {
 				"@type": "Schema",
+				"aboutUrl": "{+id}",
 				"columns": [
 					{
 						"@type": "Column",
 						"name": "id",
 						"titles": "id",
 						"datatype": "string",
-						"required": true
+						"required": true,
+						"propertyUrl": "rdf:type",
+						"valueUrl": "https://example.org/vocabulary/Továrna"
 					}, {
 						"@type": "Column",
 						"name": "nazev",
 						"titles": "název",
 						"datatype": "string",
 						"lang": "cs",
-						"required": true
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/názevTovárny"
 					}, {
 						"@type": "Column",
 						"name": "rychlost_vyroby",
 						"titles": "rychlost výroby",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/rychlostVýroby"
 					}
 				],
 				"primaryKey": "id"
@@ -159,49 +182,58 @@
 			"url": "data-5.csv",
 			"tableSchema": {
 				"@type": "Schema",
+				"aboutUrl": "{+id}",
 				"columns": [
 					{
 						"@type": "Column",
 						"name": "id",
 						"titles": "id",
 						"datatype": "string",
-						"required": true
+						"required": true,
+						"propertyUrl": "rdf:type",
+						"valueUrl": "https://example.org/vocabulary/Automat"
 					}, {
 						"@type": "Column",
 						"name": "nazev",
 						"titles": "název",
 						"datatype": "string",
 						"lang": "cs",
-						"required": true
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/názevAutomatu"
 					}, {
 						"@type": "Column",
 						"name": "kapacita",
 						"titles": "kapacita",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/kapacita"
 					}, {
 						"@type": "Column",
 						"name": "sirka",
 						"titles": "šířka",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/šířkaAutomatu"
 					}, {
 						"@type": "Column",
 						"name": "delka",
 						"titles": "délka",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/délkaAutomatu"
 					}, {
 						"@type": "Column",
 						"name": "vyska",
 						"titles": "výška",
-						"datatype": "number",
-						"required": true
+						"datatype": "integer",
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/výškaAutomatu"
 					}, {
 						"@type": "Column",
 						"name": "nachazi_se_v",
 						"titles": "nachází se v",
-						"datatype": "string"
+						"datatype": "anyURI",
+						"propertyUrl": "https://example.org/vocabulary/nacházíSeV"
 					}
 				],
 				"primaryKey": "id"
@@ -213,26 +245,33 @@
 			"url": "data-6.csv",
 			"tableSchema": {
 				"@type": "Schema",
+				"aboutUrl": "{+id}",
 				"columns": [
 					{
 						"@type": "Column",
 						"name": "id",
 						"titles": "id",
 						"datatype": "string",
-						"required": true
+						"required": true,
+						"propertyUrl": "rdf:type",
+						"valueUrl": "https://example.org/vocabulary/Zaměstnanec"
 					}, {
 						"@type": "Column",
 						"name": "prijmeni",
 						"titles": "příjmení",
 						"datatype": "string",
 						"lang": "cs",
-						"required": true
+						"required": true,
+						"propertyUrl": "https://example.org/vocabulary/příjmení"
 					}, {
 						"@type": "Column",
 						"name": "pracuje_v",
 						"titles": "pracuje v",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"aboutUrl": "{+pracuje_v}",
+						"propertyUrl": "https://example.org/vocabulary/zaměstnává",
+						"valueUrl": "{+id}"
 					}
 				],
 				"primaryKey": "id",
@@ -258,14 +297,18 @@
 						"@type": "Column",
 						"name": "surovina_id",
 						"titles": "surovina id",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"aboutUrl": "{+surovina_id}",
+						"propertyUrl": "https://example.org/vocabulary/obsahujeAlergen",
+						"valueUrl": "{+alergen_id}"
 					}, {
 						"@type": "Column",
 						"name": "alergen_id",
 						"titles": "alergen id",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"suppressOutput": true
 					}
 				],
 				"foreignKeys": [
@@ -296,14 +339,18 @@
 						"@type": "Column",
 						"name": "sladkost_id",
 						"titles": "sladkost id",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"aboutUrl": "{+sladkost_id}",
+						"propertyUrl": "https://example.org/vocabulary/obsahujeSurovinu",
+						"valueUrl": "{+surovina_id}"
 					}, {
 						"@type": "Column",
 						"name": "surovina_id",
 						"titles": "surovina id",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"suppressOutput": true
 					}
 				],
 				"foreignKeys": [
@@ -334,14 +381,18 @@
 						"@type": "Column",
 						"name": "automat_id",
 						"titles": "automat id",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"aboutUrl": "{+automat_id}",
+						"propertyUrl": "https://example.org/vocabulary/nabízí",
+						"valueUrl": "{+sladkost_id}"
 					}, {
 						"@type": "Column",
 						"name": "sladkost_id",
 						"titles": "sladkost id",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"suppressOutput": true
 					}
 				],
 				"foreignKeys": [
@@ -372,14 +423,18 @@
 						"@type": "Column",
 						"name": "tovarna_id",
 						"titles": "továrna id",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"aboutUrl": "{+tovarna_id}",
+						"propertyUrl": "https://example.org/vocabulary/vyrábí",
+						"valueUrl": "{+sladkost_id}"
 					}, {
 						"@type": "Column",
 						"name": "sladkost_id",
 						"titles": "sladkost id",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"suppressOutput": true
 					}
 				],
 				"foreignKeys": [
@@ -410,20 +465,25 @@
 						"@type": "Column",
 						"name": "zamestnanec_id",
 						"titles": "zaměstnanec id",
-						"datatype": "string",
-						"required": true
+						"datatype": "anyURI",
+						"required": true,
+						"suppressOutput": true
 					}, {
 						"@type": "Column",
 						"name": "jmeno",
 						"titles": "jméno",
+						"lang": "cs",
 						"datatype": "string",
-						"required": true
+						"required": true,
+						"aboutUrl": "{+zamestnanec_id}",
+						"propertyUrl": "https://example.org/vocabulary/jméno"
 					}, {
 						"@type": "Column",
 						"name": "index",
 						"titles": "index",
 						"datatype": "number",
-						"required": true
+						"required": true,
+						"suppressOutput": true
 					}
 				],
 				"foreignKeys": [
@@ -449,19 +509,23 @@
 						"name": "zamestnanec_id",
 						"titles": "zaměstnanec id",
 						"datatype": "string",
-						"required": true
+						"required": true,
+						"suppressOutput": true
 					}, {
 						"@type": "Column",
 						"name": "titul",
 						"titles": "titul",
 						"datatype": "string",
-						"required": true
+						"required": true,
+						"aboutUrl": "{+zamestnanec_id}",
+						"propertyUrl": "https://example.org/vocabulary/tituly"
 					}, {
 						"@type": "Column",
 						"name": "index",
 						"titles": "index",
 						"datatype": "number",
-						"required": true
+						"required": true,
+						"suppressOutput": true
 					}
 				],
 				"foreignKeys": [
