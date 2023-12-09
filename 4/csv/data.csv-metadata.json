@@ -22,18 +22,21 @@
 						"@type": "Column",
 						"name": "id",
 						"titles": "id",
-						"datatype": "string"
+						"datatype": "string",
+						"required": true
 					}, {
 						"@type": "Column",
 						"name": "nazev",
 						"titles": "název",
 						"datatype": "string",
-						"lang": "cs"
+						"lang": "cs",
+						"required": true
 					}, {
 						"@type": "Column",
 						"name": "cislo",
 						"titles": "číslo",
-						"datatype": "number"
+						"datatype": "number",
+						"required": true
 					}
 				],
 				"primaryKey": "id"
@@ -50,21 +53,199 @@
 						"@type": "Column",
 						"name": "id",
 						"titles": "id",
-						"datatype": "string"
+						"datatype": "string",
+						"required": true
 					}, {
 						"@type": "Column",
 						"name": "nazev",
 						"titles": "název",
 						"datatype": "string",
-						"lang": "cs"
+						"lang": "cs",
+						"required": true
 					}, {
 						"@type": "Column",
 						"name": "cena_za_kg",
-						"titles": "cena_za_kg",
-						"datatype": "number"
+						"titles": "cena za kg",
+						"datatype": "number",
+						"required": true
 					}
 				],
 				"primaryKey": "id"
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Sladkost",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-3.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "id",
+						"titles": "id",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "nazev",
+						"titles": "název",
+						"datatype": "string",
+						"lang": "cs",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "hmotnost",
+						"titles": "hmotnost",
+						"datatype": "number",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "sirka",
+						"titles": "šířka",
+						"datatype": "number",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "delka",
+						"titles": "délka",
+						"datatype": "number",
+						"required": "true"
+					}, {
+						"@type": "Column",
+						"name": "vyska",
+						"titles": "výška",
+						"datatype": "number",
+						"required": true
+					}
+				],
+				"primaryKey": "id"
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Továrna",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-4.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "id",
+						"titles": "id",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "nazev",
+						"titles": "název",
+						"datatype": "string",
+						"lang": "cs",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "rychlost_vyroby",
+						"titles": "rychlost výroby",
+						"datatype": "number",
+						"required": true
+					}
+				],
+				"primaryKey": "id"
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Automat",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-5.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "id",
+						"titles": "id",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "nazev",
+						"titles": "název",
+						"datatype": "string",
+						"lang": "cs",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "kapacita",
+						"titles": "kapacita",
+						"datatype": "number",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "sirka",
+						"titles": "šířka",
+						"datatype": "number",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "delka",
+						"titles": "délka",
+						"datatype": "number",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "vyska",
+						"titles": "výška",
+						"datatype": "number",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "nachazi_se_v",
+						"titles": "nachází s v",
+						"datatype": "number",
+						"required": true
+					}
+				],
+				"primaryKey": "id"
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Zaměstnanec",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-6.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "id",
+						"titles": "id",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "prijmeni",
+						"titles": "příjmení",
+						"datatype": "string",
+						"lang": "cs",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "pracuje_v",
+						"titles": "pracuje v",
+						"datatype": "string",
+						"required": true
+					}
+				],
+				"primaryKey": "id",
+				"foreignKeys": [
+					{
+						"columnReference": "pracuje_v",
+						"reference": {
+							"resource": "data-4.csv",
+							"columnReference": "id"
+						}
+					}
+				]
 			}
 		}, {
 			"@type": "Table",
@@ -77,13 +258,15 @@
 					{
 						"@type": "Column",
 						"name": "surovina_id",
-						"titles": "surovina_id",
-						"datatype": "string"
+						"titles": "surovina id",
+						"datatype": "string",
+						"required": true
 					}, {
 						"@type": "Column",
 						"name": "alergen_id",
-						"titles": "alergen_id",
-						"datatype": "string"
+						"titles": "alergen id",
+						"datatype": "string",
+						"required": true
 					}
 				],
 				"foreignKeys": [
@@ -93,9 +276,205 @@
 							"resource": "data-2.csv",
 							"columnReference": "id"
 						}
+					}, {
+						"columnReference": "alergen_id",
+						"reference": {
+							"resource": "data-1.csv",
+							"columnReference": "id"
+						}
 					}
 				]
 			}
-		}
+		}, {
+			"@type": "Table",
+			"dc:title": "Obsahuje_surovinu",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-8.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "sladkost_id",
+						"titles": "sladkost id",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "surovina_id",
+						"titles": "surovina id",
+						"datatype": "string",
+						"required": true
+					}
+				],
+				"foreignKeys": [
+					{
+						"columnReference": "surovina_id",
+						"reference": {
+							"resource": "data-2.csv",
+							"columnReference": "id"
+						}
+					}, {
+						"columnReference": "sladkost_id",
+						"reference": {
+							"resource": "data-3.csv",
+							"columnReference": "id"
+						}
+					}
+				]
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Nabízí_sladkost",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-9.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "automat_id",
+						"titles": "automat id",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "sladkost_id",
+						"titles": "sladkost id",
+						"datatype": "string",
+						"required": true
+					}
+				],
+				"foreignKeys": [
+					{
+						"columnReference": "automat_id",
+						"reference": {
+							"resource": "data-6.csv",
+							"columnReference": "id"
+						}
+					}, {
+						"columnReference": "sladkost_id",
+						"reference": {
+							"resource": "data-3.csv",
+							"columnReference": "id"
+						}
+					}
+				]
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Vyrábí_sladkost",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-10.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "tovarna_id",
+						"titles": "továrna id",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "sladkost_id",
+						"titles": "sladkost id",
+						"datatype": "string",
+						"required": true
+					}
+				],
+				"foreignKeys": [
+					{
+						"columnReference": "tovarna_id",
+						"reference": {
+							"resource": "data-4.csv",
+							"columnReference": "id"
+						}
+					}, {
+						"columnReference": "sladkost_id",
+						"reference": {
+							"resource": "data-3.csv",
+							"columnReference": "id"
+						}
+					}
+				]
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Jméno",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-11.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "zamestnanec_id",
+						"titles": "zaměstnanec id",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "jméno",
+						"titles": "jméno",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "index",
+						"titles": "index",
+						"datatype": "number",
+						"required": true
+					}
+				],
+				"foreignKeys": [
+					{
+						"columnReference": "zamestnanec_id",
+						"reference": {
+							"resource": "data-5.csv",
+							"columnReference": "id"
+						}
+					}
+				]
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Titul",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-12.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "zamestnanec_id",
+						"titles": "zaměstnanec id",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "titul",
+						"titles": "titul",
+						"datatype": "string",
+						"required": true
+					}, {
+						"@type": "Column",
+						"name": "index",
+						"titles": "index",
+						"datatype": "number",
+						"required": true
+					}
+				],
+				"foreignKeys": [
+					{
+						"columnReference": "zamestnanec_id",
+						"reference": {
+							"resource": "data-5.csv",
+							"columnReference": "id"
+						}
+					}
+				]
+			}
+		} 
 	]
 }
