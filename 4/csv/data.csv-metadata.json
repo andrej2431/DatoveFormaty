@@ -27,14 +27,16 @@
 						"@type": "Column",
 						"name": "nazev",
 						"titles": "název",
-						"datatype": "string"
+						"datatype": "string",
+						"lang": "cs"
 					}, {
 						"@type": "Column",
 						"name": "cislo",
 						"titles": "číslo",
 						"datatype": "number"
 					}
-				]
+				],
+				"primaryKey": "id"
 			}
 		}, {
 			"@type": "Table",
@@ -53,20 +55,47 @@
 						"@type": "Column",
 						"name": "nazev",
 						"titles": "název",
-						"datatype": "string"
+						"datatype": "string",
+						"lang": "cs"
 					}, {
 						"@type": "Column",
 						"name": "cena_za_kg",
 						"titles": "cena_za_kg",
 						"datatype": "number"
 					}
-				]
+				],
+				"primaryKey": "id"
 			}
 		}, {
 			"@type": "Table",
 			"dc:title": "Obsahuje_alergen",
 			"@id": "https://example.org/data.csv-metadata.json",
-			"url": "data-7.csv"
+			"url": "data-7.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "surovina_id",
+						"titles": "surovina_id",
+						"datatype": "string"
+					}, {
+						"@type": "Column",
+						"name": "alergen_id",
+						"titles": "alergen_id",
+						"datatype": "string"
+					}
+				],
+				"foreignKeys": [
+					{
+						"columnReference": "surovina_id",
+						"reference": {
+							"resource": "data-2.csv",
+							"columnReference": "id"
+						}
+					}
+				]
+			}
 		}
 	]
 }
