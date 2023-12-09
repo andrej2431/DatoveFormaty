@@ -110,7 +110,7 @@
 						"name": "delka",
 						"titles": "délka",
 						"datatype": "number",
-						"required": "true"
+						"required": true
 					}, {
 						"@type": "Column",
 						"name": "vyska",
@@ -200,9 +200,8 @@
 					}, {
 						"@type": "Column",
 						"name": "nachazi_se_v",
-						"titles": "nachází s v",
-						"datatype": "number",
-						"required": true
+						"titles": "nachází se v",
+						"datatype": "string"
 					}
 				],
 				"primaryKey": "id"
@@ -349,7 +348,7 @@
 					{
 						"columnReference": "automat_id",
 						"reference": {
-							"resource": "data-6.csv",
+							"resource": "data-5.csv",
 							"columnReference": "id"
 						}
 					}, {
@@ -415,7 +414,7 @@
 						"required": true
 					}, {
 						"@type": "Column",
-						"name": "jméno",
+						"name": "jmeno",
 						"titles": "jméno",
 						"datatype": "string",
 						"required": true
@@ -431,7 +430,7 @@
 					{
 						"columnReference": "zamestnanec_id",
 						"reference": {
-							"resource": "data-5.csv",
+							"resource": "data-6.csv",
 							"columnReference": "id"
 						}
 					}
@@ -469,7 +468,7 @@
 					{
 						"columnReference": "zamestnanec_id",
 						"reference": {
-							"resource": "data-5.csv",
+							"resource": "data-6.csv",
 							"columnReference": "id"
 						}
 					}
