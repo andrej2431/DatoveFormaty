@@ -233,7 +233,8 @@
 						"name": "nachazi_se_v",
 						"titles": "nachází se v",
 						"datatype": "anyURI",
-						"propertyUrl": "https://example.org/vocabulary/nacházíSeV"
+						"propertyUrl": "https://example.org/vocabulary/nacházíSeV",
+						"valueUrl": "{+nachazi_se_v}"
 					}
 				],
 				"primaryKey": "id"
