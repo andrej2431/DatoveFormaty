@@ -1,2 +1,2 @@
 id,příjmení,pracuje v
-ex:Zaměstnanec1,Novák,ex:Továrna1
+https://example.org/vocabulary/Zaměstnanec1,Novák,https://example.org/vocabulary/Továrna1
