@@ -1,0 +1,72 @@
+{
+	"@type": "TableGroup",
+	"@id": "https://example.org/data.csv-metadata.json",
+	"@context": [
+		"http://www.w3.org/ns/csvw",
+		{
+			"@language": "cs"
+		}
+	],
+	"dc:description": "Dobrý den, celý den",
+
+	"tables": [
+		{
+			"@type": "Table",
+			"dc:title": "Alergen",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-1.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "id",
+						"title": "id",
+						"datatype": "string"
+					}, {
+						"@type": "Column",
+						"name": "nazev",
+						"title": "název",
+						"datatype": "string"
+					}, {
+						"@type": "Column",
+						"name": "cislo",
+						"title": "číslo",
+						"datatype": "number"
+					}
+				]
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Surovina",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-2.csv",
+			"tableSchema": {
+				"@type": "Schema",
+				"columns": [
+					{
+						"@type": "Column",
+						"name": "id",
+						"title": "id",
+						"datatype": "string"
+					}, {
+						"@type": "Column",
+						"name": "nazev",
+						"title": "název",
+						"datatype": "string"
+					}, {
+						"@type": "Column",
+						"name": "cena_za_kg",
+						"title": "cena_za_kg",
+						"datatype": "number"
+					}
+				]
+			}
+		}, {
+			"@type": "Table",
+			"dc:title": "Obsahuje_alergen",
+			"@id": "https://example.org/data.csv-metadata.json",
+			"url": "data-7.csv"
+		}
+	]
+}
