@@ -21,17 +21,17 @@
 					{
 						"@type": "Column",
 						"name": "id",
-						"title": "id",
+						"titles": "id",
 						"datatype": "string"
 					}, {
 						"@type": "Column",
 						"name": "nazev",
-						"title": "název",
+						"titles": "název",
 						"datatype": "string"
 					}, {
 						"@type": "Column",
 						"name": "cislo",
-						"title": "číslo",
+						"titles": "číslo",
 						"datatype": "number"
 					}
 				]
@@ -47,17 +47,17 @@
 					{
 						"@type": "Column",
 						"name": "id",
-						"title": "id",
+						"titles": "id",
 						"datatype": "string"
 					}, {
 						"@type": "Column",
 						"name": "nazev",
-						"title": "název",
+						"titles": "název",
 						"datatype": "string"
 					}, {
 						"@type": "Column",
 						"name": "cena_za_kg",
-						"title": "cena_za_kg",
+						"titles": "cena_za_kg",
 						"datatype": "number"
 					}
 				]
