@@ -1,2 +1,12 @@
 sladkost id,surovina id
-https://example.org/vocabulary/Sladkost1,https://example.org/vocabulary/Surovina1
+https://example.org/vocabulary/Tatranka,https://example.org/vocabulary/Čokoláda
+https://example.org/vocabulary/Tatranka,https://example.org/vocabulary/Mléko
+https://example.org/vocabulary/Tatranka,https://example.org/vocabulary/Múka
+https://example.org/vocabulary/Nektar,https://example.org/vocabulary/Múka
+https://example.org/vocabulary/Nektar,https://example.org/vocabulary/Mléko
+https://example.org/vocabulary/Nektar,https://example.org/vocabulary/Vejce
+https://example.org/vocabulary/Nektar,https://example.org/vocabulary/Cukor
+https://example.org/vocabulary/Nektar,https://example.org/vocabulary/Maslo
+https://example.org/vocabulary/ČokoDortík,https://example.org/vocabulary/Čokoláda
+https://example.org/vocabulary/ČokoDortík,https://example.org/vocabulary/Múka
+https://example.org/vocabulary/ČokoDortík,https://example.org/vocabulary/Maslo

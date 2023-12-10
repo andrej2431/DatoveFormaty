@@ -1,2 +1,6 @@
 id,název,číslo
-https://example.org/vocabulary/Alergen1,alergen1,1
+https://example.org/vocabulary/Lepek,lepek,1
+https://example.org/vocabulary/VejceAlergen,vejce,3
+https://example.org/vocabulary/Arašidy,arašídy,4
+https://example.org/vocabulary/Sója,sója,6
+https://example.org/vocabulary/MlékoAlergen,mléko,7

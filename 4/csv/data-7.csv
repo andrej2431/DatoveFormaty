@@ -1,2 +1,7 @@
 surovina id,alergen id
-https://example.org/vocabulary/Surovina1,https://example.org/vocabulary/Alergen1
+https://example.org/vocabulary/Múka,https://example.org/vocabulary/Lepek
+https://example.org/vocabulary/Maslo,https://example.org/vocabulary/MlékoAlergen
+https://example.org/vocabulary/Vejce,https://example.org/vocabulary/VejceAlergen
+https://example.org/vocabulary/Čokoláda,https://example.org/vocabulary/Arašidy
+https://example.org/vocabulary/Čokoláda,https://example.org/vocabulary/MlékoAlergen
+https://example.org/vocabulary/Mléko,https://example.org/vocabulary/MlékoAlergen

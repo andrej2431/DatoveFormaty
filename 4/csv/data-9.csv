@@ -1,2 +1,11 @@
 automat id,sladkost id
-https://example.org/vocabulary/Automat1,https://example.org/vocabulary/Sladkost1
+https://example.org/vocabulary/AutomatUVrátnice,https://example.org/vocabulary/Tatranka
+https://example.org/vocabulary/AutomatUVrátnice,https://example.org/vocabulary/Nektar
+https://example.org/vocabulary/AutomatUVrátnice,https://example.org/vocabulary/ČokoDortík
+https://example.org/vocabulary/AutomatRychláMňamka,https://example.org/vocabulary/Tatranka
+https://example.org/vocabulary/AutomatRychláMňamka,https://example.org/vocabulary/Nektar
+https://example.org/vocabulary/AutomatRychláMňamka,https://example.org/vocabulary/ČokoDortík
+https://example.org/vocabulary/AutomatPohoštěníVMezipatře,https://example.org/vocabulary/Nektar
+https://example.org/vocabulary/AutomatPohoštěníVMezipatře,https://example.org/vocabulary/ČokoDortík
+https://example.org/vocabulary/AutomatOblačnéObčerstvení,https://example.org/vocabulary/Nektar
+https://example.org/vocabulary/AutomatOblačnéObčerstvení,https://example.org/vocabulary/ČokoDortík
