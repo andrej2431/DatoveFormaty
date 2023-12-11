@@ -478,13 +478,6 @@
 						"required": true,
 						"aboutUrl": "{+zamestnanec_id}",
 						"propertyUrl": "https://example.org/vocabulary/jméno"
-					}, {
-						"@type": "Column",
-						"name": "index",
-						"titles": "index",
-						"datatype": "number",
-						"required": true,
-						"suppressOutput": true
 					}
 				],
 				"foreignKeys": [
@@ -520,13 +513,6 @@
 						"required": true,
 						"aboutUrl": "{+zamestnanec_id}",
 						"propertyUrl": "https://example.org/vocabulary/tituly"
-					}, {
-						"@type": "Column",
-						"name": "index",
-						"titles": "index",
-						"datatype": "number",
-						"required": true,
-						"suppressOutput": true
 					}
 				],
 				"foreignKeys": [
