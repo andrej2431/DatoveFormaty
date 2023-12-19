@@ -510,6 +510,7 @@
 						"name": "titul",
 						"titles": "titul",
 						"datatype": "string",
+						"lang": "cs",
 						"required": true,
 						"aboutUrl": "{+zamestnanec_id}",
 						"propertyUrl": "https://example.org/vocabulary/tituly"
